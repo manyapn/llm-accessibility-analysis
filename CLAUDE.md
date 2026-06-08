@@ -10,7 +10,7 @@ Analyze Android screen reader (TalkBack) traces to identify accessibility issues
 - YouTube: YT1 (Core), YT2 (Stressful)
 
 ## Input Files
-Each trace folder contains:
+Raw trace folders live in `data/recordings/`. Each trace folder contains:
 - `events.jsonl` — TalkBack focus events, announcements, UI element metadata
 - `user_actions.jsonl` — actions performed during the task
 - `trees/` — view hierarchy JSONs per screen
@@ -83,3 +83,7 @@ Do not flag emulator lag as accessibility issues — document it separately.
 
 ## WCAG 2.2 Reference
 Use the `/wcag` skill when identifying and categorizing issues.
+
+## Repository Notes
+- `results/master_results.csv` is the canonical combined results table.
+- `TalkBack-Portal` is an external data-collection tool and is not part of this repo.

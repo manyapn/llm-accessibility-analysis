@@ -1,6 +1,7 @@
 # Claude Code Prompt Template
 # Use at the start of a fresh session per trace.
 # Replace [TASK_ID], [FOLDER], [APP], [TYPE], [MANUAL_OBSERVATIONS].
+# Raw traces are stored under data/recordings/.
 
 ---
 
@@ -38,7 +39,7 @@ Manually observed issues during recording:
  
 /wcag
  
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_manyapn_gm1_gm1 for accessibility issues.
+Analyze the trace at data/recordings/recording_manyapn_GM1_1 for accessibility issues.
  
 Task ID: GM1, App: Gmail, Type: Core
 Model: claude-sonnet-4-6, Prompt Version: v1.0
@@ -59,7 +60,7 @@ Manually observed issues during recording:
  
 /wcag
  
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_manyapn_gm2_gm2 for accessibility issues.
+Analyze the trace at data/recordings/recording_manyapn_GM_2 for accessibility issues.
  
 Task ID: GM2, App: Gmail, Type: Stressful
 Model: claude-sonnet-4-6, Prompt Version: v1.0
@@ -79,7 +80,7 @@ Manually observed issues during recording:
 ## AM1 — Amazon Core
 /wcag
 
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_manyapn_AM_1 for accessibility issues.
+Analyze the trace at data/recordings/recording_manyapn_AM_1 for accessibility issues.
 
 Task ID: AM1, App: Amazon, Type: Core
 
@@ -99,7 +100,7 @@ Manually observed issues:
 ## AM2 — Amazon Stressful
 /wcag
 
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_manyapn_AM_2 for accessibility issues.
+Analyze the trace at data/recordings/recording_manyapn_AM_2 for accessibility issues.
 
 Task ID: AM2, App: Amazon, Type: Stressful
 
@@ -119,7 +120,7 @@ Manually observed issues:
 ## MP1 — Google Maps Core
 /wcag
 
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_MANYAPN_MP_1 for accessibility issues.
+Analyze the trace at data/recordings/recording_MANYAPN_MP_1 for accessibility issues.
 
 Task ID: MP1, App: Google Maps, Type: Core
 
@@ -139,7 +140,7 @@ Manually observed issues:
 ## MP2 — Google Maps Stressful
 /wcag
 
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_MANYAPN_MP_2 for accessibility issues.
+Analyze the trace at data/recordings/recording_MANYAPN_MP_2 for accessibility issues.
 
 Task ID: MP2, App: Google Maps, Type: Stressful
 
@@ -159,7 +160,7 @@ Manually observed issues:
 ## YT1 — YouTube Core
 /wcag
 
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_MANYAPN_YT_1 for accessibility issues.
+Analyze the trace at data/recordings/recording_MANYAPN_YT_1 for accessibility issues.
 
 Task ID: YT1, App: YouTube, Type: Core
 
@@ -179,7 +180,7 @@ Manually observed issues:
 ## YT2 — YouTube Stressful
 /wcag
 
-Analyze the trace at /Users/manyapn/Documents/accessibility-research/recording_MANYAPN_YT_2 for accessibility issues.
+Analyze the trace at data/recordings/recording_MANYAPN_YT_2 for accessibility issues.
 
 Task ID: YT2, App: YouTube, Type: Stressful
 
