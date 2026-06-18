@@ -1,7 +1,11 @@
 .DS_Store
 .env
+*.env
 .env.*
 !.env.example
+*.key
+__pycache__/
 node_modules/
 TalkBack-Portal/
 .claude/settings.local.json
+AUDIT_REPORT.md
