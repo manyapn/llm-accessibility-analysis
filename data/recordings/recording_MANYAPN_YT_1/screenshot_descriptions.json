@@ -1,0 +1,1679 @@
+{
+  "task_id": "YT1",
+  "app": "YouTube",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 30,
+  "pairs_analyzed": 29,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T17-26-17-870.png",
+      "after_filename": "ss_2026-05-26T17-26-25-451.png",
+      "before_paragraph": "The user is on the Android home screen with TalkBack focus positioned on the YouTube app icon in the bottom right corner.",
+      "after_paragraph": "Upon activating the YouTube app, the app launches and a system permission dialog immediately overlays the screen, requesting notification access. TalkBack focus automatically moves to the 'Allow' button inside this dialog. Concurrently, a sign-in status toast appears at the bottom of the screen.",
+      "before_screen": "Android home screen with app shortcuts and Google search bar.",
+      "after_screen": "YouTube app launch screen with a notification permission dialog and a sign-in status toast.",
+      "talkback_focus_before": "YouTube app shortcut",
+      "talkback_focus_after": "'Allow' button",
+      "changed_elements": [
+        {
+          "type": "shortcut",
+          "label": "YouTube",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "dialog",
+          "label": "Allow YouTube to send you notifications?",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Allow",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Don't allow",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "toast",
+          "label": "Signed in as Manya PN (manyapbhat@gmail.com)",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Opened YouTube app from home screen."
+        },
+        {
+          "type": "dialog_opened",
+          "description": "System permission dialog for notifications appeared."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus shifted from YouTube home screen shortcut directly to the 'Allow' button inside the new permission dialog."
+        },
+        {
+          "type": "toast_appeared",
+          "description": "A sign-in status toast appeared at the bottom of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "'Allow' button",
+          "observation": "Focus immediately lands on the action button ('Allow') instead of the top of the dialog (the heading/description). The screen reader user might miss the context of what permission is being asked unless they manually navigate backward.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "Signed in as Manya PN toast",
+          "observation": "A toast notification containing status info ('Signed in as...') appears at the bottom while focus is locked inside the system dialog. It needs to be checked if this status message is announced to screen reader users.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T17-26-25-451.png",
+      "after_filename": "ss_2026-05-26T17-26-30-413.png",
+      "before_paragraph": "The screen shows a permission dialog asking \"Allow YouTube to send you notifications?\" with \"Allow\" and \"Don't allow\" buttons. TalkBack focus is currently on the \"Allow\" button.",
+      "after_paragraph": "After the dialog is dismissed, the main YouTube home screen is displayed. TalkBack focus has jumped to the notification bell icon in the top right header, which displays a '9+' badge.",
+      "before_screen": "YouTube app showing a permission dialog to allow notifications, with focus on the 'Allow' button.",
+      "after_screen": "YouTube Home screen showing video feed and header controls, with focus on the notification icon.",
+      "talkback_focus_before": "Allow button",
+      "talkback_focus_after": "Notification icon with '9+' badge",
+      "changed_elements": [
+        {
+          "type": "dialog",
+          "label": "Allow YouTube to send you notifications?",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Allow",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Don't allow",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Notification bell with 9+ unread",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "dialog_closed",
+          "description": "The notification permission dialog was closed."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Allow' button in the dialog to the notification bell icon in the top header of the main screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Notification bell with 9+ unread",
+          "observation": "Focus jumps directly to the notification bell icon after dismissing the notification permission dialog. While contextually relevant to notifications, this unexpected jump skips the top-left logo and other header items, which may disorient screen reader users.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T17-26-30-413.png",
+      "after_filename": "ss_2026-05-26T17-26-32-700.png",
+      "before_paragraph": "The YouTube feed is displayed with a 'Signed in as' notification bar at the bottom. TalkBack focus is currently on the Notifications button in the top header, marked by a green outline.",
+      "after_paragraph": "The TalkBack focus has moved to the Search button, which is to the immediate right of the Notifications button. The green outline is now highlighting the Search icon.",
+      "before_screen": "YouTube feed page with TalkBack focus on the Notifications button.",
+      "after_screen": "YouTube feed page with TalkBack focus shifted to the Search button.",
+      "talkback_focus_before": "Notifications button",
+      "talkback_focus_after": "Search button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Notifications",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Search",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Notifications button to the Search button in the top header."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Signed in as notification bar",
+          "observation": "A status/toast overlay is displayed at the bottom of the screen but is not focused by TalkBack.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T17-26-32-700.png",
+      "after_filename": "ss_2026-05-26T17-26-35-413.png",
+      "before_paragraph": "The YouTube home screen is displayed, showing various video cards, a TikTok advertisement, and a sign-in status banner at the bottom. No TalkBack focus indicator is visible on the screen.",
+      "after_paragraph": "After interacting with the search option, the search screen opens. TalkBack focus moves to the 'Back' navigation arrow button in the top-left corner, marked by a green focus ring. A virtual keyboard also appears at the bottom of the screen.",
+      "before_screen": "YouTube app home feed with a sign-in notification at the bottom.",
+      "after_screen": "YouTube search interface with search history list and the virtual keyboard open.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "button: Back",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Search YouTube",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Search with your voice",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "keyboard",
+          "label": null,
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the Home feed to the Search screen."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "The system on-screen keyboard appeared at the bottom of the screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus is set on the Back button in the top-left corner upon navigating to the search screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "button: Back",
+          "observation": "Focus is placed on the Back button instead of the Search text input edit box, even though the keyboard has automatically appeared, indicating the text input may have input focus while screen reader focus is elsewhere.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T17-26-35-413.png",
+      "after_filename": "ss_2026-05-26T17-26-36-225.png",
+      "before_paragraph": "The TalkBack focus is on the back arrow button in the top-left corner of the YouTube search screen. The on-screen keyboard is visible at the bottom of the screen, and search history items fill the middle of the screen.",
+      "after_paragraph": "The screen remains almost unchanged, with the TalkBack focus staying on the back arrow button. However, a text insertion cursor has appeared at the beginning of the 'Search YouTube' input field.",
+      "before_screen": "YouTube search interface with search history and the keyboard open, focus on the back button.",
+      "after_screen": "YouTube search interface with search history and the keyboard open, focus remains on the back button, but a cursor is now visible in the search input field.",
+      "talkback_focus_before": "button",
+      "talkback_focus_after": "button",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Search YouTube",
+          "state": "cursor visible",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "A cursor appeared at the beginning of the 'Search YouTube' input field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search YouTube input field",
+          "observation": "A text insertion cursor is visible in the search input field, yet the TalkBack accessibility focus remains on the back arrow button instead of shifting to the active text input.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T17-26-36-225.png",
+      "after_filename": "ss_2026-05-26T17-26-39-957.png",
+      "before_paragraph": "The user is on the YouTube search screen with the keyboard active. TalkBack focus is positioned on the 'Back' navigation button in the top-left corner.",
+      "after_paragraph": "The user has typed the letter 'a' into the search input. The search results list updates dynamically to show queries starting with 'a', and a 'Clear' icon (X) appears inside the search input field. The visual TalkBack focus ring is no longer visible on any on-screen element.",
+      "before_screen": "YouTube search screen with search history and keyboard open.",
+      "after_screen": "YouTube search screen showing search suggestions for the query 'a'.",
+      "talkback_focus_before": "Back button (top left)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Back",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "EditText",
+          "label": "Search YouTube",
+          "state": "text: a",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Clear query",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved away from the Back button and is no longer visually indicated on the screen."
+        },
+        {
+          "type": "state_changed",
+          "description": "The search input text changed from empty/placeholder to 'a'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "A clear text button (X) appeared in the search input field, and the search suggestions list updated to match the query 'a'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search input field",
+          "observation": "After typing 'a', no visual focus ring is present. It is unclear if the text field still has accessibility focus or if focus was lost.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Search suggestions list",
+          "observation": "The list of suggestions dynamically filtered when 'a' was typed. It needs to be verified if these live updates are announced to screen reader users.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T17-26-39-957.png",
+      "after_filename": "ss_2026-05-26T17-26-40-748.png",
+      "before_paragraph": "The screen shows a YouTube search interface with the keyboard open. The search query 'a' is entered in the search field at the top, displaying a list of search suggestions starting with 'a', such as 'Andrej Karpathy' and 'appdev'. There is no active TalkBack focus ring visible on the screen.",
+      "after_paragraph": "The screen state remains virtually identical to the before screen. The only observable difference is the blinking cursor in the search text input field, indicating that the input field remains active. No TalkBack focus ring has appeared.",
+      "before_screen": "YouTube search screen with suggestions and keyboard open",
+      "after_screen": "YouTube search screen, identical to the previous screen except for a blinking cursor",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No major visual changes; the screen state remains identical with only the text field cursor blinking."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "There is no visible TalkBack focus indicator, making it impossible to determine which element is currently focused by the screen reader.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Floating accessibility buttons on the right edge",
+          "observation": "Two floating accessibility shortcut buttons are overlaying the right side of the screen, which could potentially obstruct interactive elements or text behind them.",
+          "potentially_relevant_wcag": [
+            "1.4.11",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T17-26-40-748.png",
+      "after_filename": "ss_2026-05-26T17-26-41-765.png",
+      "before_paragraph": "The screen shows a search interface with the search input containing the letter \"a\". A list of search suggestions, both from history and general search, is displayed above an on-screen keyboard. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The search query has been updated to \"acc\". The list of search suggestions has dynamically updated to match the new query, showing terms like \"accidentally in love\" and \"accent slips\". The keyboard suggestions have also updated to \"acc\", \"accessi\", and \"account\". No TalkBack focus indicator is visible.",
+      "before_screen": "Search screen with query 'a' and corresponding search suggestions.",
+      "after_screen": "Search screen with query 'acc' and updated search suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "acc",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "ListView",
+          "label": "Search suggestions list",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the search input field changed from 'a' to 'acc'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The search suggestions list updated dynamically with new suggestions matching 'acc'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "The list of suggestions updates dynamically as the user types. TalkBack should announce the availability of new suggestions or the size of the list to ensure blind users are aware of the changes.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Diagonal arrow buttons (next to suggestions)",
+          "observation": "Each suggestion row has a diagonal arrow icon on the far right. These need clear, descriptive accessibility labels (e.g., 'Insert [suggestion] into search box') so users know their function.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T17-26-41-765.png",
+      "after_filename": "ss_2026-05-26T17-26-42-469.png",
+      "before_paragraph": "The screen shows a search interface with 'acc' entered into the search field. Below the search field is a list of search suggestions, and at the bottom, an on-screen keyboard is displayed. There is no visible TalkBack focus indicator on any element.",
+      "after_paragraph": "The screen remains completely identical to the previous state. There are no changes in content, layout, keyboard state, or focus indicators.",
+      "before_screen": "Android search interface with search suggestions for 'acc' and an active on-screen keyboard.",
+      "after_screen": "Android search interface, identical to the before screen.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movements detected between the before and after screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating accessibility/shortcut buttons on the right edge",
+          "observation": "These floating icons (purple 'R' and gray arrows) overlap the search suggestions list and might block content or be easily mis-activated. They are icon-only and may require text alternatives.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "1.4.3",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T17-26-42-469.png",
+      "after_filename": "ss_2026-05-26T17-26-44-743.png",
+      "before_paragraph": "The screen shows a search interface with the keyboard active. The search query in the input field is \"acc\", and a list of search suggestions starting with \"acc\" (e.g., \"accidentally in love\", \"accent slips\") is displayed. The keyboard is visible at the bottom of the screen with prediction chips for \"acc\", \"accessi\", and \"account\". No TalkBack focus ring is visible.",
+      "after_paragraph": "The search query has been updated to \"acce\" after typing the letter 'e'. The list of search suggestions has dynamically updated to match \"acce\" (e.g., \"accent slips\", \"accelerando\", \"accepting my flaws\"). The keyboard prediction chips have also updated to \"acce\", \"accessi\", and \"access\". No TalkBack focus ring is visible.",
+      "before_screen": "Search screen with keyboard active, query \"acc\" and corresponding suggestions.",
+      "after_screen": "Search screen with keyboard active, query \"acce\" and updated suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "text_field",
+          "label": "acce",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "acce",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "access",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "acc",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "account",
+          "state": null,
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "The search query was updated from 'acc' to 'acce', which updated the search suggestions list and the keyboard prediction bar."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "The list of search suggestions updates dynamically as the user types. Screen readers should announce the updated list or the number of suggestions available.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Floating icons on the right",
+          "observation": "There are overlapping floating icons on the right edge (purple 'P' icon and a grey arrow icon) which may be difficult to target or may overlap with list items.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T17-26-44-743.png",
+      "after_filename": "ss_2026-05-26T17-26-52-074.png",
+      "before_paragraph": "The screen displays a Google Search interface with the text 'acce' typed into the search bar. Below the search bar, a list of search suggestions beginning with 'acce' is shown, and the virtual keyboard is open at the bottom of the screen.",
+      "after_paragraph": "The user has typed the letter 's', changing the search query to 'acces'. The search suggestions list and the keyboard's spelling suggestions bar have both updated to reflect this new query. No TalkBack focus indicator is visible in either screenshot.",
+      "before_screen": "Google Search screen with 'acce' query and virtual keyboard open",
+      "after_screen": "Google Search screen with 'acces' query and virtual keyboard open",
+      "talkback_focus_before": "null",
+      "talkback_focus_after": "null",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "acce",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "accent slips",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accelerando",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accepting my flaws",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Accept",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accelerant fnf",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accent wall ideas",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "acceptable losses",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "acceleracers",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access 2819",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access vegas",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessories that mexican ot",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessories",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessible beige sherwin williams",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access church lakeland",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessorize me",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "acce",
+          "state": "keyboard suggestion",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "accessi",
+          "state": "keyboard suggestion",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "access",
+          "state": "keyboard suggestion",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "acces",
+          "state": "keyboard suggestion",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "accessibility",
+          "state": "keyboard suggestion",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query text changed from 'acce' to 'acces' after user typed 's'."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Search suggestions relevant only to 'acce' prefix disappeared."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Search suggestions relevant to 'acces' prefix appeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "Suggestions update dynamically as the user types. It is important to verify if these changes are announced to screen reader users via live regions or if they must manually navigate to find them.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Keyboard suggestions bar (emojis)",
+          "observation": "In the AFTER screen, there are two emoji-like icons (a flexing arm and a dog) in the keyboard suggestion bar. It's important to verify if these have accessible labels for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T17-26-52-074.png",
+      "after_filename": "ss_2026-05-26T17-26-55-339.png",
+      "before_paragraph": "The screen shows a Google Search interface with the text \"acces\" entered in the search box. A standard virtual keyboard is open at the bottom, and search suggestions are listed below the search box. There is no visible TalkBack focus indicator in this screenshot.",
+      "after_paragraph": "The screen is almost identical to the previous one, but a vertical text cursor has appeared at the end of \"acces\" in the search input field, indicating it is active for text insertion. There is still no visual TalkBack focus ring on the screen.",
+      "before_screen": "Google search screen with search suggestions and open keyboard, searching for 'acces'",
+      "after_screen": "Google search screen with search suggestions, keyboard open, and text cursor active in the search box",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "acces",
+          "state": "cursor visible",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "A text insertion cursor appeared at the end of 'acces' in the search box."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search text box",
+          "observation": "No TalkBack focus indicator is visually apparent on the active search text box.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Floating purple 'R' button and grey arrow button",
+          "observation": "These floating overlay buttons on the right side of the screen may be difficult to navigate or lack clear text labels.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T17-26-55-339.png",
+      "after_filename": "ss_2026-05-26T17-26-58-358.png",
+      "before_paragraph": "The screen shows a search interface, likely Google Search, with the query \"acces\" typed into the search bar. Below the search bar, a list of search suggestions starting with \"access\" is displayed. A virtual keyboard is active at the bottom of the screen. On the right edge, there are two floating accessibility shortcut buttons (a purple circle with an 'R' icon and a grey circle with a curved arrow). There is no active TalkBack focus indicator visible on the screen.",
+      "after_paragraph": "No changes are observed between the BEFORE and AFTER screenshots. The screen contents, keyboard, search query, suggestions, and floating shortcuts remain in the exact same state, and no TalkBack focus indicator has appeared.",
+      "before_screen": "Search interface with search suggestions and an active keyboard, plus floating accessibility shortcuts on the right.",
+      "after_screen": "Identical search interface with no visible changes.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating accessibility shortcuts on the right",
+          "observation": "These floating buttons overlap the search suggestions and scrollbar area, potentially obstructing content or touch targets underneath.",
+          "potentially_relevant_wcag": [
+            "1.4.11",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T17-26-58-358.png",
+      "after_filename": "ss_2026-05-26T17-26-58-408.png",
+      "before_paragraph": "The screen shows a Google search interface with the query 'acces' typed into the search bar. A list of search suggestions is displayed below the search bar, and the on-screen keyboard is visible at the bottom. There are two floating shortcut buttons on the right edge of the screen. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The AFTER screen is visually identical to the BEFORE screen. No changes in content, keyboard state, or focus are visible.",
+      "before_screen": "Google search interface with suggestions and keyboard open",
+      "after_screen": "Google search interface with suggestions and keyboard open, identical to the previous state",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating shortcut buttons on the right edge",
+          "observation": "These floating overlay buttons partially obstruct the search suggestion list and the scrollbar area, which could interfere with user interaction or content readability.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T17-26-58-408.png",
+      "after_filename": "ss_2026-05-26T17-26-59-110.png",
+      "before_paragraph": "The screen displays a search query input field containing the text \"acces\". Below it is a list of search suggestions starting with \"Access Hollywood\" and \"access 2819\". The virtual keyboard is active at the bottom of the screen.",
+      "after_paragraph": "The user has typed the letter 'i', updating the search input text to \"accesi\". Consequently, the list of search suggestions has updated dynamically, now showing items like \"ascensionism\" and \"accessible beige sherwin williams\". No TalkBack focus indicator is visible on either screen.",
+      "before_screen": "Google Search query screen with suggestions for 'acces' and active keyboard",
+      "after_screen": "Google Search query screen with suggestions for 'accesi' and active keyboard",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "acces",
+          "state": "editable text",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "Access Hollywood",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access 2819",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access vegas",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessories that mexican ot",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessories",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "access church lakeland",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessorize me",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "ascensionism",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessing a port",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessing a port with a huber needle",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "ascension wow",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accesina",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "ascension easter egg",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessibility",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "accessing the dark web 2025",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the search edit box changed from 'acces' to 'accesi' due to user typing."
+        },
+        {
+          "type": "content_appeared",
+          "description": "New search suggestions corresponding to 'accesi' appeared, replacing previous suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "search suggestions list",
+          "observation": "The list of suggestions dynamically updates as the user types. Dynamic changes in list content should be announced or easily discoverable by a screen reader user.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T17-26-59-110.png",
+      "after_filename": "ss_2026-05-26T17-27-04-178.png",
+      "before_paragraph": "The screen shows a search interface with the keyboard active. The user has typed \"accesi\" into the search bar, and a list of matching search suggestions is displayed. There is no active TalkBack focus ring visible.",
+      "after_paragraph": "The user has typed the letter 'b', updating the search query to \"accesib\". The list of search suggestions dynamically updates to show results relevant to \"accesib\" (such as \"accesibilidad\" and \"accessible underground\"). The suggestions bar above the keyboard also updates to reflect the new typing state.",
+      "before_screen": "Search interface with keyboard open showing suggestions for 'accesi'",
+      "after_screen": "Search interface with keyboard open showing suggestions for 'accesib'",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "accesib",
+          "state": "editable text",
+          "change": "state_changed"
+        },
+        {
+          "type": "TextView",
+          "label": "ascensionism",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessing a port",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessing a port with a huber needle",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "ascension wow",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accesina",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "ascension easter egg",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessing the dark web 2025",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accesibilidad",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessible beige kitchen cabinets",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessible underground",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accesibilidad con interruptores free fire",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessible funky",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessibility settings",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "accessibility settings off",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query in the input field updated from 'accesi' to 'accesib', resulting in a refreshed list of search suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search Suggestions List",
+          "observation": "The list of suggestions dynamically updates as the user types. Screen readers should announce updates or the number of results if appropriate.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Floating accessibility shortcut buttons",
+          "observation": "Floating buttons on the right edge overlap the search suggestion arrow icons, potentially obstructing touch targets or visual content.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T17-27-04-178.png",
+      "after_filename": "ss_2026-05-26T17-27-07-397.png",
+      "before_paragraph": "The screen shows a search interface with the search query 'accesib' entered. A list of search suggestions is displayed below the search bar, and an on-screen keyboard is visible at the bottom. No TalkBack focus ring is visible in this frame.",
+      "after_paragraph": "TalkBack focus has moved to the third search suggestion, 'accessibility'. This list item is now highlighted with a green focus border.",
+      "before_screen": "Search screen with keyboard open and search suggestions list.",
+      "after_screen": "Search screen with TalkBack focus on the 'accessibility' search suggestion.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": {
+        "type": "linear_layout",
+        "label": "accessibility",
+        "state": "focused"
+      },
+      "changed_elements": [
+        {
+          "type": "linear_layout",
+          "label": "accessibility",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'accessibility' search suggestion list item."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestion row",
+          "observation": "The row contains a diagonal arrow icon on the right (commonly used to copy the suggestion to the search box). It is unclear if this icon is separately focusable or if it is announced as part of the main suggestion label.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "before_filename": "ss_2026-05-26T17-27-07-397.png",
+      "after_filename": "ss_2026-05-26T17-27-09-378.png",
+      "before_paragraph": "The screen shows a YouTube search suggestion list for the query 'accesib'. TalkBack focus is currently on the 'accessibility' search suggestion, and the on-screen keyboard is visible at the bottom.",
+      "after_paragraph": "After selecting the suggestion, the on-screen keyboard disappears and a loading screen is shown. TalkBack focus has moved to the loading indicator in the center of the screen.",
+      "before_screen": "YouTube search suggestions screen with keyboard open and suggestion 'accessibility' focused.",
+      "after_screen": "YouTube search results loading screen with a loading indicator focused.",
+      "talkback_focus_before": "Search suggestion 'accessibility'",
+      "talkback_focus_after": "Loading indicator in the center of the screen",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "accessibility",
+          "state": "editable text",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "accessibility",
+          "state": "suggestion",
+          "change": "disappeared"
+        },
+        {
+          "type": "Keyboard",
+          "label": null,
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ProgressBar",
+          "label": "Loading",
+          "state": "active",
+          "change": "appeared"
+        },
+        {
+          "type": "ProgressBar",
+          "label": "Loading",
+          "state": "active",
+          "change": "focus_gained"
+        },
+        {
+          "type": "Button",
+          "label": "Voice search",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "More options",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "BottomNavigation",
+          "label": "Bottom navigation bar",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "keyboard_disappeared",
+          "description": "The soft keyboard was dismissed as the search was initiated."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The search suggestions list disappeared."
+        },
+        {
+          "type": "content_appeared",
+          "description": "A loading indicator, voice search button, options button, and bottom navigation bar appeared."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the selected search suggestion to the loading progress indicator in the center of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Loading indicator",
+          "observation": "TalkBack focus is on the loading indicator. It should announce its status to the user (e.g., 'Loading') so they know search results are loading.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "before_filename": "ss_2026-05-26T17-27-09-378.png",
+      "after_filename": "ss_2026-05-26T17-27-10-453.png",
+      "before_paragraph": "The YouTube app is loading search results for 'accessibility'. TalkBack focus is currently placed on the loading indicator in the center of the screen.",
+      "after_paragraph": "The search results have loaded, revealing a TikTok Shop overlay advertisement in front of the video list. TalkBack focus has automatically moved to the 'Back' button in the top-left corner of the header, bypassing both the newly loaded content and the prominent advertisement overlay.",
+      "before_screen": "YouTube search results screen in a loading state with a central loading spinner.",
+      "after_screen": "YouTube search results screen with a loaded list of videos, partially obscured by a TikTok Shop ad overlay, with TalkBack focus on the Back button.",
+      "talkback_focus_before": "Loading indicator in the center of the screen",
+      "talkback_focus_after": "Back button in the top-left corner",
+      "changed_elements": [
+        {
+          "type": "View",
+          "label": null,
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "Back",
+          "state": null,
+          "change": "focus_gained"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "TikTok Shop Double-Tier Kitchen Organizer ad overlay",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "TikTok: Videos, Music & LIVE sponsored ad",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "Accessibility video search result",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "loading_ended",
+          "description": "The search results and an ad overlay loaded, replacing the loading spinner."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the loading spinner to the Back button in the header."
+        },
+        {
+          "type": "overlay_appeared",
+          "description": "A TikTok Shop promotional overlay appeared on top of the search results."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Back button",
+          "observation": "Focus automatically reset to the top-left Back button upon content load. This may require the user to navigate through the entire header before reaching the main content or the prominent ad overlay.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "TikTok Shop overlay",
+          "observation": "A promotional overlay appeared on top of the main content but did not receive initial focus, which could lead to screen reader users interacting with background content without realizing an overlay is active.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "before_filename": "ss_2026-05-26T17-27-10-453.png",
+      "after_filename": "ss_2026-05-26T17-27-11-746.png",
+      "before_paragraph": "The screen displays search results for \"accessibility\" on YouTube. TalkBack focus is currently on the back button in the top-left corner. A large promotional overlay for \"TikTok Shop\" is visible in the center of the screen, partially obscuring the search results behind it.",
+      "after_paragraph": "There are no changes between the before and after screenshots. The TalkBack focus remains on the back button, and the screen content and layout are identical.",
+      "before_screen": "YouTube search results page for 'accessibility' with a TikTok Shop overlay advertisement.",
+      "after_screen": "YouTube search results page for 'accessibility' with a TikTok Shop overlay advertisement, identical to the previous screen.",
+      "talkback_focus_before": "Back button (arrow icon next to the search bar)",
+      "talkback_focus_after": "Back button (arrow icon next to the search bar)",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "TikTok Shop overlay advertisement",
+          "observation": "A large modal overlay is present on screen, but TalkBack focus remains on the background back button. This suggests the modal may not be properly trapping focus or announcing itself when it appears.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Close button ('X') on the TikTok Shop overlay",
+          "observation": "The close button in the top-right corner of the ad overlay appears visually small, potentially violating minimum touch target size guidelines.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "before_filename": "ss_2026-05-26T17-27-11-746.png",
+      "after_filename": "ss_2026-05-26T17-27-14-449.png",
+      "before_paragraph": "TalkBack focus is on the back button in the top-left corner of the screen. A TikTok Shop modal ad overlay for a kitchen organizer is displayed in the center, obscuring the search results underneath.",
+      "after_paragraph": "TalkBack focus has moved to the first video search result in the background, titled 'Accessibility'. The focus ring now surrounds the video thumbnail and card, which is located underneath the still-present TikTok Shop ad overlay. This indicates that TalkBack is navigating background content that is visually obscured by the modal dialog.",
+      "before_screen": "YouTube search results page with a prominent TikTok Shop ad overlay; TalkBack focus is on the top-left back button.",
+      "after_screen": "YouTube search results page with the same ad overlay; TalkBack focus has moved to the first video card in the background.",
+      "talkback_focus_before": "Back button",
+      "talkback_focus_after": "Accessibility video card",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Navigate up",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "layout",
+          "label": "Accessibility video card",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the back button at the top of the screen to the first video search result in the background, bypassing the active TikTok Shop ad overlay."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "TikTok Shop ad overlay",
+          "observation": "An active modal ad overlay is displayed on screen, but TalkBack is able to focus on background content ('Accessibility' video card) that is partially obscured behind it. The modal does not appear to trap accessibility focus.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "before_filename": "ss_2026-05-26T17-27-14-449.png",
+      "after_filename": "ss_2026-05-26T17-27-19-729.png",
+      "before_paragraph": "The screen displays search results on YouTube for the term 'accessibility'. A prominent modal advertisement for 'TikTok Shop' is shown in the foreground, displaying a double-tier kitchen organizer. No active TalkBack focus frame is visible.",
+      "after_paragraph": "A transient TalkBack adjustment overlay has appeared on top of the screen content, displaying 'Speech rate 100%' with directional adjustment arrows. No other focus changes are visually apparent.",
+      "before_screen": "YouTube search results with a central TikTok Shop promotional popup.",
+      "after_screen": "YouTube search results with a TalkBack 'Speech rate 100%' adjustment overlay appearing over the TikTok Shop popup.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "overlay",
+          "label": "Speech rate 100%",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_appeared",
+          "description": "The TalkBack system overlay for adjusting speech rate appeared on screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "TikTok Shop promotional popup",
+          "observation": "The promotional popup modal interrupts the search results screen and may require explicit dismissal.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "before_filename": "ss_2026-05-26T17-27-19-729.png",
+      "after_filename": "ss_2026-05-26T17-27-22-827.png",
+      "before_paragraph": "TalkBack focus is on the video container for the \"Accessibility\" video (37:33) at the bottom of the screen. A large TikTok Shop ad modal and a TalkBack \"Speech rate 100%\" settings overlay are displayed in the center, partially obscuring the search results.",
+      "after_paragraph": "The TikTok Shop ad and speech rate overlays have been dismissed, and the page has scrolled down to show different search results, including a \"Learn Accessibility - Full a11y Tutorial\" video. The green TalkBack focus ring is no longer visible on any of the displayed on-screen elements.",
+      "before_screen": "YouTube search results for 'accessibility' with a TikTok ad overlay and a TalkBack speech rate control visible.",
+      "after_screen": "YouTube search results scrolled down, displaying tutorial videos with no active focus indicator visible.",
+      "talkback_focus_before": "Video item 'Accessibility' (37:33)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "TikTok Shop ad overlay",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Speech rate 100% overlay",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "video_item",
+          "label": "Accessibility (37:33) video card",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "video_item",
+          "label": "Learn Accessibility - Full a11y Tutorial (1:33:06)",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_disappeared",
+          "description": "The TikTok Shop promotional overlay and the speech rate adjustment overlay were dismissed."
+        },
+        {
+          "type": "scroll_occurred",
+          "description": "The search results scrolled down, bringing new video listings into view."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved off the previous video card and is no longer visually indicated on the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search results page (AFTER)",
+          "observation": "No element has a visible TalkBack focus ring, which may make it difficult for users to know where their interactive focus currently resides.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Chapter thumbnails under 'Learn Accessibility' video",
+          "observation": "Small, unlabeled horizontal thumbnails representing video chapters are present without clear text descriptions or individual focus indicators.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "before_filename": "ss_2026-05-26T17-27-22-827.png",
+      "after_filename": "ss_2026-05-26T17-27-26-893.png",
+      "before_paragraph": "The screen shows a list of search results for 'accessibility' on YouTube. TalkBack focus is currently on the channel avatar icon (WDS) for the first video result, titled 'The Only Accessibility Video You Will Ever Need'.",
+      "after_paragraph": "The TalkBack focus has shifted to encompass the entire horizontal container of the first video item, which includes the avatar, video title, channel name, views count, and the three-dot menu button.",
+      "before_screen": "Search results page for 'accessibility' on YouTube, with focus on the first video's channel avatar.",
+      "after_screen": "Search results page for 'accessibility' on YouTube, with focus now on the entire first video result item container.",
+      "talkback_focus_before": "WDS channel avatar icon",
+      "talkback_focus_after": "First video item container (including title 'The Only Accessibility Video You Will Ever Need')",
+      "changed_elements": [
+        {
+          "type": "ImageView",
+          "label": "WDS channel avatar",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "The Only Accessibility Video You Will Ever Need, Web Dev Simplified, 116K views, 1 year ago",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the channel avatar icon to the entire video item container."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "First video item container",
+          "observation": "The entire row is focused as a single item, which contains multiple distinct actions (going to channel, playing video, opening options menu). This might make it difficult to target sub-elements individually with linear navigation.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "before_filename": "ss_2026-05-26T17-27-26-893.png",
+      "after_filename": "ss_2026-05-26T17-27-35-445.png",
+      "before_paragraph": "The user is on a YouTube search results page for the query 'accessibility'. TalkBack focus is on the first search result, which is the video titled 'The Only Accessibility Video You Will Ever Need' by Web Dev Simplified.",
+      "after_paragraph": "After selecting the video, the app navigates to the video player screen. A video starts playing, and a warning banner appears at the bottom stating 'Your controls are modified because an accessibility service is on.' There is no visible TalkBack focus indicator on the new screen, which could mean focus was lost or is not visually highlighted during this transition.",
+      "before_screen": "YouTube search results page for 'accessibility'",
+      "after_screen": "YouTube video player screen with an active video and an accessibility warning banner at the bottom",
+      "talkback_focus_before": "The Only Accessibility Video You Will Ever Need search result item",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Search results list",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Video player screen",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "banner",
+          "label": "Your controls are modified because an accessibility service is on.",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the search results page to the video details/player page."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the clicked search result item to an undetermined location on the newly loaded screen, as no focus ring is visible."
+        },
+        {
+          "type": "overlay_appeared",
+          "description": "An accessibility warning banner appeared at the bottom of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Video player screen",
+          "observation": "No active focus indicator is visible after screen transition, which may cause confusion as to where the user is currently positioned.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Accessibility warning banner",
+          "observation": "A critical warning banner appeared at the bottom of the screen. It is unclear if TalkBack automatically announced this or if focus was shifted to it.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 26,
+      "before_filename": "ss_2026-05-26T17-27-35-445.png",
+      "after_filename": "ss_2026-05-26T17-27-36-766.png",
+      "before_paragraph": "The BEFORE screen shows a YouTube-like interface playing a video, with an advertisement for Adobe Firefly currently active. Below the video are the title 'The Only Accessibility Video You Will Ever Need', channel info, and control buttons. At the bottom, there is a persistent accessibility notification banner stating 'Your controls are modified because an accessibility service is on' with 'SETTINGS' and 'Dismiss' buttons. No TalkBack focus ring is visible on any element.",
+      "after_paragraph": "The AFTER screen is identical to the BEFORE screen. No changes in visual elements, layout, or focus are observed, suggesting no action was taken or registered between the two screenshots.",
+      "before_screen": "YouTube video page with an active advertisement and a persistent accessibility warning banner at the bottom.",
+      "after_screen": "Identical YouTube video page with no changes.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Dismiss button",
+          "observation": "The accessibility banner at the bottom has 'Dismiss' and 'SETTINGS' buttons which are close to the bottom edge, but they have decent contrast. No element has active focus.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 27,
+      "before_filename": "ss_2026-05-26T17-27-36-766.png",
+      "after_filename": "ss_2026-05-26T17-27-37-642.png",
+      "before_paragraph": "The screen shows a YouTube video page with an advertisement playing at the top. An accessibility notification overlay is displayed at the bottom, stating 'Your controls are modified because an accessibility service is on,' with 'SETTINGS' and 'Dismiss' buttons. No TalkBack focus ring is visible on any element.",
+      "after_paragraph": "The AFTER screenshot is identical to the BEFORE screenshot. No changes in content, layout, or TalkBack focus are visible.",
+      "before_screen": "YouTube video page with an accessibility settings warning card at the bottom.",
+      "after_screen": "Identical YouTube video page with the same warning card.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Claude text at the bottom",
+          "observation": "The text 'Sponsored · Claude' at the very bottom of the screen has extremely low contrast against the white background.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        },
+        {
+          "element": "Floating action buttons on the right",
+          "observation": "Two floating overlay buttons (chat bubble and a wave icon) are present on the right edge, potentially overlapping underlying content and lacking clear labels in this view.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "1.3.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 28,
+      "before_filename": "ss_2026-05-26T17-27-37-642.png",
+      "after_filename": "ss_2026-05-26T17-27-40-726.png",
+      "before_paragraph": "The screen shows a YouTube video playing a sponsored ad, with video controls overlaying the video and an accessibility notification banner at the bottom. No TalkBack focus ring is visible in this frame.",
+      "after_paragraph": "The video playback has progressed to a different scene. TalkBack focus has moved to highlight the entire 'Adobe Firefly' sponsored banner card located directly below the video player.",
+      "before_screen": "YouTube video player playing an ad with an accessibility warning banner at the bottom.",
+      "after_screen": "YouTube video player with TalkBack focus now on the 'Adobe Firefly' sponsored card.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Adobe Firefly Sponsored card container",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Adobe Firefly Sponsored card",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the Adobe Firefly sponsored card container."
+        },
+        {
+          "type": "other",
+          "description": "Video playback frame changed from a drifting car to a close-up of a person."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Adobe Firefly Sponsored card container",
+          "observation": "The entire card is focused as a single element, which contains an icon, text, a options menu (three dots), and a 'Learn more' button. This may restrict access to individual elements within the card if they cannot be focused independently.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 29,
+      "before_filename": "ss_2026-05-26T17-27-40-726.png",
+      "after_filename": "start_2026-05-26T17-26-14-196.png",
+      "before_paragraph": "The YouTube app is active, displaying a video titled 'The Only Accessibility Video You Will Ever Need'. At the bottom of the screen, a system overlay message reads 'Your controls are modified because an accessibility service is on,' featuring 'SETTINGS' and 'Dismiss' buttons. No TalkBack focus indicator is visible in this frame.",
+      "after_paragraph": "The screen has navigated back to the Android home screen launcher. TalkBack focus is now active, landing on the unlabeled Maps shortcut icon in the bottom right of the dock, indicated by a green focus ring. This represents a complete change of context from the YouTube application to the system launcher.",
+      "before_screen": "YouTube video player page with an accessibility settings banner overlay at the bottom.",
+      "after_screen": "Android home screen launcher displaying app icons and a search bar.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Button, Maps, state: unselected",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "YouTube video and controls",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Accessibility settings banner",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Home screen launcher icons and widgets",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Maps",
+          "state": "unselected",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the YouTube application to the Android home screen launcher."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the Maps icon in the home screen dock."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Dock icons (Phone, Messages, Chrome, Maps)",
+          "observation": "Icons in the bottom dock row do not have visible text labels underneath them, unlike the main grid icons above.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "1.3.1"
+          ]
+        },
+        {
+          "element": "Date text 'Tue, May 26'",
+          "observation": "White text on a light blue/white cloud background may have insufficient contrast.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    }
+  ]
+}

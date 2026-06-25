@@ -1,0 +1,1589 @@
+{
+  "task_id": "MP2",
+  "app": "Google Maps",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 33,
+  "pairs_analyzed": 32,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T17-23-42-408.png",
+      "after_filename": "ss_2026-05-26T17-23-49-290.png",
+      "before_paragraph": "The home screen is active, with the TalkBack focus ring highlighting the Google Maps app icon in the bottom right corner.",
+      "after_paragraph": "After selecting the Maps icon, the Google Maps application opens, displaying a map and details for the Space Needle. The TalkBack focus ring is now on the 'Directions' button in the venue's details sheet at the bottom of the screen.",
+      "before_screen": "Android home screen with app shortcuts and a Google Search bar.",
+      "after_screen": "Google Maps application showing the Space Needle location card with the 'Directions' button focused.",
+      "talkback_focus_before": "Maps app icon",
+      "talkback_focus_after": "Directions button",
+      "changed_elements": [
+        {
+          "type": "icon",
+          "label": "Maps",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Directions",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Opened the Google Maps app from the home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the Maps app shortcut on the home screen to the 'Directions' button in the Maps interface."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons on the right side",
+          "observation": "There are two overlapping floating buttons (a purple speech bubble icon and a black wave/letter icon) on the right edge. Their purpose and labels should be verified to ensure they are accessible to screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "2.5.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T17-23-49-290.png",
+      "after_filename": "ss_2026-05-26T17-23-57-841.png",
+      "before_paragraph": "The BEFORE screen shows the detail panel for the Space Needle on Google Maps. TalkBack focus is on the 'Directions' button in the lower-left portion of the screen.",
+      "after_paragraph": "After tapping 'Directions', the screen transitions to the route planning interface. TalkBack focus has moved to the 'Back' arrow button in the top left corner of the screen, rather than placing focus directly into the 'Choose start location' text input field.",
+      "before_screen": "Google Maps location details page for Space Needle with Directions button focused",
+      "after_screen": "Google Maps route planning page with Back button focused",
+      "talkback_focus_before": "Directions button",
+      "talkback_focus_after": "Back button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Directions",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Choose start location",
+          "state": "unfocused",
+          "change": "appeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Space Needle",
+          "state": "unfocused",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the location details screen to the directions entry screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Directions' button on the previous screen to the 'Back' button on the new screen."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Route planning inputs, travel mode selectors, and recent history items appeared."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The map view and Space Needle detail panel disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Back button",
+          "observation": "Focus is placed on the Back button at the top left of the screen upon navigation, rather than immediately focusing the first empty input field ('Choose start location'), which may require extra swipes for a screen reader user to begin typing.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T17-23-57-841.png",
+      "after_filename": "ss_2026-05-26T17-24-01-580.png",
+      "before_paragraph": "The screen shows a Google Maps route selection interface. TalkBack focus is currently on the back button in the top-left corner, highlighted with a green border.",
+      "after_paragraph": "The TalkBack focus has moved from the back button to the 'Choose start location' edit text field, which is now highlighted with a green border.",
+      "before_screen": "Google Maps route selection screen with focus on the back button",
+      "after_screen": "Google Maps route selection screen with focus on the 'Choose start location' text field",
+      "talkback_focus_before": "Back button",
+      "talkback_focus_after": "Choose start location text box",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "edit_text",
+          "label": "Choose start location",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Back button to the 'Choose start location' input field."
+        }
+      ],
+      "accessibility_signals": []
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T17-24-01-580.png",
+      "after_filename": "ss_2026-05-26T17-24-03-907.png",
+      "before_paragraph": "In the BEFORE screenshot, TalkBack focus is on the 'Choose start location' text input field near the top of the screen, which is highlighted with a green outline.",
+      "after_paragraph": "In the AFTER screenshot, focus has moved down to the 'Home' location shortcut, which displays the name 'Home' and the address '22344 Northeast 6th Court, Sammamish, WA'. This row is now highlighted with the green focus indicator.",
+      "before_screen": "Google Maps directions input screen with focus on the 'Choose start location' field.",
+      "after_screen": "Google Maps directions input screen with focus on the 'Home' shortcut item.",
+      "talkback_focus_before": "Choose start location text input",
+      "talkback_focus_after": "Home shortcut list item",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Choose start location",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "LinearLayout",
+          "label": "Home, 22344 Northeast 6th Court, Sammamish, WA",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the start location input field down to the Home shortcut item."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Home shortcut list item",
+          "observation": "The entire 'Home' row (icon, title, and address) is focused as a single element, which is correct for accessible list navigation.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T17-24-03-907.png",
+      "after_filename": "ss_2026-05-26T17-24-06-015.png",
+      "before_paragraph": "The user is on the Google Maps directions entry screen with 'Space Needle' as the destination. TalkBack focus is on the 'Home' location shortcut from the recent history list, which contains the address '22344 Northeast 6th Court, Sammamish, WA'.",
+      "after_paragraph": "After selecting 'Home', the route details screen loads. The start location input is now populated with 'Home'. TalkBack focus has moved to the root container of the entire screen, as indicated by the green outline around the entire frame, rather than focusing on a specific new element like the route overview or the 'Preview' button.",
+      "before_screen": "Google Maps directions entry screen with destination 'Space Needle' and history list, focusing on the 'Home' shortcut.",
+      "after_screen": "Google Maps route calculation screen showing a map, a 36-minute travel time, and buttons for 'Preview', 'Steps', and 'Pin', with the entire screen root view focused.",
+      "talkback_focus_before": "Home, 22344 Northeast 6th Court, Sammamish, WA (list item)",
+      "talkback_focus_after": "Root screen container (view group)",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Home, 22344 Northeast 6th Court, Sammamish, WA",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "edit_text",
+          "label": "Home",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "view",
+          "label": "Map and Route Details",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "view_group",
+          "label": "Entire Screen Container",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the tapped 'Home' list item to the root screen container of the loaded route screen."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The map showing the route from Home to Space Needle and the route options/details card appeared."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The recent history list and suggestions disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Entire Screen Container",
+          "observation": "Focus lands on the entire screen container (root view) after the content loads, forcing the user to navigate manually into the route details instead of highlighting the primary result or 'Preview' button.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T17-24-06-015.png",
+      "after_filename": "ss_2026-05-26T17-24-07-061.png",
+      "before_paragraph": "The BEFORE screenshot shows a Google Maps route planning screen from 'Home' to 'Space Needle', indicating a 36-minute drive. An informational banner at the top suggests saving fuel based on engine type. There is a green highlight around the entire screen border, which may indicate the entire view or container has focus.",
+      "after_paragraph": "The AFTER screenshot is identical to the BEFORE screenshot. No visual changes, state changes, or focus movements are observed.",
+      "before_screen": "Google Maps route directions screen with a fuel savings banner and map view.",
+      "after_screen": "Google Maps route directions screen, identical to the before screen.",
+      "talkback_focus_before": "null",
+      "talkback_focus_after": "null",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Banner close button (X)",
+          "observation": "The close button in the top right of the banner has an 'X' icon but no visible text label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Choose engine type / Learn more",
+          "observation": "These text links inside the banner may have small touch targets if they are close to other text.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T17-24-07-061.png",
+      "after_filename": "ss_2026-05-26T17-24-07-968.png",
+      "before_paragraph": "The screen shows Google Maps directions from 'Home' to 'Space Needle'. The map is zoomed in closely on the destination near the water, and the bottom panel shows route details of '36 min (21 mi)'. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The map has zoomed out to show the complete route from the east side of Lake Washington to Seattle. Two route options are now visible on the map, along with a small street view preview thumbnail in the bottom-left corner. No TalkBack focus indicator is visible.",
+      "before_screen": "Google Maps directions screen zoomed in on the destination.",
+      "after_screen": "Google Maps directions screen zoomed out showing the entire route options.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "ImageView",
+          "label": "Street view preview",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "View",
+          "label": "Map Route: 36 min $3.95",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "View",
+          "label": "Map Route: 41 min No tolls",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "content_appeared",
+          "description": "The map zoomed out to reveal the full route, alternative route options, and a street view thumbnail."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Map route labels ('36 min $3.95', '41 min No tolls')",
+          "observation": "These labels appear as part of the map canvas. It is unclear if they are focusable or readable by screen readers as individual elements.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.1.1"
+          ]
+        },
+        {
+          "element": "Street view thumbnail",
+          "observation": "A small image thumbnail has appeared on the map; it may lack an accessible label indicating its purpose.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T17-24-07-968.png",
+      "after_filename": "ss_2026-05-26T17-24-14-363.png",
+      "before_paragraph": "The screen shows Google Maps with route options from Home to Space Needle, showing a 36-minute driving route. There is no visible TalkBack focus indicator on the screen.",
+      "after_paragraph": "TalkBack focus moves to the transit option tab, which displays a train icon and '1 hr 31'. A green focus ring now surrounds this tab. Additionally, the map area in the background has loaded more details, rendering blue water bodies and local streets that were previously blank.",
+      "before_screen": "Google Maps route selection screen with driving route active and map partially loaded.",
+      "after_screen": "Google Maps route selection screen with the transit tab focused by TalkBack and more detailed map tiles loaded.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Transit tab button with label '1 hr 31'",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "1 hr 31",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the transit route option tab ('1 hr 31')."
+        },
+        {
+          "type": "other",
+          "description": "Map background tiles completed loading, displaying blue water and street grids."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Transit tab button ('1 hr 31')",
+          "observation": "The tab has a train icon and '1 hr 31' text. It should have a descriptive screen reader label indicating the mode of transport (e.g., 'Transit, 1 hour 31 minutes').",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T17-24-14-363.png",
+      "after_filename": "ss_2026-05-26T17-24-16-991.png",
+      "before_paragraph": "The screen shows driving directions on a map in Google Maps. TalkBack focus is on the transit option tab labeled '1 hr 31', which is outlined with a green selection box, though the driving route is currently displayed on the map.",
+      "after_paragraph": "After the user selects the transit option, the map and route info card disappear and are replaced by a loading state showing 'Finding best route...'. TalkBack focus remains on the '1 hr 31' transit tab. Three new dropdown filter buttons ('Depart at 10:24 AM', 'All modes', and 'Best route') appear directly below the mode of transport options.",
+      "before_screen": "Google Maps route selection screen showing driving directions with TalkBack focus on the transit option tab.",
+      "after_screen": "Google Maps transit route screen showing a loading state with TalkBack focus still on the transit option tab.",
+      "talkback_focus_before": "Transit option button labeled '1 hr 31'",
+      "talkback_focus_after": "Transit option button labeled '1 hr 31'",
+      "changed_elements": [
+        {
+          "type": "banner",
+          "label": "New! Save fuel with route suggestions based on your engine type",
+          "state": "disappeared",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Depart at 10:24 AM",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "All modes",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Best route",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text",
+          "label": "Finding best route...",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "map",
+          "label": "Map view",
+          "state": "disappeared",
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Route details card",
+          "state": "disappeared",
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "loading_started",
+          "description": "The map view is replaced by a loading state with the text 'Finding best route...'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Three route filter dropdowns ('Depart at...', 'All modes', 'Best route') appeared."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The engine type fuel savings banner and the map/route details disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Finding best route...",
+          "observation": "A major layout transition occurred to a loading state, but TalkBack focus remained on the transit tab. A blind user may not be immediately aware that a loading process has started or that new filter criteria have appeared.",
+          "potentially_relevant_wcag": [
+            "4.1.3",
+            "3.2.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T17-24-16-991.png",
+      "after_filename": "ss_2026-05-26T17-24-19-309.png",
+      "before_paragraph": "The Google Maps directions screen is currently loading public transit routes from 'Home' to 'Space Needle'. TalkBack focus is on the transit tab, which is temporarily labeled '1 hr 31' while the main content area displays a loading message 'Finding best route...'.",
+      "after_paragraph": "The transit routes have finished loading, replacing the loading message with a detailed list of route options like 'LEAST WALKING' and 'OTHER OPTIONS'. TalkBack focus remains on the transit tab, but its text has dynamically updated to '1 hr 2' to reflect the fastest available route.",
+      "before_screen": "Google Maps directions screen loading transit routes with focus on the transit mode tab.",
+      "after_screen": "Google Maps directions screen showing loaded transit routes with focus on the updated transit mode tab.",
+      "talkback_focus_before": "Transit mode tab (labeled '1 hr 31')",
+      "talkback_focus_after": "Transit mode tab (labeled '1 hr 2')",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "1 hr 31",
+          "state": "selected",
+          "change": "state_changed"
+        },
+        {
+          "type": "text",
+          "label": "Finding best route...",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Transit route results list",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "loading_ended",
+          "description": "The loading message 'Finding best route...' disappeared and the list of route options appeared."
+        },
+        {
+          "type": "state_changed",
+          "description": "The text label of the currently focused transit tab changed from '1 hr 31' to '1 hr 2' after the routes loaded."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Transit mode tab",
+          "observation": "The text label of the focused element changed from '1 hr 31' to '1 hr 2' while holding focus. This dynamic change should be announced to the user.",
+          "potentially_relevant_wcag": [
+            "4.1.2",
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Transit route results list",
+          "observation": "New content loaded dynamically below the focused tab. Screen reader users may require an active announcement (live region) that the search results have successfully loaded.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T17-24-19-309.png",
+      "after_filename": "ss_2026-05-26T17-24-22-806.png",
+      "before_paragraph": "The focus is currently on the public transit tab in the horizontal scroll list of travel modes, displaying '1 hr 2'.",
+      "after_paragraph": "The focus has moved down to the first route card under the 'LEAST WALKING' section, which details a 1 hr 2 min journey leaving by 10:27 AM.",
+      "before_screen": "Google Maps directions screen showing transit options with the transit tab selected and focused.",
+      "after_screen": "Google Maps directions screen with the first route option under 'Least Walking' now focused.",
+      "talkback_focus_before": "Transit tab '1 hr 2'",
+      "talkback_focus_after": "Route option card 'LEAST WALKING... 1 hr 2 min'",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Transit mode, 1 hour 2 minutes",
+          "state": "selected",
+          "change": "focus_lost"
+        },
+        {
+          "type": "card",
+          "label": "LEAST WALKING, 1 hr 2 min, Leave by 10:27 AM...",
+          "state": "focusable",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the transit mode tab to the first route option card in the list below."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Route option card",
+          "observation": "The route option card contains multiple nested details (icons, bus numbers, times). When focused as a single element, TalkBack needs to read this information in a coherent order.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T17-24-22-806.png",
+      "after_filename": "ss_2026-05-26T17-24-34-114.png",
+      "before_paragraph": "The Google Maps directions screen displays transit route options from Home to the Space Needle. TalkBack focus is currently on the first transit route card under 'LEAST WALKING', which takes 1 hour and 2 minutes.",
+      "after_paragraph": "TalkBack focus has moved up to the '8 hr' walking tab in the horizontal transport mode selector near the top of the screen. The screen content remains unchanged, indicating the tab has been focused but not yet activated.",
+      "before_screen": "Google Maps route options page with transit routes listed and the first route card focused.",
+      "after_screen": "Google Maps route options page with the '8 hr' walking tab focused in the mode selector.",
+      "talkback_focus_before": "Route option card for the 'LEAST WALKING' route (1 hr 2 min)",
+      "talkback_focus_after": "Walking mode button with label '8 hr'",
+      "changed_elements": [
+        {
+          "type": "card",
+          "label": "LEAST WALKING, 1 hr 2 min, Leave by 10:27 AM",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Walking, 8 hours",
+          "state": "not selected",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the first transit route card to the walking mode button ('8 hr') in the transport mode selector."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Walking mode button ('8 hr')",
+          "observation": "The button contains a walking icon and '8 hr' text. It should have a descriptive label indicating the mode (Walking) and duration (8 hours).",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T17-24-34-114.png",
+      "after_filename": "ss_2026-05-26T17-24-35-621.png",
+      "before_paragraph": "The screen shows a list of public transit route options in Google Maps. TalkBack focus is on the 'Walking (8 hr)' mode of transport tab button.",
+      "after_paragraph": "The user has activated the 'Walking' tab. The transit list is replaced by a map view displaying the walking route, and a bottom sheet appears at the bottom with route details ('7 hr 37 min (20 mi)') and buttons for 'Preview' and 'Steps'. TalkBack focus remains on the 'Walking (8 hr)' tab button.",
+      "before_screen": "Google Maps transit directions search results list",
+      "after_screen": "Google Maps walking route map view and bottom details sheet",
+      "talkback_focus_before": "Walking (8 hr) tab button",
+      "talkback_focus_after": "Walking (8 hr) tab button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Transit (1 hr 2)",
+          "state": "unselected",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Walking (8 hr)",
+          "state": "selected",
+          "change": "state_changed"
+        },
+        {
+          "type": "list",
+          "label": "Transit routes list",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Map view",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Walking route bottom sheet",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The selected travel mode changed from Transit to Walking."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The transit route list disappeared."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The map view showing the walking route and the bottom sheet with route details appeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Walking (8 hr) tab button",
+          "observation": "Focus remained on the tab after activation, which is standard, but the dynamic content change below may require a screen reader announcement to inform the user of the new layout.",
+          "potentially_relevant_wcag": [
+            "4.1.2",
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T17-24-35-621.png",
+      "after_filename": "ss_2026-05-26T17-24-37-569.png",
+      "before_paragraph": "The screen shows walking directions on Google Maps. TalkBack focus is currently on the walking transit mode option, highlighted with a green border and labeled '8 hr'.",
+      "after_paragraph": "A small Street View thumbnail button has appeared in the bottom-left corner of the map. The TalkBack focus remains unchanged on the '8 hr' walking transit mode option, meaning the appearance of the new element did not disrupt or shift the active focus.",
+      "before_screen": "Google Maps walking directions overview with the walking tab focused.",
+      "after_screen": "Google Maps walking directions overview with a newly appeared Street View thumbnail button; walking tab remains focused.",
+      "talkback_focus_before": "Walking transit mode button ('8 hr')",
+      "talkback_focus_after": "Walking transit mode button ('8 hr')",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Street View preview",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "content_appeared",
+          "description": "A Street View thumbnail button appeared in the bottom-left corner of the map area."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Street View thumbnail button",
+          "observation": "A new interactive thumbnail button appeared on screen. It needs to be verified if this icon-heavy button is properly labeled for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T17-24-37-569.png",
+      "after_filename": "ss_2026-05-26T17-24-40-734.png",
+      "before_paragraph": "The user is viewing directions on Google Maps with the walking route selected. TalkBack focus is currently on the 'Walking' travel mode tab, which displays a travel time of '8 hr' and is highlighted with a blue background indicating it is the active selection.",
+      "after_paragraph": "TalkBack focus has moved to the next element to the right, which is the 'Ride-sharing' travel mode tab displaying '36 min'. The map and the selected route ('Walking') have not changed, indicating that the user has navigated to the ride-sharing tab but has not yet activated it.",
+      "before_screen": "Google Maps directions screen showing a walking route on the map, with the walking travel mode tab focused.",
+      "after_screen": "Google Maps directions screen showing the same walking route, with TalkBack focus moved to the ride-sharing travel mode tab.",
+      "talkback_focus_before": "Walking travel mode button, labeled '8 hr'",
+      "talkback_focus_after": "Ride-sharing travel mode button, labeled '36 min'",
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Walking, 8 hr",
+          "state": "selected",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Button",
+          "label": "Ride-sharing, 36 min",
+          "state": "not selected",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Walking' travel mode tab to the adjacent 'Ride-sharing' travel mode tab."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Ride-sharing travel mode tab",
+          "observation": "The focused tab is visually distinct from the selected tab, allowing the user to distinguish between keyboard focus and selection state.",
+          "potentially_relevant_wcag": [
+            "2.4.7",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T17-24-40-734.png",
+      "after_filename": "ss_2026-05-26T17-24-41-919.png",
+      "before_paragraph": "The screen shows Google Maps directions with a route mapped out. TalkBack focus is on the ride services tab, which displays a hailing icon and '36 min', though the map and bottom sheet currently show walking directions taking 7 hours and 37 minutes.",
+      "after_paragraph": "The ride services tab is now selected, changing its label to '35 min' and updating the map and bottom sheet to show ride services. The bottom sheet now displays Lyft options ('Black', 'XL', 'Lyft') and an 'Open app' button. TalkBack focus remains on the ride services tab, which is now in a selected state.",
+      "before_screen": "Google Maps directions screen showing walking route with ride services tab focused.",
+      "after_screen": "Google Maps directions screen showing Lyft ride services options with ride services tab selected.",
+      "talkback_focus_before": "Ride services tab displaying '36 min'",
+      "talkback_focus_after": "Ride services tab displaying '35 min'",
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Ride services, 36 min",
+          "state": "not selected",
+          "change": "state_changed"
+        },
+        {
+          "type": "Layout",
+          "label": "Route preview bottom sheet (7 hr 37 min)",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Layout",
+          "label": "Lyft rides and prices bottom sheet",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Open app",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The ride services tab changed from unselected ('36 min') to selected ('35 min')."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The walking route preview details and action buttons ('Preview', 'Steps') disappeared from the bottom sheet."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Lyft ride-sharing options ('Black', 'XL', 'Lyft') and an 'Open app' action button appeared at the bottom."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Ride services tab ('35 min')",
+          "observation": "The tab label relies on an icon and '35 min' text. It needs to have a clear content description indicating it is for ride-hailing services.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Lyft rides section",
+          "observation": "Several custom icons and ride options ('Black', 'XL') are presented in a horizontal scrollable list. TalkBack must clearly announce the prices and wait times associated with each ride type.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T17-24-41-919.png",
+      "after_filename": "ss_2026-05-26T17-24-49-359.png",
+      "before_paragraph": "The Google Maps app is showing route options from 'Home' to 'Space Needle'. TalkBack focus is on the ride services transit tab, which is selected and displays a hailing icon and '35 min'.",
+      "after_paragraph": "The screen has transitioned to the Android home screen, suggesting the user pressed the Home button or closed the app. TalkBack focus has moved to the date widget showing 'Tue, May 26' near the top of the screen.",
+      "before_screen": "Google Maps directions route selection screen with ride services tab selected.",
+      "after_screen": "Android home screen with app icons and a date widget at the top.",
+      "talkback_focus_before": "Ride services tab displaying '35 min'",
+      "talkback_focus_after": "Date widget displaying 'Tue, May 26'",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "35 min",
+          "state": "selected",
+          "change": "focus_lost"
+        },
+        {
+          "type": "widget",
+          "label": "Tue, May 26",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from Google Maps back to the Android home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the ride services tab in Google Maps to the date widget on the home screen."
+        }
+      ],
+      "accessibility_signals": []
+    },
+    {
+      "step": 18,
+      "before_filename": "ss_2026-05-26T17-24-49-359.png",
+      "after_filename": "ss_2026-05-26T17-24-53-740.png",
+      "before_paragraph": "The TalkBack focus is on the date widget displaying 'Tue, May 26' near the top of the home screen.",
+      "after_paragraph": "The TalkBack focus has shifted to the Google Maps icon located in the bottom right corner of the favorite apps dock.",
+      "before_screen": "Android home screen with focus on the date widget.",
+      "after_screen": "Android home screen with focus on the Google Maps app icon.",
+      "talkback_focus_before": "Tue, May 26",
+      "talkback_focus_after": "Google Maps icon",
+      "changed_elements": [
+        {
+          "type": "widget",
+          "label": "Tue, May 26",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Google Maps",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the date widget at the top of the screen to the Maps icon in the bottom dock."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Tue, May 26 widget",
+          "observation": "The white text of 'Tue, May 26' against the light sky background has potentially low contrast.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "before_filename": "ss_2026-05-26T17-24-53-740.png",
+      "after_filename": "ss_2026-05-26T17-24-59-667.png",
+      "before_paragraph": "On the home screen, the TalkBack focus is currently on the Google Maps app icon located in the bottom-right corner of the dock.",
+      "after_paragraph": "After tapping the Maps icon, the Google Maps app opens. The TalkBack focus shifts to the entire screen container of the newly opened app, rather than landing on a specific interactive element like the search bar or the map.",
+      "before_screen": "Android home screen with app shortcuts and a Google search widget.",
+      "after_screen": "Google Maps app home screen featuring a search bar, a map area, and bottom navigation.",
+      "talkback_focus_before": "Maps app icon",
+      "talkback_focus_after": "Google Maps root container (full screen boundary)",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Maps",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Google Maps screen",
+          "state": "focused",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Opened the Google Maps app from the home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the Maps app icon on the home screen to the entire root container of the newly opened Google Maps screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Google Maps root container",
+          "observation": "Initial TalkBack focus lands on the entire screen container instead of a specific interactive element like the 'Search here' edit text, which might require extra swipes for the user to start interacting.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "before_filename": "ss_2026-05-26T17-24-59-667.png",
+      "after_filename": "ss_2026-05-26T17-25-05-922.png",
+      "before_paragraph": "The Google Maps app is in a loading state, with a blank tan map area and placeholder skeleton bars in the bottom sheet. TalkBack focus appears to be on the outer screen container, as indicated by the green border outlining the entire screen.",
+      "after_paragraph": "The map content has loaded, displaying the Seattle Center area and the Space Needle. Suggestion chips for 'Restaurants', 'Coffee', 'Hotels', and 'Gas' have appeared below the search bar, and the bottom sheet now displays actual content starting with 'Latest in the area'. TalkBack focus has moved from the outer container to the 'Search here' input field.",
+      "before_screen": "Google Maps main view in a loading state with blank map and skeleton placeholders.",
+      "after_screen": "Google Maps main view fully loaded with map details, suggestion chips, and populated bottom sheet.",
+      "talkback_focus_before": "Screen container (green outline around entire screen)",
+      "talkback_focus_after": "Search bar containing 'Search here'",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Search here",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "button",
+          "label": "Restaurants",
+          "state": "active",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Coffee",
+          "state": "active",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Hotels",
+          "state": "active",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Gas",
+          "state": "active",
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Map area showing Seattle",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text",
+          "label": "Latest in the area",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "loading_ended",
+          "description": "The map and bottom sheet content finished loading."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the outer screen container to the 'Search here' edit text field."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Suggestion chips and populated local guide content in the bottom sheet appeared on the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search here",
+          "observation": "Focus automatically shifted to the search bar once the page content finished loading, which may be helpful or unexpected depending on whether the user was attempting to navigate elsewhere while loading.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "before_filename": "ss_2026-05-26T17-25-05-922.png",
+      "after_filename": "ss_2026-05-26T17-25-07-965.png",
+      "before_paragraph": "The screen shows a Google Maps view of Seattle near the Space Needle. TalkBack focus is on the 'Search here' search bar at the top of the screen.",
+      "after_paragraph": "After activating the search bar, the screen transitions to the search query interface. An on-screen keyboard appears at the bottom of the screen, and a list of recent searches is displayed in the middle. TalkBack focus is on the active 'Search here' text input field at the top.",
+      "before_screen": "Google Maps map view with search bar and explore tab active.",
+      "after_screen": "Google Maps search entry screen with active text input, shortcuts, recent history, and open keyboard.",
+      "talkback_focus_before": "Search bar containing 'Search here'",
+      "talkback_focus_after": "Text input field containing 'Search here'",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Search here",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Home, 22344 NE...",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Work, Set location",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "More",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "list",
+          "label": "Recent searches",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "keyboard",
+          "label": "Virtual keyboard",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Map and explore details",
+          "state": "hidden",
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the map screen to the search input screen."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "The system virtual keyboard appeared at the bottom of the screen."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Recent searches list and search shortcut buttons (Home, Work, More) became visible."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The map, category filter chips (Restaurants, Coffee, Hotels), and bottom navigation bar disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Back button",
+          "observation": "An icon-only back arrow is present next to the search field; must have an appropriate text label like 'Back' for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "More button",
+          "observation": "A button with a three-dot icon labeled 'More' might be vague without contextual description.",
+          "potentially_relevant_wcag": [
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "before_filename": "ss_2026-05-26T17-25-07-965.png",
+      "after_filename": "ss_2026-05-26T17-25-09-252.png",
+      "before_paragraph": "The screen shows a search interface with a list of recent searches. The TalkBack focus is currently on the \"Search here\" edit text field at the top of the screen, outlined in green, with the virtual keyboard visible below.",
+      "after_paragraph": "There are no visual changes between the BEFORE and AFTER screenshots. The focus remains on the \"Search here\" edit text field, and all on-screen elements and keyboard states are identical.",
+      "before_screen": "Search screen with recent locations list and virtual keyboard active.",
+      "after_screen": "Search screen with recent locations list and virtual keyboard active, identical to the previous screen.",
+      "talkback_focus_before": "Search here edit text",
+      "talkback_focus_after": "Search here edit text",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Purple chat icon floating button",
+          "observation": "Appears to be an icon-only button that may need a clear content description.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Grey wave/map icon floating button",
+          "observation": "Appears to be an icon-only button that may lack an intuitive visual label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "before_filename": "ss_2026-05-26T17-25-09-252.png",
+      "after_filename": "ss_2026-05-26T17-25-12-962.png",
+      "before_paragraph": "The TalkBack focus is on the \"Search here\" input field at the top of the screen. A virtual keyboard is visible on the bottom half of the screen, underneath a list of recent searches.",
+      "after_paragraph": "The focus has moved from the \"Search here\" input field down to the first item in the recent searches list, \"Space Needle / 400 Broad St, Seattle, WA 98109\".",
+      "before_screen": "Google Maps search screen with the keyboard active and focus on the search input field.",
+      "after_screen": "Google Maps search screen with focus on the first search history item, Space Needle.",
+      "talkback_focus_before": "Search here",
+      "talkback_focus_after": "Space Needle, 400 Broad St, Seattle, WA 98109",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Search here",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "layout",
+          "label": "Space Needle, 400 Broad St, Seattle, WA 98109",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the search input field to the first item in the search history list."
+        }
+      ],
+      "accessibility_signals": []
+    },
+    {
+      "step": 24,
+      "before_filename": "ss_2026-05-26T17-25-12-962.png",
+      "after_filename": "ss_2026-05-26T17-25-17-573.png",
+      "before_paragraph": "The screen shows a Google Maps search interface with search history. The virtual keyboard is visible at the bottom. TalkBack focus is currently on the first item in the 'Recent' list, which is 'Space Needle, 400 Broad St, Seattle, WA 98109'.",
+      "after_paragraph": "After selecting the 'Space Needle' item, the map view displays the location of the Space Needle along with a details panel at the bottom. The keyboard has disappeared. TalkBack focus has moved to the outer container of the entire screen, rather than focusing on a specific element like the title of the new location or the back button.",
+      "before_screen": "Google Maps search screen with 'Space Needle' selected in the recent search history.",
+      "after_screen": "Google Maps location details screen for Space Needle, displaying a map and details sheet.",
+      "talkback_focus_before": "Space Needle, 400 Broad St, Seattle, WA 98109 (Recent search item)",
+      "talkback_focus_after": "Root screen container (outer green border)",
+      "changed_elements": [
+        {
+          "type": "ListItem",
+          "label": "Space Needle, 400 Broad St, Seattle, WA 98109",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Keyboard",
+          "label": "Virtual Keyboard",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "Map view and Location Details sheet",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "Root screen container",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from search history list to map and location details screen."
+        },
+        {
+          "type": "keyboard_disappeared",
+          "description": "The on-screen keyboard was dismissed upon navigating to the map."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the selected list item to the root container of the new screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Root screen container",
+          "observation": "Focus is placed on the entire screen container after navigation, instead of a more specific logical start point like the back button or the main 'Space Needle' header, which may disrupt screen reader navigation flow.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "before_filename": "ss_2026-05-26T17-25-17-573.png",
+      "after_filename": "ss_2026-05-26T17-25-18-473.png",
+      "before_paragraph": "The screen shows the Google Maps details page for the 'Space Needle'. The top portion of the screen displays a map with the Space Needle pin and nearby landmarks, while the bottom portion contains a card with information about the location, including action buttons like 'Directions', 'Tickets', and 'Call', followed by photos. No TalkBack focus ring is visible on any element.",
+      "after_paragraph": "The AFTER screenshot is identical to the BEFORE screenshot. No changes in content, layout, or focus are visible.",
+      "before_screen": "Google Maps details page for the Space Needle",
+      "after_screen": "Google Maps details page for the Space Needle (identical to BEFORE)",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Transit and point-of-interest icons on map",
+          "observation": "Several small icons (such as bus stop icons and parking symbols) are displayed on the map and may have touch targets smaller than 24dp.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 26,
+      "before_filename": "ss_2026-05-26T17-25-18-473.png",
+      "after_filename": "ss_2026-05-26T17-25-20-093.png",
+      "before_paragraph": "The BEFORE screen displays Google Maps details for the Space Needle in Seattle. No active TalkBack focus ring is visible on any of the interactive elements, such as the action buttons or search bar.",
+      "after_paragraph": "In the AFTER screen, TalkBack focus has moved to the 'Directions' button, which is now highlighted with a green focus ring.",
+      "before_screen": "Google Maps view of the Space Needle with details card visible at the bottom.",
+      "after_screen": "Google Maps view of the Space Needle with the 'Directions' button highlighted by a green TalkBack focus ring.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Directions button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Directions",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Directions' button."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Directions button",
+          "observation": "The 'Directions' button successfully receives TalkBack accessibility focus with a visible green focus ring.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 27,
+      "before_filename": "ss_2026-05-26T17-25-20-093.png",
+      "after_filename": "ss_2026-05-26T17-25-24-428.png",
+      "before_paragraph": "The screen shows a Google Maps search result for the 'Space Needle' with a detailed information card at the bottom. TalkBack focus is currently on the blue 'Directions' button.",
+      "after_paragraph": "After activating the 'Directions' button, the screen transitions to the route planning view. The map and place details are replaced by 'Choose start location' and 'Space Needle' input fields, travel mode buttons, and a list of recent locations. TalkBack focus has shifted to outline the entire screen area rather than landing on a specific input field or control.",
+      "before_screen": "Place details page for Space Needle on Google Maps with the Directions button focused.",
+      "after_screen": "Route planning page with start and destination input fields and transport options.",
+      "talkback_focus_before": "Directions button",
+      "talkback_focus_after": "Entire screen container (root view)",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Directions",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Choose start location",
+          "state": "not focused",
+          "change": "appeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Space Needle",
+          "state": "not focused",
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Directions container",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from place details to directions planning screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Directions' button to the overall screen container instead of the primary 'Choose start location' input field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Entire screen container (root view)",
+          "observation": "Focus is placed on the entire screen/window container upon navigation, requiring the user to swipe to find the start location input field.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 28,
+      "before_filename": "ss_2026-05-26T17-25-24-428.png",
+      "after_filename": "ss_2026-05-26T17-25-27-331.png",
+      "before_paragraph": "The screen shows a Google Maps directions planning interface. It has input fields for a start location and destination ('Space Needle'), followed by travel mode icons and a list of suggested/recent addresses starting with 'Home'. No TalkBack focus ring is visible.",
+      "after_paragraph": "The TalkBack focus has moved to the 'Home' address suggestion row, highlighting it with a green outline. This element contains the label 'Home' and its corresponding address.",
+      "before_screen": "Google Maps directions input screen with destination set to Space Needle and a list of recent locations below.",
+      "after_screen": "Google Maps directions screen with TalkBack focus highlighted on the 'Home' location suggestion.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Home, 22344 Northeast 6th Court, Sammamish, WA",
+      "changed_elements": [
+        {
+          "type": "list_item",
+          "label": "Home, 22344 Northeast 6th Court, Sammamish, WA",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Home' address suggestion list item."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Home address list item",
+          "observation": "The list item combines both the header 'Home' and the address into a single focusable target, which is good for screen reader efficiency.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 29,
+      "before_filename": "ss_2026-05-26T17-25-27-331.png",
+      "after_filename": "ss_2026-05-26T17-25-28-488.png",
+      "before_paragraph": "The Google Maps directions screen is displayed with 'Choose start location' as the empty starting point and 'Space Needle' as the destination. TalkBack focus is on the 'Home' shortcut item in the suggestions list.",
+      "after_paragraph": "After tapping 'Home', the starting location is populated with 'Home', and the screen transitions to showing the route options on a map with Lyft ride options at the bottom. No TalkBack focus ring is visible on the new screen, meaning focus may have been lost or reset to the top of the screen without visible indication.",
+      "before_screen": "Google Maps search directions screen with starting point selection active",
+      "after_screen": "Google Maps directions results screen showing a map and rideshare options",
+      "talkback_focus_before": "Home, 22344 Northeast 6th Court, Sammamish, WA (list item)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Choose start location",
+          "state": "value changed to 'Home'",
+          "change": "state_changed"
+        },
+        {
+          "type": "list",
+          "label": "Recent history list",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "More from recent history",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "image",
+          "label": "Map",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Lyft rideshare options bottom sheet",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Open app",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "More options (three vertical dots)",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "tab",
+          "label": "Travel modes",
+          "state": "updated with estimated times (e.g., '35 min', '1 hr 31')",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "Start location updated from empty to 'Home' after tapping the Home shortcut."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Map view and rideshare layout at the bottom appeared."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The suggestions list (Home, Apna Bazar, etc.) disappeared."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus on 'Home' list item was lost when the list disappeared, and no new focus is visually highlighted."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "TalkBack Focus",
+          "observation": "When the screen transitioned, the focus indicator disappeared. A blind user may not know where the focus landed (e.g., if it defaulted to 'Home' edit text or somewhere else).",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "More options (three vertical dots)",
+          "observation": "An icon-only button appeared next to the destination fields without a clear visual label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.6"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 30,
+      "before_filename": "ss_2026-05-26T17-25-28-488.png",
+      "after_filename": "ss_2026-05-26T17-25-35-965.png",
+      "before_paragraph": "The BEFORE screenshot shows the Google Maps directions screen with route options and integrated Lyft ride-sharing details at the bottom. There is no active TalkBack focus ring visible on the screen.",
+      "after_paragraph": "In the AFTER screenshot, the device has navigated to the Android home screen. TalkBack focus is now active and positioned on the Maps app icon in the bottom-right dock.",
+      "before_screen": "Google Maps transit and ride-sharing directions screen",
+      "after_screen": "Android home screen with app shortcuts and widgets",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Maps app icon in the bottom-right dock",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Google Maps Directions Screen",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Android Home Screen",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Maps",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the Google Maps app to the Android Home Screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the Maps app icon on the home screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Maps app icon",
+          "observation": "TalkBack focus ring is correctly visible on the Maps icon after returning to the home screen.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "before_filename": "ss_2026-05-26T17-25-35-965.png",
+      "after_filename": "ss_2026-05-26T17-25-44-174.png",
+      "before_paragraph": "The screen is the Android home screen showing various app shortcuts. TalkBack focus is currently on the Maps icon at the bottom right, indicated by a green focus rectangle.",
+      "after_paragraph": "There is no change between the BEFORE and AFTER screenshots. The TalkBack focus remains on the Maps icon, and no visual elements or states have updated.",
+      "before_screen": "Android home screen with app icons and a search bar, with TalkBack focusing on the Maps icon.",
+      "after_screen": "Android home screen, identical to the before screen, with TalkBack focus still on the Maps icon.",
+      "talkback_focus_before": "Maps icon",
+      "talkback_focus_after": "Maps icon",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No changes occurred between the before and after screenshots; the screen state and TalkBack focus remained identical."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Maps icon",
+          "observation": "The Maps icon and other dock icons (Phone, Messages, Chrome) do not have visible text labels, relying entirely on icon design for identification.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.6"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "before_filename": "ss_2026-05-26T17-25-44-174.png",
+      "after_filename": "start_2026-05-26T17-23-35-745.png",
+      "before_paragraph": "The home screen is shown with TalkBack focus on the Google Maps icon located in the bottom dock (hotseat) next to Chrome.",
+      "after_paragraph": "The TalkBack focus has shifted from the Google Maps icon in the bottom dock all the way to the 'Tue, May 26' date widget near the top-left of the screen.",
+      "before_screen": "Android home screen with focus on the Google Maps icon in the bottom dock.",
+      "after_screen": "Android home screen with focus on the 'Tue, May 26' widget at the top.",
+      "talkback_focus_before": "Google Maps icon",
+      "talkback_focus_after": "Tue, May 26 widget",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Google Maps",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "text",
+          "label": "Tue, May 26",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Google Maps icon in the hotseat to the date widget at the top of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating shortcut buttons on the right edge",
+          "observation": "Floating accessibility/shortcut overlays overlap with the YouTube app icon and the bottom dock, potentially obstructing touch targets or causing accidental activation.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.8"
+          ]
+        }
+      ]
+    }
+  ]
+}

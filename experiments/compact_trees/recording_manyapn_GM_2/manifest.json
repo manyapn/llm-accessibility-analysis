@@ -1,0 +1,374 @@
+{
+  "task_dir": "data/recordings/recording_manyapn_GM_2",
+  "trees_dir": "data/recordings/recording_manyapn_GM_2/trees",
+  "out_dir": "experiments/compact_trees/recording_manyapn_GM_2",
+  "file_count": 45,
+  "totals": {
+    "before_nodes": 933,
+    "after_nodes": 933,
+    "before_chars": 1326672,
+    "after_chars": 239791
+  },
+  "files": [
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/start_2026-05-26T08-43-10-346.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/start_2026-05-26T08-43-10-346.compact.json",
+      "before_nodes": 18,
+      "after_nodes": 18,
+      "before_chars": 27368,
+      "after_chars": 4627
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-18-186.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-18-186.compact.json",
+      "before_nodes": 18,
+      "after_nodes": 18,
+      "before_chars": 27368,
+      "after_chars": 4627
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-23-053.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-23-053.compact.json",
+      "before_nodes": 2,
+      "after_nodes": 2,
+      "before_chars": 2357,
+      "after_chars": 404
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-26-020.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-26-020.compact.json",
+      "before_nodes": 5,
+      "after_nodes": 5,
+      "before_chars": 6783,
+      "after_chars": 1208
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-32-116.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-32-116.compact.json",
+      "before_nodes": 25,
+      "after_nodes": 25,
+      "before_chars": 37837,
+      "after_chars": 8579
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-35-758.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-35-758.compact.json",
+      "before_nodes": 25,
+      "after_nodes": 25,
+      "before_chars": 37837,
+      "after_chars": 8579
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-42-766.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-42-766.compact.json",
+      "before_nodes": 18,
+      "after_nodes": 18,
+      "before_chars": 25125,
+      "after_chars": 4307
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-43-43-695.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-43-43-695.compact.json",
+      "before_nodes": 19,
+      "after_nodes": 19,
+      "before_chars": 26574,
+      "after_chars": 4573
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-09-001.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-09-001.compact.json",
+      "before_nodes": 33,
+      "after_nodes": 33,
+      "before_chars": 45756,
+      "after_chars": 8081
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-11-811.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-11-811.compact.json",
+      "before_nodes": 28,
+      "after_nodes": 28,
+      "before_chars": 39228,
+      "after_chars": 6709
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-14-133.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-14-133.compact.json",
+      "before_nodes": 25,
+      "after_nodes": 25,
+      "before_chars": 35044,
+      "after_chars": 5968
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-16-481.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-16-481.compact.json",
+      "before_nodes": 25,
+      "after_nodes": 25,
+      "before_chars": 35046,
+      "after_chars": 5970
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-18-780.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-18-780.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30903,
+      "after_chars": 5270
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-21-023.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-21-023.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30906,
+      "after_chars": 5272
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-22-616.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-22-616.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30908,
+      "after_chars": 5274
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-24-474.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-24-474.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30910,
+      "after_chars": 5276
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-26-631.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-26-631.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30912,
+      "after_chars": 5278
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-28-695.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-28-695.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30916,
+      "after_chars": 5280
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-30-717.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-30-717.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30918,
+      "after_chars": 5282
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-34-004.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-34-004.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30920,
+      "after_chars": 5284
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-36-501.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-36-501.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30922,
+      "after_chars": 5286
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-38-694.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-38-694.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30924,
+      "after_chars": 5288
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-40-864.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-40-864.compact.json",
+      "before_nodes": 22,
+      "after_nodes": 22,
+      "before_chars": 30925,
+      "after_chars": 5288
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-44-718.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-44-718.compact.json",
+      "before_nodes": 21,
+      "after_nodes": 21,
+      "before_chars": 29359,
+      "after_chars": 5159
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-48-094.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-48-094.compact.json",
+      "before_nodes": 21,
+      "after_nodes": 21,
+      "before_chars": 29359,
+      "after_chars": 5159
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-50-218.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-50-218.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28021,
+      "after_chars": 4932
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-53-094.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-53-094.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28148,
+      "after_chars": 4926
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-55-426.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-55-426.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28149,
+      "after_chars": 4927
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-57-395.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-57-395.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28150,
+      "after_chars": 4928
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-44-59-139.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-44-59-139.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28151,
+      "after_chars": 4929
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-01-059.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-01-059.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28152,
+      "after_chars": 4930
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-20-847.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-20-847.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28153,
+      "after_chars": 4930
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-25-085.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-25-085.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28153,
+      "after_chars": 4931
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-35-206.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-35-206.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 27826,
+      "after_chars": 4907
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-39-455.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-39-455.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28036,
+      "after_chars": 4918
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-41-690.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-41-690.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28037,
+      "after_chars": 4919
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-44-247.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-44-247.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28038,
+      "after_chars": 4920
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-45-629.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-45-629.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28039,
+      "after_chars": 4921
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-47-149.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-47-149.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28040,
+      "after_chars": 4922
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-48-950.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-48-950.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28041,
+      "after_chars": 4923
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-50-849.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-50-849.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28042,
+      "after_chars": 4924
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-54-745.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-54-745.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28043,
+      "after_chars": 4924
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-45-57-972.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-45-57-972.compact.json",
+      "before_nodes": 20,
+      "after_nodes": 20,
+      "before_chars": 28043,
+      "after_chars": 4924
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-46-04-073.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-46-04-073.compact.json",
+      "before_nodes": 24,
+      "after_nodes": 24,
+      "before_chars": 38153,
+      "after_chars": 9565
+    },
+    {
+      "source": "data/recordings/recording_manyapn_GM_2/trees/tree_2026-05-26T08-46-07-505.json",
+      "compact": "experiments/compact_trees/recording_manyapn_GM_2/tree_2026-05-26T08-46-07-505.compact.json",
+      "before_nodes": 24,
+      "after_nodes": 24,
+      "before_chars": 38152,
+      "after_chars": 9563
+    }
+  ]
+}

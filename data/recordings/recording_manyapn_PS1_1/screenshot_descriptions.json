@@ -1,0 +1,998 @@
+{
+  "task_id": "PS1",
+  "app": "Google Play Store",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 19,
+  "pairs_analyzed": 18,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T17-09-52-892.png",
+      "after_filename": "ss_2026-05-26T17-09-55-765.png",
+      "before_paragraph": "The user is on the Android home screen. TalkBack focus is currently on the 'Play Store' app icon, highlighted with a green focus ring.",
+      "after_paragraph": "The screen transitions to the Google Play Store, displaying the app details page for 'Lyft'. No TalkBack focus ring is visible on this new screen, indicating that focus may have been lost or is not visually marked, which can make it difficult for users to know where their interaction starts.",
+      "before_screen": "Android home screen with focus on the Play Store icon.",
+      "after_screen": "Google Play Store details page for Lyft with no visible TalkBack focus.",
+      "talkback_focus_before": "Play Store",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Play Store",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Back",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Uninstall",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Open",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Transitioned from the home screen to the Google Play Store app page."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved off the home screen icon, but no element on the new screen is currently focused or showing a focus indicator."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "New screen state",
+          "observation": "After transitioning to the new page, there is no visible TalkBack focus ring on any element.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T17-09-55-765.png",
+      "after_filename": "ss_2026-05-26T17-09-57-792.png",
+      "before_paragraph": "The screen displays the Google Play Store listing for the Lyft app, offering options to Uninstall or Open, alongside app recommendations. No element is currently highlighted with the TalkBack focus ring.",
+      "after_paragraph": "The Back button in the top-left corner is now highlighted with the green TalkBack focus ring. Additionally, the icon in the top-right has changed from a solid blue checkmark to an outlined checkmark with a red notification badge showing the number '2'.",
+      "before_screen": "Google Play Store app details page for Lyft",
+      "after_screen": "Google Play Store app details page with the Back button focused and a notification badge updated in the top right",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Back button",
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Back",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "Icon",
+          "label": "Updates/Play Protect",
+          "state": "notification badge '2' visible",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the Back button in the top left corner."
+        },
+        {
+          "type": "state_changed",
+          "description": "The checkmark icon in the top right changed visual state, now displaying a red notification badge with the number '2'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Updates/Play Protect icon with notification badge",
+          "observation": "The status/notification icon in the top right has changed state to show a badge of '2'. If this status change is not announced by TalkBack, users may miss the update notification.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T17-09-57-792.png",
+      "after_filename": "ss_2026-05-26T17-10-03-875.png",
+      "before_paragraph": "The focus is currently on the back button in the top-left corner of the Google Play Store's detail page for the Lyft app.",
+      "after_paragraph": "Focus has jumped from the back button in the top-left corner down to the 'Search' tab in the bottom navigation bar. This represents a significant spatial jump across the screen.",
+      "before_screen": "Google Play Store page for the Lyft app with focus on the back button.",
+      "after_screen": "Google Play Store page for the Lyft app with focus shifted to the Search tab in the bottom navigation bar.",
+      "talkback_focus_before": "Back button (top-left arrow icon)",
+      "talkback_focus_after": "Search tab (bottom navigation bar)",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "tab",
+          "label": "Search",
+          "state": "selected",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the back button in the top-left corner to the Search tab in the bottom navigation bar."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search tab",
+          "observation": "Focus jumped from the top-left back button to the bottom navigation bar's Search tab, which may disrupt logical reading order for screen reader users.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T17-10-03-875.png",
+      "after_filename": "ss_2026-05-26T17-10-11-142.png",
+      "before_paragraph": "The screen shows the Google Play Store app detail page for 'Lyft'. TalkBack focus is currently on the 'Search' tab within the bottom navigation bar, indicated by a green highlight box.",
+      "after_paragraph": "After interacting, the Search page is displayed. A virtual keyboard has appeared at the bottom of the screen, and the search input box is active at the top. TalkBack focus has shifted from the bottom navigation bar to the 'Back' arrow button in the top left corner.",
+      "before_screen": "Google Play Store app details page for Lyft with search tab selected.",
+      "after_screen": "Google Play search interface with active search input and keyboard visible.",
+      "talkback_focus_before": "Search, tab, 3 of 5",
+      "talkback_focus_after": "Back button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Search",
+          "state": "selected",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "null",
+          "change": "focus_gained"
+        },
+        {
+          "type": "edit_text",
+          "label": "Search apps & games",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "keyboard",
+          "label": "Virtual keyboard",
+          "state": "null",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated to the search entry screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Search' tab in the bottom navigation bar to the 'Back' arrow button in the top-left corner."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "The system virtual keyboard appeared at the bottom of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search apps & games edit text",
+          "observation": "Focus moved to the Back button instead of the Search edit text field when the search interface opened, which might require the user to swipe to find the text field even though the keyboard is active.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T17-10-11-142.png",
+      "after_filename": "ss_2026-05-26T17-10-11-916.png",
+      "before_paragraph": "The screen displays the search interface of the Google Play Store with the on-screen keyboard active. TalkBack focus is currently positioned on the 'Back' arrow button in the top-left corner.",
+      "after_paragraph": "No visual changes are observed between the before and after screenshots. The TalkBack focus remains on the 'Back' arrow button, and all on-screen elements, including the keyboard and search history, are identical.",
+      "before_screen": "Google Play Store search screen with keyboard open and TalkBack focus on the back button.",
+      "after_screen": "Google Play Store search screen showing no change, with TalkBack focus still on the back button.",
+      "talkback_focus_before": "Back button (arrow icon in the top-left corner)",
+      "talkback_focus_after": "Back button (arrow icon in the top-left corner)",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movements were detected between the two screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating icons on the right edge",
+          "observation": "There are two floating circular icons on the right edge of the screen (one purple, one grey) that appear to be overlay controls; their labels and purposes are not visually clear.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.6"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T17-10-11-916.png",
+      "after_filename": "ss_2026-05-26T17-10-16-032.png",
+      "before_paragraph": "The Play Store search screen is active with the virtual keyboard visible. TalkBack focus is currently on the Back navigation button in the top-left corner of the screen.",
+      "after_paragraph": "The user has typed the letter 't' into the search field. The search suggestions have dynamically updated to display apps starting with 't', and TalkBack focus has moved to the active search text input field, highlighting the typed query.",
+      "before_screen": "Google Play Store search screen before text entry, with keyboard active and focus on the Back button.",
+      "after_screen": "Google Play Store search screen after typing 't', showing updated suggestions and focus on the search input field.",
+      "talkback_focus_before": "Back button",
+      "talkback_focus_after": "Search text input field",
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Navigate up",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "EditText",
+          "label": "t",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "Button",
+          "label": "Clear query",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "List",
+          "label": "Recent searches and suggestions",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "List",
+          "label": "Search suggestions for 't'",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Back navigation button to the active Search text input field."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The clear text button ('X') appeared inside the search bar on the right."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Search suggestions matching the letter 't' (such as tiktok, telegram, tinder) appeared in place of recent searches and sponsored suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Clear button ('X')",
+          "observation": "An icon-only button appeared in the search bar. Ensure it has an appropriate text label like 'Clear query' for screen reader users.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Suggestion arrow icons",
+          "observation": "Diagonal arrow icons are present next to each search suggestion. These must have descriptive labels indicating they copy the suggestion into the search box.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T17-10-16-032.png",
+      "after_filename": "ss_2026-05-26T17-10-17-538.png",
+      "before_paragraph": "The screen shows a search interface with the search input field focused by TalkBack, indicated by a green highlight. The input currently contains the letter 't', and a list of suggestions starting with 't' is displayed below, including 'tiktok', 'telegram', 'tinder', 'teams', and 'twitter'.",
+      "after_paragraph": "After typing the letter 'i', the search input updates to 'ti'. The list of suggestions dynamically updates to 'tiktok', 'tinder', 'tiktok lite', 'ticketmaster app', and 'tilt'. TalkBack focus is no longer visible on the search input field.",
+      "before_screen": "Search screen with 't' entered in the search bar and TalkBack focus on the search bar.",
+      "after_screen": "Search screen with 'ti' entered in the search bar, showing updated suggestions; TalkBack focus is not visible.",
+      "talkback_focus_before": "Search text input containing 't'",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "ti",
+          "state": "focused state lost",
+          "change": "state_changed"
+        },
+        {
+          "type": "TextView",
+          "label": "telegram",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "teams",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "twitter",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "tiktok lite",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "ticketmaster app",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "TextView",
+          "label": "tilt",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the search input changed from 't' to 'ti'."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Suggestions 'telegram', 'teams', and 'twitter' disappeared from the list."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Suggestions 'tiktok lite', 'ticketmaster app', and 'tilt' appeared in the list."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved off the search input field and is no longer visible."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search text input",
+          "observation": "TalkBack focus was lost from the text field after typing a character, which may cause confusion or loss of context for screen reader users.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.2"
+          ]
+        },
+        {
+          "element": "Search suggestions list",
+          "observation": "Suggestions updated dynamically. Without an accessibility announcement (live region), a blind user may not know the list of suggestions has changed.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T17-10-17-538.png",
+      "after_filename": "ss_2026-05-26T17-10-19-123.png",
+      "before_paragraph": "The screen shows a search interface with the text 'ti' typed into the search bar. Below the search bar, several search suggestions are displayed, including 'tiktok', 'tinder', and 'tiktok lite'. The soft keyboard is visible at the bottom of the screen, and no element currently has TalkBack focus.",
+      "after_paragraph": "After typing the letter 'k', the search query updates to 'tik'. TalkBack focus is now explicitly placed on the search input box. The list of search suggestions has dynamically updated to display terms starting with 'tik', such as 'tiktok shop', 'tiktok studio', and 'tiktok update'.",
+      "before_screen": "Search interface with query 'ti' and related suggestions.",
+      "after_screen": "Search interface with query 'tik', updated suggestions, and focus on the search input field.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Search input text field with text 'tik'",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "tik",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "tinder",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "ticketmaster app",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "tilt",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "tiktok shop",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "tiktok studio",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "tiktok update",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query text changed from 'ti' to 'tik'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the search input field."
+        },
+        {
+          "type": "content_appeared",
+          "description": "New search suggestions corresponding to 'tik' appeared on the screen."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Old search suggestions corresponding to 'ti' disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "The list of search suggestions updates dynamically as the user types. It is important that these changes are announced to screen reader users, or that they are aware suggestions have updated.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T17-10-19-123.png",
+      "after_filename": "ss_2026-05-26T17-10-21-104.png",
+      "before_paragraph": "The screen shows a Google Play Store search interface with the keyboard open. The search input field currently contains the text 'tik' and is highlighted with a green TalkBack focus ring. Suggestions for 'tiktok' and related terms are listed below the search bar.",
+      "after_paragraph": "After the user types the letter 't', the text in the search input field changes to 'tikt'. The keyboard's auto-correct suggestions also update to 'tikt', 'TikTok', and 'tilt'. However, the green TalkBack focus ring on the search input field has disappeared, leaving no visible focus indicator on the screen.",
+      "before_screen": "Google Play search screen with 'tik' in the search bar and TalkBack focus on the search field.",
+      "after_screen": "Google Play search screen with 'tikt' in the search bar and no active TalkBack focus ring.",
+      "talkback_focus_before": "Search input field containing 'tik'",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Search input field",
+          "state": "text changed from 'tik' to 'tikt'",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion: tik",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion: tok",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion: too",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion: tikt",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion: TikTok",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion: tilt",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus was lost from the search input field after typing a character, and no new element gained focus visually."
+        },
+        {
+          "type": "state_changed",
+          "description": "The search query text changed from 'tik' to 'tikt' and keyboard suggestions updated."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search input field",
+          "observation": "TalkBack focus indicator disappeared after typing a character, which might make it difficult for users to know where their focus currently resides.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T17-10-21-104.png",
+      "after_filename": "ss_2026-05-26T17-10-22-857.png",
+      "before_paragraph": "The search interface shows 'tikt' in the search bar. The on-screen keyboard is active, and the keyboard's suggestion bar displays 'tikt', 'TikTok', and 'tilt'. No TalkBack focus indicator is visible on the screen.",
+      "after_paragraph": "The user has typed the letter 'o', updating the search query in the search bar to 'tikto'. The keyboard suggestion bar updates to display 'tikto', 'TikTok', and 'Tokyo'. Focus remains on the active input field.",
+      "before_screen": "Search interface with keyboard visible and search query 'tikt'",
+      "after_screen": "Search interface with keyboard visible and search query updated to 'tikto'",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "tikto",
+          "state": "editing",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "tikto",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Tokyo",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "tikt",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "tilt",
+          "state": null,
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query text changed from 'tikt' to 'tikto' as the user typed."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Keyboard suggestion buttons changed to reflect the new typing state."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Keyboard suggestions bar",
+          "observation": "Keyboard suggestions update dynamically as the user types, which may not be announced by TalkBack unless explicitly navigated to.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T17-10-22-857.png",
+      "after_filename": "ss_2026-05-26T17-10-26-089.png",
+      "before_paragraph": "The screen shows a Google Play Store search interface where 'tikto' has been typed. Several autocomplete suggestions are listed below the search bar, such as 'tiktok', 'tiktok lite', and 'tiktok shop'. The on-screen keyboard is visible, and no TalkBack focus ring is present.",
+      "after_paragraph": "TalkBack focus has moved to the first search suggestion, 'tiktok'. A green focus outline now surrounds this entire suggestion row, indicating it is the currently selected element.",
+      "before_screen": "Search results page in Google Play Store with search bar containing 'tikto' and suggestions listed below with keyboard open.",
+      "after_screen": "Search results page in Google Play Store where the first autocomplete suggestion 'tiktok' has gained TalkBack focus.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "tiktok suggestion row",
+      "changed_elements": [
+        {
+          "type": "linear_layout",
+          "label": "tiktok",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the first search suggestion row ('tiktok')."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "tiktok suggestion row",
+          "observation": "The suggestion row contains a search icon, text 'tiktok', and an arrow icon. It is focused as a single element.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T17-10-26-089.png",
+      "after_filename": "ss_2026-05-26T17-10-29-113.png",
+      "before_paragraph": "The user is on a Google Play Store search suggestions screen with 'tikto' typed in. TalkBack focus is on the first suggestion, 'tiktok', and the virtual keyboard is visible.",
+      "after_paragraph": "After selecting the suggestion, the search results page for 'tiktok' is displayed. The keyboard is dismissed, and TalkBack focus moves to the 'Back' button in the top-left corner.",
+      "before_screen": "Google Play Store search suggestions screen for query 'tikto'.",
+      "after_screen": "Google Play Store search results screen for 'tiktok' with TikTok app showing.",
+      "talkback_focus_before": "tiktok (search suggestion)",
+      "talkback_focus_after": "Back button (arrow icon, top-left)",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "focusable",
+          "change": "focus_gained"
+        },
+        {
+          "type": "list_item",
+          "label": "tiktok",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "keyboard",
+          "label": "virtual keyboard",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "navigation_bar",
+          "label": "bottom navigation",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from search suggestions to search results for 'tiktok'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the selected search suggestion to the top-left 'Back' button on the new page."
+        },
+        {
+          "type": "keyboard_disappeared",
+          "description": "The on-screen keyboard was dismissed automatically after searching."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Back button",
+          "observation": "Focus lands on the 'Back' button when the new search results page loads, which requires the user to swipe forward several times to reach the actual search results.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T17-10-29-113.png",
+      "after_filename": "ss_2026-05-26T17-10-31-375.png",
+      "before_paragraph": "The screen shows the Google Play Store detail page for the TikTok app. TalkBack focus is currently on the back navigation arrow in the top-left corner.",
+      "after_paragraph": "The focus has shifted down and to the right, now highlighting the 'Install' button for the TikTok app.",
+      "before_screen": "TikTok app detail page on the Google Play Store with focus on the back button.",
+      "after_screen": "TikTok app detail page on the Google Play Store with focus on the Install button.",
+      "talkback_focus_before": "Back button",
+      "talkback_focus_after": "Install button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "focused in BEFORE",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Install",
+          "state": "focused in AFTER",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the back button to the Install button."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Install button",
+          "observation": "Focus moved to the Install button, which is a major call to action on this screen.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T17-10-31-375.png",
+      "after_filename": "ss_2026-05-26T17-10-35-671.png",
+      "before_paragraph": "The screen shows search results for 'tiktok' on the Google Play Store. TalkBack focus is on the 'Install' button next to the TikTok app.",
+      "after_paragraph": "After tapping the 'Install' button, the installation begins, changing the button to 'Cancel' and adding a 'Pending...' status. TalkBack focus remains on this button, now labeled 'Cancel'. Additionally, the content below the app header has changed dynamically: a 'Suggested for you' carousel of other apps has appeared, and the previous search-related sponsored content has disappeared.",
+      "before_screen": "Google Play Store search results for 'tiktok' with the 'Install' button focused.",
+      "after_screen": "Google Play Store search results showing TikTok installation is pending, with the 'Cancel' button focused, and new sponsored suggestions displayed.",
+      "talkback_focus_before": "Install button",
+      "talkback_focus_after": "Cancel button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Install",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Cancel",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "text",
+          "label": "Pending...",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Sponsored · Suggested for you",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Sponsored · Related to your search",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Follow Harry Kane on TikTok banner",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Limited-time events",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The installation initiated, changing the 'Install' button to 'Cancel' and showing 'Pending...'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "'Suggested for you' carousel and 'Limited-time events' sections appeared on the screen."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "'Sponsored · Related to your search' carousel and the promotional Harry Kane banner disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Pending...",
+          "observation": "A new status text 'Pending...' appeared next to the main application name. It should be announced to the user as a status update.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Sponsored · Suggested for you",
+          "observation": "Dynamic content insertion below the focused element occurs immediately after pressing 'Install'. This significant layout shift changes the page structure without navigating, which could be unexpected for screen reader users.",
+          "potentially_relevant_wcag": [
+            "3.2.2",
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T17-10-35-671.png",
+      "after_filename": "ss_2026-05-26T17-10-37-066.png",
+      "before_paragraph": "The screen shows a Google Play Store page for the TikTok app, which is currently in a 'Pending' state of installation. TalkBack focus is set on the 'Cancel' button next to the installation progress indicator, highlighted by a green focus ring.",
+      "after_paragraph": "The 'Cancel' button has lost focus, and the green TalkBack focus ring is no longer visible on any element on the screen. Focus has been lost entirely, which could disorient a non-visual user.",
+      "before_screen": "Google Play Store search results page for TikTok with the 'Cancel' button focused.",
+      "after_screen": "Google Play Store search results page for TikTok with no active TalkBack focus ring visible.",
+      "talkback_focus_before": "Cancel button",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Cancel",
+          "state": null,
+          "change": "focus_lost"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus was lost from the 'Cancel' button and did not land on any other visible element on the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Screen focus state",
+          "observation": "TalkBack focus disappears entirely after the interaction, leaving the user without an active cursor. Focus should ideally remain on the control or move to a logical next element.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T17-10-37-066.png",
+      "after_filename": "ss_2026-05-26T17-10-38-417.png",
+      "before_paragraph": "In the BEFORE screenshot, the Google Play Store page for TikTok is displayed, showing a 'Pending...' download status. TalkBack focus is currently on the 'Cancel' button, highlighted with a green outline.",
+      "after_paragraph": "The AFTER screenshot is identical to the BEFORE screenshot. No changes are visible, and the TalkBack focus remains on the 'Cancel' button.",
+      "before_screen": "Google Play Store search result page for TikTok with pending installation status.",
+      "after_screen": "Google Play Store search result page for TikTok with pending installation status, unchanged.",
+      "talkback_focus_before": "Cancel button",
+      "talkback_focus_after": "Cancel button",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No changes were observed between the BEFORE and AFTER screenshots; focus remained on the Cancel button."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Cancel button",
+          "observation": "The 'Cancel' button appears visually small, potentially having a height under 48dp, which may make it difficult to target.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T17-10-38-417.png",
+      "after_filename": "ss_2026-05-26T17-10-40-012.png",
+      "before_paragraph": "The TalkBack focus is on the \"Cancel\" button next to the pending TikTok installation. The screen displays the Play Store search results for \"tiktok\" with suggested apps below.",
+      "after_paragraph": "There are no visible changes in the screenshot. The TalkBack focus remains on the \"Cancel\" button, and the state of the screen and application remains identical to the before state.",
+      "before_screen": "Google Play Store search results page for 'tiktok' showing a pending installation.",
+      "after_screen": "Google Play Store search results page for 'tiktok' with no visible changes from the previous state.",
+      "talkback_focus_before": "Cancel button",
+      "talkback_focus_after": "Cancel button",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visible changes or focus movements were detected between the before and after screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Pending... text",
+          "observation": "The 'Pending...' status text under the TikTok title is light gray on a white background, which may have insufficient contrast.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        },
+        {
+          "element": "Floating action buttons on the bottom right",
+          "observation": "There are two overlapping circular floating buttons on the bottom right (one chat bubble icon, one 'M' logo icon) which may have small touch targets or cause overlapping interactive areas.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "before_filename": "ss_2026-05-26T17-10-40-012.png",
+      "after_filename": "start_2026-05-26T17-09-44-382.png",
+      "before_paragraph": "The screen shows a Google Play Store search results page for 'tiktok', where the app is currently in a 'Pending...' download state. TalkBack focus is on the 'Cancel' button adjacent to the pending download.",
+      "after_paragraph": "The screen transitions to the Android Home screen, showing various app icons like Play Store, Gmail, Photos, and YouTube. TalkBack focus has shifted to the Google Search widget located at the bottom of the screen.",
+      "before_screen": "Google Play Store search results for 'tiktok' with a pending download and focus on the Cancel button.",
+      "after_screen": "Android Home screen with standard app icons and focus on the Google Search widget at the bottom.",
+      "talkback_focus_before": "Cancel button",
+      "talkback_focus_after": "Google Search widget",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Cancel",
+          "state": "focusable",
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Play Store Content",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Home Screen",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "search_bar",
+          "label": "Google Search",
+          "state": "focusable",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the Google Play Store app back to the Android Home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Cancel' button in the Play Store to the Google Search widget on the Home screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Home Screen",
+          "observation": "A sudden change of context occurs when exiting the Play Store to the Home screen. Screen readers must announce the new screen context to prevent user disorientation.",
+          "potentially_relevant_wcag": [
+            "3.2.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    }
+  ]
+}

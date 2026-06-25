@@ -1,0 +1,1370 @@
+{
+  "task_id": "MP1",
+  "app": "Google Maps",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 22,
+  "pairs_analyzed": 21,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T17-20-47-639.png",
+      "after_filename": "ss_2026-05-26T17-20-51-053.png",
+      "before_paragraph": "The device is on the home screen with the TalkBack focus highlighting the Google search bar widget at the bottom of the screen.",
+      "after_paragraph": "After activating the search widget, the search interface opens. TalkBack focus successfully moves to the 'Search apps, web and more' input text field at the top of the screen, and the system keyboard appears at the bottom.",
+      "before_screen": "Android home screen with app icons and a search bar at the bottom with TalkBack focus.",
+      "after_screen": "Google App search interface with a text input field focused at the top, app shortcuts, search history list, and the on-screen keyboard.",
+      "talkback_focus_before": "Search widget (including Google logo, mic, and camera icon)",
+      "talkback_focus_after": "'Search apps, web and more' edit text field",
+      "changed_elements": [
+        {
+          "type": "widget",
+          "label": "Search widget",
+          "state": "null",
+          "change": "focus_lost"
+        },
+        {
+          "type": "edit_text",
+          "label": "Search apps, web and more",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "keyboard",
+          "label": "On-screen keyboard",
+          "state": "null",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "User navigated from the home screen to the search interface."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "On-screen keyboard popped up automatically when the search input field gained focus."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the search widget on the home screen to the search text input field on the new screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Amazon Sh...",
+          "observation": "The label for the Amazon Shopping app is truncated as 'Amazon Sh...'. Users relying on screen readers need to ensure that the full name is announced correctly.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.3",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T17-20-51-053.png",
+      "after_filename": "ss_2026-05-26T17-20-56-547.png",
+      "before_paragraph": "TalkBack focus is on the search input field with the hint text 'Search apps, web and more'. Below the search bar, app shortcuts for Play Store, YouTube, Gmail, and Amazon Shopping are displayed, and the on-screen keyboard is active.",
+      "after_paragraph": "The letter 'm' has been typed into the search bar, updating the text input. The app suggestions below have changed to Maps, Messages, Mobilerun Partner, and YT Music, and a clear button ('X') has appeared in the search bar. The TalkBack focus ring, which was on the search input, is no longer visible on screen.",
+      "before_screen": "App drawer search screen with focus on the empty search bar and keyboard open.",
+      "after_screen": "App drawer search screen with 'm' typed, updated app suggestions, and no visible TalkBack focus ring.",
+      "talkback_focus_before": "Search apps, web and more (text field)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Search apps, web and more",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "edit_text",
+          "label": "m",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Clear query",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "image_view",
+          "label": "Play Store",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "image_view",
+          "label": "YouTube",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "image_view",
+          "label": "Gmail",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "image_view",
+          "label": "Amazon Shopping",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "image_view",
+          "label": "Maps",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "image_view",
+          "label": "Messages",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "image_view",
+          "label": "Mobilerun Partner",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "image_view",
+          "label": "YT Music",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus left the search input field and is no longer visually active on any element."
+        },
+        {
+          "type": "state_changed",
+          "description": "The search field content changed from empty (hint text) to 'm'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "A clear button ('X') appeared inside the search field."
+        },
+        {
+          "type": "content_appeared",
+          "description": "App suggestions updated to match the query 'm' (Maps, Messages, Mobilerun Partner, YT Music)."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search Input",
+          "observation": "Focus ring disappeared after typing a character, leaving the user with no active focus indicator.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Mobilerun P...",
+          "observation": "The application shortcut label is truncated to 'Mobilerun P...'.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "App suggestions list",
+          "observation": "The list of suggested apps dynamically filtered based on typing without explicit notification to screen reader users.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T17-20-56-547.png",
+      "after_filename": "ss_2026-05-26T17-20-57-049.png",
+      "before_paragraph": "The screen shows a Google search interface with the letter 'm' typed in the search bar. Below the search bar, there are quick links to Maps, Messages, Mobilerun, and YT Music, followed by a list of search suggestions like 'memorial day 2026' and 'twitter'. An on-screen keyboard is visible at the bottom. No TalkBack focus ring is visible on any element.",
+      "after_paragraph": "There are no visible changes between the BEFORE and AFTER screenshots. The screen state, text, keyboard, and layout remain exactly the same. No TalkBack focus ring is visible.",
+      "before_screen": "Google search interface with 'm' typed and suggestions listed, keyboard active",
+      "after_screen": "Google search interface with 'm' typed and suggestions listed, keyboard active",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons on the right",
+          "observation": "There are overlapping floating action buttons on the right side of the screen ('chat' and 'M' icons) which may block underlying content or have small touch target sizes.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T17-20-57-049.png",
+      "after_filename": "ss_2026-05-26T17-20-57-552.png",
+      "before_paragraph": "The screen shows a Google Search interface with the search query 'm' entered. Below the search input, there are app shortcuts for Maps, Messages, Mobilerun, and YT Music, followed by a list of search suggestions starting with 'm', and the on-screen keyboard is open at the bottom.",
+      "after_paragraph": "After typing the letter 'a' to make the query 'ma', the search suggestions and app shortcuts instantly update. Only 'Maps' remains under the app shortcuts, and a new set of suggestions like 'manya-pn github' and 'Seattle Mariners' appears. The keyboard suggestion strip also updates from 'm, my, me' to 'ma, maybe, make'. No visible TalkBack focus ring is present in either state.",
+      "before_screen": "Google search screen with query 'm' showing matching app shortcuts, suggestions, and the soft keyboard.",
+      "after_screen": "Google search screen with query 'ma' showing updated app shortcuts, suggestions, and keyboard suggestion strip.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "m",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Messages",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Mobilerun P...",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "YT Music",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "memorial day 2026",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "twitter",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "amazon",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "qian yang",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "student center",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "pomodoro",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text_view",
+          "label": "...ry anne babysitters club mixed",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text_view",
+          "label": "manya-pn github",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text_view",
+          "label": "mann library workstation",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text_view",
+          "label": "Seattle Mariners Baseball team",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text_view",
+          "label": "mardi gras 2026",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text_view",
+          "label": "may long weekend",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "m",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "my",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "me",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "ma",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "maybe",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "make",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search input field text changed from 'm' to 'ma' as a user typed."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "App shortcuts for Messages, Mobilerun, and YT Music disappeared as they did not match the updated search query."
+        },
+        {
+          "type": "content_appeared",
+          "description": "New search suggestions and keyboard predictions matching 'ma' appeared on the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions",
+          "observation": "Suggestions update dynamically as the user types, which may require live region announcements to inform screen reader users of the change in options.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "...ry anne babysitters club mixed",
+          "observation": "Search suggestion text is clipped with an ellipsis at the start of the line ('...ry anne...'), which might restrict the readability of the full suggestion.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T17-20-57-552.png",
+      "after_filename": "ss_2026-05-26T17-20-58-294.png",
+      "before_paragraph": "The screen displays a Google search interface with the text query 'ma' entered in the search bar. Below the search bar, a shortcut for 'Maps' and several search history/suggestions are visible, while an active virtual keyboard occupies the bottom half of the screen. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The TalkBack focus ring now appears around the search input field containing the text 'ma'. No other content or layout changes occurred, indicating focus has been directed to the search bar.",
+      "before_screen": "Google search interface with 'ma' typed in the search bar, showing search suggestions and an active keyboard.",
+      "after_screen": "Google search interface with the search input box now highlighted by the green TalkBack focus indicator.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Search box with text 'ma'",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "ma",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the search input text box."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search input box",
+          "observation": "Focus is successfully drawn to the active search input field.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T17-20-58-294.png",
+      "after_filename": "ss_2026-05-26T17-21-00-006.png",
+      "before_paragraph": "The TalkBack focus is currently on the search text box containing the text 'ma' at the top of the screen. An onscreen keyboard is visible below, along with search suggestions and a quick link to the Maps app.",
+      "after_paragraph": "The TalkBack focus has moved from the search text box to the Maps app shortcut icon immediately below it. The screen layout, keyboard, and search suggestions remain unchanged.",
+      "before_screen": "Google search interface with search suggestions and keyboard active, with focus on the search text input.",
+      "after_screen": "Google search interface with search suggestions and keyboard active, with focus moved to the Maps shortcut icon.",
+      "talkback_focus_before": "Search text box with text 'ma'",
+      "talkback_focus_after": "Maps app shortcut button",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "ma",
+          "state": "focused: false",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Button",
+          "label": "Maps",
+          "state": "focused: true",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the search text input to the Maps shortcut icon below it."
+        }
+      ],
+      "accessibility_signals": []
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T17-21-00-006.png",
+      "after_filename": "ss_2026-05-26T17-21-19-335.png",
+      "before_paragraph": "The screen shows a Google Search interface where the user has typed 'ma'. TalkBack focus is currently on the 'Maps' app shortcut card, which has a green accessibility focus outline.",
+      "after_paragraph": "After selecting the Maps shortcut, the Google Maps application opens. The main interface of Maps is now visible, showing a 'Search here' input field and a list of recent searches. The keyboard remains open, but its suggestion strip has switched to a tool shortcut bar. There is no visible TalkBack focus ring on the new screen.",
+      "before_screen": "Google Search results showing a shortcut to the Maps app, with TalkBack focus on the Maps icon.",
+      "after_screen": "Google Maps home screen with search bar, location shortcuts, recent searches list, and keyboard open.",
+      "talkback_focus_before": "Maps shortcut card (containing the Google Maps icon and 'Maps' text label)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Maps",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "input",
+          "label": "Search here",
+          "state": "editable",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Home Set location",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Work Set location",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "More",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "restaurants",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "OMO Thai Tea",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "takeout near me",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Sichuan Cuisine",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "keyboard",
+          "label": "On-screen keyboard",
+          "state": "toolbar strip showing instead of suggestions",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from Google Search to the Google Maps application."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus on 'Maps' shortcut is lost, and no new element on the Maps screen has a visible focus indicator."
+        },
+        {
+          "type": "state_changed",
+          "description": "The soft keyboard's top row changed from suggesting words ('ma', 'maybe', 'make') to displaying utility icons (settings, clipboard, etc.)."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Google Maps Screen",
+          "observation": "Upon navigating to the new screen, no element has an active visual TalkBack focus indicator, which may make it difficult for screen reader users to know their starting position.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Info icon (i) next to 'Recent'",
+          "observation": "This is an icon-only element next to the 'Recent' header that may lack an accessible label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.6"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T17-21-19-335.png",
+      "after_filename": "ss_2026-05-26T17-21-21-176.png",
+      "before_paragraph": "The screen shows the Google Maps search interface with the keyboard open and a list of recent searches. No TalkBack focus rectangle is visible in the before screenshot.",
+      "after_paragraph": "The TalkBack focus has moved to the 'Search here' text entry field at the top of the screen, outlined by a green focus indicator. The rest of the screen elements remain unchanged.",
+      "before_screen": "Google Maps search screen with open keyboard and search history list.",
+      "after_screen": "Google Maps search screen with the 'Search here' text input field focused by TalkBack.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Search here (EditText)",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Search here",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the main search input field ('Search here')."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search here (EditText)",
+          "observation": "The input field uses 'Search here' as a placeholder/hint, which may disappear once typing begins, potentially leaving it without a persistent visible label.",
+          "potentially_relevant_wcag": [
+            "3.3.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T17-21-21-176.png",
+      "after_filename": "ss_2026-05-26T17-21-21-351.png",
+      "before_paragraph": "The TalkBack focus is on the 'Search here' edit text box at the top of the screen. A virtual keyboard is displayed on the bottom half of the screen, and recent search history is visible in the background.",
+      "after_paragraph": "No changes are detected between the BEFORE and AFTER screenshots. TalkBack focus remains on the 'Search here' text input, and the on-screen keyboard and background content are completely identical.",
+      "before_screen": "Google Maps search interface with the keyboard open and focus on the search input field.",
+      "after_screen": "Google Maps search interface with the keyboard open and focus remaining on the search input field.",
+      "talkback_focus_before": "Search here edit text",
+      "talkback_focus_after": "Search here edit text",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movement occurred between the two frames."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating purple chat icon",
+          "observation": "This floating button contains only an icon and may lack an accessible textual label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Floating black icon",
+          "observation": "This floating button contains a stylized logo/icon and may lack an accessible textual label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T17-21-21-351.png",
+      "after_filename": "ss_2026-05-26T17-21-22-767.png",
+      "before_paragraph": "The TalkBack focus is on the search input field ('Search here') at the top of the screen. Underneath the search bar, the 'Home' and 'Work' shortcut buttons both display 'Set location' as their subtext.",
+      "after_paragraph": "The 'Home' shortcut button subtext has updated from 'Set location' to a specific address ('22344 NE...'), indicating the home location has been set. The TalkBack focus remains unchanged on the 'Search here' input field.",
+      "before_screen": "Google Maps search screen with keyboard open and 'Home' location unset.",
+      "after_screen": "Google Maps search screen with keyboard open and 'Home' location updated to a specific address.",
+      "talkback_focus_before": "Search here input field",
+      "talkback_focus_after": "Search here input field",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Home, 22344 NE...",
+          "state": "updated address",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The subtext of the Home shortcut button changed from 'Set location' to '22344 NE...'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Home shortcut button",
+          "observation": "The status/label of the Home button changed from 'Set location' to an address while focus remained on the search input. A blind user may not be aware of this background update unless a status announcement (live region) was triggered.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T17-21-22-767.png",
+      "after_filename": "ss_2026-05-26T17-21-37-222.png",
+      "before_paragraph": "The Google Maps search screen is displayed with the search edit text 'Search here' focused by TalkBack. A virtual keyboard is visible at the bottom of the screen, and recent searches are listed below the search bar.",
+      "after_paragraph": "The user typed the letter 's' into the search input. The list of recent searches is replaced by auto-complete suggestions starting with 's', and a 'Clear text' button has appeared in the search field. The keyboard now displays a row of text predictions ('s', 'so', 'sorry'). The green focus outline is no longer visible on the screen.",
+      "before_screen": "Google Maps search screen with active keyboard and recent search history.",
+      "after_screen": "Google Maps search screen displaying search suggestions for the typed letter 's'.",
+      "talkback_focus_before": "Search edit text with placeholder 'Search here'",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "s",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Clear query",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Home",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Work",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "More",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Keyboard suggestion bar",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search input text changed from empty placeholder to 's'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "A clear button (X icon) appeared inside the search bar."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The quick-destination shortcuts (Home, Work, More) below the search bar disappeared."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "A predictive text bar appeared above the keyboard layout with suggestions 's', 'so', and 'sorry'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "The visual TalkBack focus indicator (green border) is no longer visible on the text input field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Clear text button (X)",
+          "observation": "The 'X' icon inside the search bar should have an accessible label like 'Clear query' to be understandable by screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Search suggestions list",
+          "observation": "When search suggestions dynamically update upon typing, screen readers should be notified of the change or the number of results found.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "List item arrow icons",
+          "observation": "The diagonal arrow icons next to suggestions (e.g., next to 'Sconers') might have small touch targets or be unlabeled.",
+          "potentially_relevant_wcag": [
+            "2.5.8",
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T17-21-37-222.png",
+      "after_filename": "ss_2026-05-26T17-21-38-656.png",
+      "before_paragraph": "The screen shows a search interface with the keyboard open. The search query is 's', and a list of search suggestions starting with 'S' (such as Sconers, Sichuanese Cuisine, and Sichuan Cuisine) is displayed below the search bar. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The search query has been updated to 'sp' after typing 'p'. The suggestions list has dynamically refreshed to show locations matching 'sp' (such as SPU, Space Needle, and Spice Waala). The keyboard suggestion strip has also updated from 's, so, sorry' to 'sp, so, SP'. No TalkBack focus indicator is visible.",
+      "before_screen": "Google Maps search screen with query 's' and matching suggestions.",
+      "after_screen": "Google Maps search screen with query 'sp' and updated suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Search text input",
+          "state": "text: sp",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "SPU, Seattle Pacific University Alumni Center",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Space Needle, Broad Street, Seattle, WA",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spice Waala, See locations",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spice Waala, 15th Avenue East, Seattle, WA",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spanaway, WA",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spokane, WA",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "spa",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spain",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Sconers, Washington, Bellevue, Main Street",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Sichuanese Cuisine, See locations",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Sichuan Cuisine, 148th Avenue Northeast, Redmond, WA",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Sammamish Cafe & Spirits, Northeast 8th Street, Sammamish, WA",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Story Coffee, Northeast 9th Street B, Bellevue, WA",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "stores",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "sage hall - johnson graduate schoo...",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard suggestion sp",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard suggestion SP",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard suggestion s",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard suggestion sorry",
+          "state": null,
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query text changed from 's' to 'sp' as the user typed."
+        },
+        {
+          "type": "content_appeared",
+          "description": "New search suggestions corresponding to 'sp' appeared on screen."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Previous search suggestions starting with 's' disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "Suggestions update dynamically as the user types, which may require live region announcements to inform assistive technology users of the changes.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T17-21-38-656.png",
+      "after_filename": "ss_2026-05-26T17-21-39-330.png",
+      "before_paragraph": "The screen shows a search query 'sp' entered in a search bar, displaying several location suggestions like 'SPU', 'Space Needle', and 'Spice Waala' below it. An on-screen keyboard is active at the bottom of the screen. No TalkBack focus indicator is visually apparent on any element in this screenshot.",
+      "after_paragraph": "There are no visual differences between the BEFORE and AFTER screenshots. The search query, listed suggestions, keyboard, and layout remain completely identical, and no TalkBack focus indicator has appeared.",
+      "before_screen": "Search interface with query 'sp', suggestions list, and active on-screen keyboard.",
+      "after_screen": "Identical search interface with query 'sp', suggestions list, and active on-screen keyboard.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons on the right edge",
+          "observation": "The floating buttons (purple route icon and grey wavy icon) overlap the suggestion list items ('Spokane' and 'spa'), which can obscure text and cause accidental activations due to close proximity.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T17-21-39-330.png",
+      "after_filename": "ss_2026-05-26T17-21-39-963.png",
+      "before_paragraph": "The screen shows a Google Maps search with the query 'sp' entered. A list of suggestions is displayed, including SPU, Space Needle, Spice Waala, Spanaway, Spokane, spa, and Spain. Next to 'Spain' at the bottom, there is a gray placeholder icon.",
+      "after_paragraph": "The blank placeholder icon next to the 'Spain' suggestion has now loaded and displays the flag of Spain. No other elements have changed, and there is no active TalkBack focus ring visible in either screenshot.",
+      "before_screen": "Google Maps search suggestions screen with a gray placeholder icon next to 'Spain'",
+      "after_screen": "Google Maps search suggestions screen with the Spanish flag loaded next to 'Spain'",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "image",
+          "label": null,
+          "state": "loaded Spanish flag instead of grey placeholder",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "The placeholder icon next to the 'Spain' search suggestion loaded and updated to show the Spanish flag."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Icon next to Spain suggestion",
+          "observation": "The icon next to 'Spain' loads asynchronously. It should have a proper content description (e.g., 'Spain flag') or be marked as decorative to avoid redundant announcements with the text 'Spain'.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T17-21-39-963.png",
+      "after_filename": "ss_2026-05-26T17-21-40-666.png",
+      "before_paragraph": "The user is on the Google Maps search screen with the search text field containing 'sp'. A list of matching location suggestions is displayed, and the standard Android virtual keyboard is active at the bottom. There is no visible TalkBack focus ring on any screen element.",
+      "after_paragraph": "After typing the letter 'a', the search query updates to 'spa'. The list of suggestions dynamically updates to match the new query, and the keyboard's spelling suggestions strip updates accordingly. There is still no active TalkBack focus ring visible.",
+      "before_screen": "Google Maps search query input screen with 'sp' typed and suggestions listed.",
+      "after_screen": "Google Maps search query input screen updated to 'spa' with new suggestions listed.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "sp",
+          "state": "editable text",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "SPU, Seattle Pacific University Alumni Center,...",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spice Waala, See locations",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spice Waala, 15th Avenue East #202, Seattle, WA",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spokane, WA",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "space needle tickets",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "spacex",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Spark Pizza, 164th Avenue Northeast, Redmond, WA",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list_item",
+          "label": "SpaceX",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "sp",
+          "state": "keyboard suggestion",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "so",
+          "state": "keyboard suggestion",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "SP",
+          "state": "keyboard suggestion",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query text changed from 'sp' to 'spa'."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Suggestions 'SPU', 'Spice Waala', and 'Spokane' disappeared from the search results list."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Suggestions 'space needle tickets', 'spacex', 'Spark Pizza', and 'SpaceX' appeared in the search results list."
+        },
+        {
+          "type": "state_changed",
+          "description": "The keyboard suggestions bar updated from 'sp', 'so', 'SP' to 'spa', 'space', 'Spanish'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search suggestions list",
+          "observation": "The list of suggestions updates dynamically as the user types. It is important that these changes are announced to screen reader users (e.g., via a live region announcing the number of results found) so they know typing has updated the results.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Floating action buttons (purple and grey round icons on the right edge)",
+          "observation": "These floating overlay icons partially overlap list item content and scrollbar areas, potentially making them difficult to target or visually confusing.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T17-21-40-666.png",
+      "after_filename": "ss_2026-05-26T17-21-42-941.png",
+      "before_paragraph": "The search screen displays search suggestions for 'spa' with the on-screen keyboard active. The cursor is visible in the search input field, but there is no active TalkBack focus ring visible on screen.",
+      "after_paragraph": "TalkBack focus has moved to the first search suggestion, 'Space Needle, Broad Street, Seattle, WA', which is now highlighted with a green focus ring.",
+      "before_screen": "Search screen with keyboard open and suggestions for 'spa'.",
+      "after_screen": "Search screen with the 'Space Needle' suggestion focused by TalkBack.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Space Needle, Broad Street, Seattle, WA (list item)",
+      "changed_elements": [
+        {
+          "type": "list_item",
+          "label": "Space Needle, Broad Street, Seattle, WA",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the first search suggestion 'Space Needle'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons on the right",
+          "observation": "Two floating circular buttons on the right edge overlap the search suggestions ('Spain' and 'Spark Pizza'), potentially obstructing touch targets and visual readability.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T17-21-42-941.png",
+      "after_filename": "ss_2026-05-26T17-21-48-241.png",
+      "before_paragraph": "The screen shows a map search interface with search suggestions for the query 'spa'. TalkBack focus is on the first suggestion, 'Space Needle, Broad Street, Seattle, WA', and the on-screen keyboard is visible.",
+      "after_paragraph": "After selecting the suggestion, the map view and the 'Space Needle' details sheet appear, and the keyboard disappears. TalkBack focus moves to the back button in the top left corner of the search bar, rather than the newly presented Space Needle information sheet or the action buttons.",
+      "before_screen": "Search suggestion list with 'Space Needle' highlighted and keyboard visible.",
+      "after_screen": "Map view and details sheet for 'Space Needle' with focus on the back button.",
+      "talkback_focus_before": "Space Needle, Broad Street, Seattle, WA suggestion",
+      "talkback_focus_after": "Back button (arrow) in the search bar",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Space Needle search suggestion",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "keyboard",
+          "label": "Android keyboard",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Back",
+          "state": null,
+          "change": "focus_gained"
+        },
+        {
+          "type": "layout",
+          "label": "Space Needle details sheet",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "card",
+          "label": "To see the full map, swipe up on the search bar tooltip",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the selected search suggestion to the back button at the top of the screen."
+        },
+        {
+          "type": "keyboard_disappeared",
+          "description": "The on-screen keyboard was dismissed."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The map view, place detail card for 'Space Needle', and a helper tooltip appeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Back button",
+          "observation": "Focus moved to the top-left back button instead of the newly appeared 'Space Needle' details sheet, forcing the user to navigate through the entire screen to read the search result details.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "To see the full map, swipe up on the search bar tooltip",
+          "observation": "The tooltip suggests a custom swipe gesture ('swipe up on the search bar') which may conflict with or be difficult to perform using standard screen reader navigation gestures.",
+          "potentially_relevant_wcag": [
+            "1.3.3",
+            "2.5.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "before_filename": "ss_2026-05-26T17-21-48-241.png",
+      "after_filename": "ss_2026-05-26T17-21-49-269.png",
+      "before_paragraph": "The screen shows a Google Maps search result for the Space Needle, featuring a map on the top half and a details card on the bottom half. TalkBack focus is currently on the back arrow button in the top-left corner of the search bar.",
+      "after_paragraph": "The AFTER screenshot is visually identical to the BEFORE screenshot. The TalkBack focus remains on the back arrow button in the top-left corner, and no elements have changed state, appeared, or disappeared.",
+      "before_screen": "Google Maps place details screen with the back button focused",
+      "after_screen": "Google Maps place details screen with the back button still focused",
+      "talkback_focus_before": "Back button (arrow icon in the top-left corner)",
+      "talkback_focus_after": "Back button (arrow icon in the top-left corner)",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movements occurred between the two screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "To see the full map, swipe up on the search bar (blue tooltip)",
+          "observation": "This informational tooltip appears floating on the map. It is unclear if this tooltip is programmatically accessible or if it receives screen reader focus to announce its instructions to users.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "before_filename": "ss_2026-05-26T17-21-49-269.png",
+      "after_filename": "ss_2026-05-26T17-21-54-781.png",
+      "before_paragraph": "The screen shows a Google Maps search result for the Space Needle with a simplified map in the background. TalkBack focus is on the back button in the top-left corner of the search bar.",
+      "after_paragraph": "The TalkBack focus has shifted to the 'Directions' button in the bottom sheet. Concurrently, the background map has transitioned to a detailed street map of the Seattle Center area.",
+      "before_screen": "Google Maps search result for Space Needle with simplified map background and TalkBack focus on the back button.",
+      "after_screen": "Google Maps search result for Space Needle with detailed street map background and TalkBack focus on the Directions button.",
+      "talkback_focus_before": "Back button (top-left)",
+      "talkback_focus_after": "Directions button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Back",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Directions",
+          "state": null,
+          "change": "focus_gained"
+        },
+        {
+          "type": "map",
+          "label": null,
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the back button in the search bar directly to the Directions button in the bottom sheet."
+        },
+        {
+          "type": "state_changed",
+          "description": "The background map style changed from a simplified, abstract pin view to a detailed street map view."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search bar and map area",
+          "observation": "Focus moved from the top-left back button directly to the Directions button in the lower half of the screen, bypassing the search input, clear button, voice search button, and the informational tooltip 'To see the full map...'.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "before_filename": "ss_2026-05-26T17-21-54-781.png",
+      "after_filename": "ss_2026-05-26T17-21-55-915.png",
+      "before_paragraph": "The screen shows Google Maps with the 'Space Needle' location details panel open. TalkBack focus is currently on the 'Directions' button, indicated by the green outline.",
+      "after_paragraph": "No changes are observed between the BEFORE and AFTER screenshots. TalkBack focus remains on the 'Directions' button, and the screen content is identical.",
+      "before_screen": "Google Maps search result for Space Needle with the details panel open and Directions button focused.",
+      "after_screen": "Google Maps search result for Space Needle with the details panel open and Directions button focused.",
+      "talkback_focus_before": "Directions button",
+      "talkback_focus_after": "Directions button",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Dire... button",
+          "observation": "The text label on the rightmost button in the horizontal scrolling list is clipped to 'Dire...'.",
+          "potentially_relevant_wcag": [
+            "1.4.4",
+            "1.4.10",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "before_filename": "ss_2026-05-26T17-21-55-915.png",
+      "after_filename": "start_2026-05-26T17-20-39-677.png",
+      "before_paragraph": "The screen shows a Google Maps search result for the Space Needle. TalkBack focus is currently on the blue 'Directions' button near the bottom left of the map detail panel.",
+      "after_paragraph": "The user has returned to the Android home screen. TalkBack focus has shifted to the date widget displaying 'Tue, May 26' near the top of the screen.",
+      "before_screen": "Google Maps detail view for the Space Needle with 'Directions' button highlighted.",
+      "after_screen": "Android home screen with the date widget 'Tue, May 26' highlighted.",
+      "talkback_focus_before": "Directions button",
+      "talkback_focus_after": "Tue, May 26 widget",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Directions",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "widget",
+          "label": "Tue, May 26",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Play Store",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Gmail",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Photos",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "YouTube",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the Google Maps app back to the Android home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Directions' button in Google Maps to the date widget on the home screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Tue, May 26 widget",
+          "observation": "The white text of the date widget is displayed on a light white/blue background of the wallpaper, which may result in low contrast.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,841 @@
+{
+  "task_id": "YT2",
+  "app": "YouTube",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 18,
+  "pairs_analyzed": 17,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T17-28-25-205.png",
+      "after_filename": "ss_2026-05-26T17-28-30-306.png",
+      "before_paragraph": "The screen displays a YouTube video player page with video controls visible over the video. TalkBack focus is currently on the first comment in the preview section, which reads: 'It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.'",
+      "after_paragraph": "TalkBack focus has shifted upward to the main video title and metadata block, which contains the title 'The Only Accessibility Video You Will Ever Need', channel name, view count, and a '...more' link. The video has also progressed from 0:33 to 0:38 in elapsed time.",
+      "before_screen": "YouTube video player screen with the first comment highlighted by TalkBack focus.",
+      "after_screen": "YouTube video player screen with TalkBack focus shifted to the video title and metadata section.",
+      "talkback_focus_before": "Comment preview text block",
+      "talkback_focus_after": "Video title and metadata block",
+      "changed_elements": [
+        {
+          "type": "ViewGroup",
+          "label": "It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "The Only Accessibility Video You Will Ever Need @WebDevSimplified 116K views 1y ago #Accessibility ...more",
+          "state": "not focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "TextView",
+          "label": "0:33 / 37:32",
+          "state": "0:38 / 37:32",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the preview comment up to the video title and metadata container."
+        },
+        {
+          "type": "state_changed",
+          "description": "The video playback time updated from 0:33 to 0:38."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Video title and metadata block",
+          "observation": "The metadata block groups multiple distinct pieces of information (title, channel, views, date, hashtags) and ends with a vague '...more' expander button as a single focusable target.",
+          "potentially_relevant_wcag": [
+            "2.4.4",
+            "2.4.6",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T17-28-30-306.png",
+      "after_filename": "ss_2026-05-26T17-28-35-758.png",
+      "before_paragraph": "TalkBack focus is on the video metadata container, which includes the video title 'The Only Accessibility Video You Will Ever Need', channel name, view count, and a '...more' link to expand the description.",
+      "after_paragraph": "After interacting, the 'Description' bottom sheet overlays the lower portion of the screen. TalkBack focus has moved to the header of this new Description overlay, which contains the title 'Description' and a close button.",
+      "before_screen": "YouTube video player screen with the video metadata card focused by TalkBack.",
+      "after_screen": "YouTube video player screen with the Description bottom sheet opened and its header focused by TalkBack.",
+      "talkback_focus_before": "Video title and metadata container including 'The Only Accessibility Video You Will Ever Need...'",
+      "talkback_focus_after": "Description header container containing the text 'Description' and close icon",
+      "changed_elements": [
+        {
+          "type": "container",
+          "label": "The Only Accessibility Video You Will Ever Need @WebDevSimplified 116K views 1y ago #Accessibility ...more",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "container",
+          "label": "Description",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "button",
+          "label": "Close Description",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Description details including Likes, Views, Date, and Description text",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Comments section and suggested videos list",
+          "state": null,
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_appeared",
+          "description": "The Description bottom sheet opened, covering the comments and suggested videos section."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus shifted from the video metadata container to the header of the newly opened Description bottom sheet."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Description close button",
+          "observation": "The close button ('X') in the Description header is contained within the same TalkBack focus area as the 'Description' title text. If they are grouped together, the user might not be able to activate the close button directly without navigating inside the group, or it may act as a single large touch target.",
+          "potentially_relevant_wcag": [
+            "2.1.1",
+            "2.4.3",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Video metadata container ('...more')",
+          "observation": "In the BEFORE screen, the '...more' link is part of a large combined metadata block. Activating this block opens the description, but it may not be clear to a screen reader user that the entire block is clickable or specifically what '...more' targets.",
+          "potentially_relevant_wcag": [
+            "2.4.4",
+            "2.5.3",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T17-28-35-758.png",
+      "after_filename": "ss_2026-05-26T17-28-38-432.png",
+      "before_paragraph": "The screen shows a video playing in a video player with its description panel expanded. At the very bottom, there is an accessibility banner informing the user that controls are modified, containing 'SETTINGS' and 'Dismiss' buttons. No TalkBack focus ring is visible in this frame.",
+      "after_paragraph": "The TalkBack focus has moved to the 'Dismiss' button inside the bottom accessibility banner, highlighted by a green focus ring. Additionally, the video playback timestamp has advanced from 0:42 to 0:44.",
+      "before_screen": "Video player playing a video with the description overlay open and an accessibility notice at the bottom.",
+      "after_screen": "Video player with description open, focus now on the 'Dismiss' button of the bottom accessibility notice.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Dismiss button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Dismiss",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Dismiss' button in the accessibility notice banner."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "See more button",
+          "observation": "Vague button label 'See more' might lack context when read out of order.",
+          "potentially_relevant_wcag": [
+            "2.4.6",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T17-28-38-432.png",
+      "after_filename": "ss_2026-05-26T17-28-40-903.png",
+      "before_paragraph": "The TalkBack focus is on the 'Dismiss' button inside an accessibility notification banner at the bottom of the screen. In the background, a YouTube video is playing or paused at 0:44.",
+      "after_paragraph": "The screen remains almost entirely identical, with TalkBack focus staying on the 'Dismiss' button. The only change is that the video background playback has advanced from 0:44 to 0:46.",
+      "before_screen": "Video description page with an accessibility settings banner at the bottom; focus is on the 'Dismiss' button.",
+      "after_screen": "Video description page with the video advanced by 2 seconds; focus remains on the 'Dismiss' button.",
+      "talkback_focus_before": "Dismiss button",
+      "talkback_focus_after": "Dismiss button",
+      "changed_elements": [
+        {
+          "type": "text",
+          "label": "0:46 / 37:32",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The video progress timestamp updated from 0:44 to 0:46."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "See more button",
+          "observation": "Vague label 'See more' which may lack context out of order.",
+          "potentially_relevant_wcag": [
+            "2.4.4",
+            "2.4.6"
+          ]
+        },
+        {
+          "element": "#Accessibility, #WDS, #A11Y chips",
+          "observation": "Small tap targets that might be below 24dp or 48dp in height.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T17-28-40-903.png",
+      "after_filename": "ss_2026-05-26T17-28-44-067.png",
+      "before_paragraph": "In the BEFORE screen, TalkBack focus is positioned on the 'Dismiss' button inside the accessibility warning banner at the bottom right of the screen.",
+      "after_paragraph": "In the AFTER screen, the focus has moved backwards/upwards to the 'See more' button in the video description section. The video playback time has also slightly advanced from 0:46 to 0:48.",
+      "before_screen": "Video description view with an accessibility banner at the bottom, focusing on the 'Dismiss' button.",
+      "after_screen": "Video description view, focusing on the 'See more' button in the description card.",
+      "talkback_focus_before": "Dismiss button",
+      "talkback_focus_after": "See more button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Dismiss",
+          "state": "focusable",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "See more",
+          "state": "focusable",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Dismiss' button at the bottom of the screen to the 'See more' button in the video description section."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "See more button",
+          "observation": "The button label 'See more' is generic and its purpose might not be fully clear out of context, though it is visually contained within the description card.",
+          "potentially_relevant_wcag": [
+            "2.4.4",
+            "2.4.6"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T17-28-44-067.png",
+      "after_filename": "ss_2026-05-26T17-28-47-342.png",
+      "before_paragraph": "The screen shows a YouTube video description panel with the 'See more' button focused by TalkBack. This button is used to expand the description text to show the full video description.",
+      "after_paragraph": "After tapping the 'See more' button, the description expands to show additional text, and the 'See more' button disappears. TalkBack focus is no longer visible on any element in the AFTER screenshot, indicating that focus was lost when the focused element disappeared rather than being redirected to the newly revealed content.",
+      "before_screen": "YouTube video description panel with 'See more' button focused.",
+      "after_screen": "YouTube video description panel showing expanded text; 'See more' button is gone and focus is lost.",
+      "talkback_focus_before": "See more",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "See more",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "TextView",
+          "label": "Accessibility is an incredibly important topic that is often overlooked. This is partially because of how complex accessibility is. That is why in this video I cover a complete master class of everything you need to know about accessibility.",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "content_disappeared",
+          "description": "The 'See more' button disappeared from the bottom of the description panel."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Additional video description text appeared where the button used to be."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus was on 'See more' but is lost after the button disappears, instead of moving to the newly revealed text."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "See more",
+          "observation": "Activating the 'See more' button causes it to disappear and focus to be lost, rather than focusing the newly revealed content.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T17-28-47-342.png",
+      "after_filename": "ss_2026-05-26T17-28-53-740.png",
+      "before_paragraph": "The screen shows a YouTube video playing with the video description panel open at the bottom. No active TalkBack focus ring is visible in this frame.",
+      "after_paragraph": "The video in the background has progressed, showing a new title card. TalkBack focus has moved to the 'Close' button (represented by an 'X' icon) on the top right of the description panel.",
+      "before_screen": "YouTube video description panel open with video playing in the background",
+      "after_screen": "YouTube video description panel open with focus on the close button",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Close description button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Close description",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the close button ('X') in the description header."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Close description button",
+          "observation": "The close button is represented by a simple 'X' icon. Ensure it has a clear, localized descriptive content label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T17-28-53-740.png",
+      "after_filename": "ss_2026-05-26T17-28-56-501.png",
+      "before_paragraph": "The description panel for a video is open, with TalkBack focus set on the close button ('X') in the top-right corner of the Description panel.",
+      "after_paragraph": "The Description panel has been dismissed, and TalkBack focus has shifted to the video title 'The Only Accessibility Video You Will Ever Need' on the main video page.",
+      "before_screen": "Video description panel open with focus on the close button.",
+      "after_screen": "Main video page with focus on the video title after closing the description.",
+      "talkback_focus_before": "Close button ('X') in the Description panel",
+      "talkback_focus_after": "Video title 'The Only Accessibility Video You Will Ever Need'",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Close",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "text",
+          "label": "Description",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "view",
+          "label": "Description details content",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "text",
+          "label": "The Only Accessibility Video You Will Ever Need",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_disappeared",
+          "description": "The bottom sheet containing the video description was closed."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the dismissed close button to the video title on the underlying screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Video title",
+          "observation": "Focus returned to a logical structural element (the video title) on the main screen when the overlay panel was closed.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T17-28-56-501.png",
+      "after_filename": "ss_2026-05-26T17-29-00-368.png",
+      "before_paragraph": "The user is viewing a YouTube video page with TalkBack active. The accessibility focus is currently on the video title and metadata container, which reads the title 'The Only Accessibility Video You Will Ever Need', channel handle, views, and upload date.",
+      "after_paragraph": "The focus moves down to the next logical element, which is the 'Comments' preview card. This card contains the comment count and a preview of a top comment. The video progress bar has advanced slightly from 0:59 to 1:02.",
+      "before_screen": "YouTube video player screen with video title and description focused by TalkBack.",
+      "after_screen": "YouTube video player screen with the Comments container focused by TalkBack.",
+      "talkback_focus_before": "The Only Accessibility Video You Will Ever Need @WebDevSimplified 116K views 1y ago #Accessibility ...more",
+      "talkback_focus_after": "Comments 114 It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.",
+      "changed_elements": [
+        {
+          "type": "ViewGroup",
+          "label": "The Only Accessibility Video You Will Ever Need @WebDevSimplified 116K views 1y ago #Accessibility ...more",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "Comments 114 It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the video details card down to the comments preview card."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "The Only Accessibility Video You Will Ever Need ...more",
+          "observation": "The text ends with '...more', which may be an inline button or link. If integrated into a single focusable block, it might not be individually actionable by keyboard or screen reader users without navigating into a collapsed view.",
+          "potentially_relevant_wcag": [
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Comments 114",
+          "observation": "The comment count '114' is small, gray text on a light gray background, potentially presenting low contrast.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T17-29-00-368.png",
+      "after_filename": "ss_2026-05-26T17-29-02-699.png",
+      "before_paragraph": "TalkBack focus is on the Comments section header, which displays 'Comments 114' and three dots. The video player in the background is currently playing at 1:02, showing the chapter 'Introduction'.",
+      "after_paragraph": "TalkBack focus has moved down to the comment preview card, reading out the user's comment: 'It feels like this guy is reading my mind...'. During this interaction, the video in the background has advanced to 1:04 and the active chapter has updated to 'Visually Impaired Accessibility'.",
+      "before_screen": "Video player screen with comments section visible and an accessibility banner at the bottom.",
+      "after_screen": "Video player screen with focus moved to the comment preview card.",
+      "talkback_focus_before": "Comments section header containing 'Comments 114'",
+      "talkback_focus_after": "Comment preview card containing the text 'It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.'",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Comments 114",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "layout",
+          "label": "It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.",
+          "state": null,
+          "change": "focus_gained"
+        },
+        {
+          "type": "text",
+          "label": "1:02 / 37:32",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Introduction",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Comments header to the first comment preview."
+        },
+        {
+          "type": "state_changed",
+          "description": "Video timestamp updated from 1:02 to 1:04 and chapter title updated from 'Introduction' to 'Visually Impaired Accessibility'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Video progress/chapter button",
+          "observation": "The active video chapter text updated dynamically ('Introduction' to 'Visually Impaired Accessibility') while focus was on the comment section. Screen reader users may not be notified of this background change unless it is announced.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T17-29-02-699.png",
+      "after_filename": "ss_2026-05-26T17-29-08-670.png",
+      "before_paragraph": "The TalkBack focus is on the comment preview box below the video details, which displays a user comment. Below that, a system accessibility banner is visible at the bottom of the screen.",
+      "after_paragraph": "After interacting with the comment preview, the Comments pane opens as an overlay bottom sheet. TalkBack focus moves directly to the header of this new Comments overlay.",
+      "before_screen": "YouTube video playback screen with the Comments section preview highlighted by TalkBack.",
+      "after_screen": "YouTube video screen with the Comments bottom sheet open and the 'Comments' header focused by TalkBack.",
+      "talkback_focus_before": "Comment preview container displaying 'It feels like this guy is reading my mind and pacing his lessons perfectly with my career path, step by step.'",
+      "talkback_focus_after": "Comments header container in the newly opened bottom sheet",
+      "changed_elements": [
+        {
+          "type": "ViewGroup",
+          "label": "Comments preview",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "ViewGroup",
+          "label": "Comments header",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "Button",
+          "label": "Close",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Info",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Top",
+          "state": "selected",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Newest",
+          "state": "not selected",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_appeared",
+          "description": "The Comments bottom sheet has slid up to cover the lower half of the screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the video's comment preview to the header of the newly opened Comments overlay."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Comments overlay close button (X icon)",
+          "observation": "Relies on an 'X' icon; needs to ensure it has an appropriate text alternative such as 'Close comments' rather than just 'button'.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Comments overlay info button (i icon)",
+          "observation": "Relies on an 'i' icon; needs to ensure it has a descriptive text alternative.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T17-29-08-670.png",
+      "after_filename": "ss_2026-05-26T17-29-09-451.png",
+      "before_paragraph": "The screen reader focus is placed on the 'Comments' header panel, highlighted by a green focus indicator. This panel groups together the title 'Comments', an informational icon, a close button, and filtering options ('Top' and 'Newest'). An accessibility notification dialog is also visible at the bottom of the screen.",
+      "after_paragraph": "No visual changes or focus movements are observed between the BEFORE and AFTER screenshots. The screen reader focus remains static on the 'Comments' header panel.",
+      "before_screen": "YouTube video page with comments section open and accessibility warning dialog at the bottom, TalkBack focus on the Comments header group.",
+      "after_screen": "Same as BEFORE; no changes detected.",
+      "talkback_focus_before": "Comments header container (including Comments title, info, close, and filter buttons)",
+      "talkback_focus_after": "Comments header container (including Comments title, info, close, and filter buttons)",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Comments header container",
+          "observation": "A single large focus indicator groups multiple interactive and non-interactive elements (the 'Comments' text, info button, close button, 'Top' button, and 'Newest' button). This grouping might hinder direct navigation to individual controls within the header.",
+          "potentially_relevant_wcag": [
+            "2.1.1",
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "Accessibility modification dialog",
+          "observation": "An accessibility warning dialog is displayed at the bottom of the screen, but it does not receive initial focus or an accessibility announcement indicator, potentially leaving users unaware of the persistent notification.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T17-29-09-451.png",
+      "after_filename": "ss_2026-05-26T17-29-16-094.png",
+      "before_paragraph": "In the BEFORE screenshot, TalkBack focus is on the \"Comments\" header area container, which spans the width of the screen just below the video player. The video timestamp shows 1:09.",
+      "after_paragraph": "In the AFTER screenshot, focus has moved to the \"Dismiss\" button within the accessibility service warning card at the bottom right. The video has continued playing and now shows a timestamp of 1:15.",
+      "before_screen": "YouTube video page with comments section open, showing a persistent accessibility warning banner at the bottom.",
+      "after_screen": "YouTube video page with comments section open, now with TalkBack focus on the 'Dismiss' button of the accessibility warning banner.",
+      "talkback_focus_before": "Comments header container",
+      "talkback_focus_after": "Dismiss button",
+      "changed_elements": [
+        {
+          "type": "ViewGroup",
+          "label": "Comments header",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "Button",
+          "label": "Dismiss",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Comments header at the top of the bottom sheet to the Dismiss button inside the accessibility warning card at the bottom."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Dismiss button",
+          "observation": "The Dismiss button is located within a persistent accessibility overlay. Focus moved here, possibly due to a user swipe or automated shifting.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T17-29-16-094.png",
+      "after_filename": "ss_2026-05-26T17-29-17-517.png",
+      "before_paragraph": "In the BEFORE screenshot, TalkBack focus is positioned on the 'Dismiss' button of a bottom dialog that informs the user that controls are modified due to an active accessibility service.",
+      "after_paragraph": "In the AFTER screenshot, after activating 'Dismiss', the bottom dialog has disappeared, revealing the comment input area and other previously obscured content. TalkBack focus is not visibly active on any element, meaning focus may have been lost.",
+      "before_screen": "YouTube video comments section with an accessibility notice banner at the bottom.",
+      "after_screen": "YouTube video comments section with the banner dismissed, showing the bottom comment input bar.",
+      "talkback_focus_before": "Dismiss button",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Dismiss",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "SETTINGS",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Your controls are modified because an accessibility service is on.",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Comment...",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "2 replies",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_disappeared",
+          "description": "The accessibility banner at the bottom of the screen has been dismissed."
+        },
+        {
+          "type": "focus_lost",
+          "description": "After dismissing the overlay, the TalkBack focus ring is no longer visible on any on-screen element."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Screen",
+          "observation": "Focus is lost after the bottom sheet is dismissed. Focus should be programmatically moved back to a logical parent container or the main content.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T17-29-17-517.png",
+      "after_filename": "ss_2026-05-26T17-29-19-539.png",
+      "before_paragraph": "The screen shows a YouTube video playing at the top with media controls overlaid, and the comments panel open below. No TalkBack accessibility focus ring is visible in this frame.",
+      "after_paragraph": "The TalkBack accessibility focus ring now appears around the entire video player container at the top of the screen. The video timestamp has progressed from 1:17 to 1:18.",
+      "before_screen": "YouTube video with overlay controls active on top, and comments section visible below.",
+      "after_screen": "YouTube video player container is focused by TalkBack with a green outline.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Video player container",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Video player",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack accessibility focus moved to the main video player container at the top of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Video player container",
+          "observation": "The entire video player container is focused as a single target, which contains multiple active inner controls (Play/Pause, Rewind, Fast Forward, CC, Settings, Close). Users must navigate into the container to access individual controls.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T17-29-19-539.png",
+      "after_filename": "ss_2026-05-26T17-29-21-626.png",
+      "before_paragraph": "The TalkBack focus is currently on the video player container at the top of the screen, which displays playback controls and the video timeline at 1:18.",
+      "after_paragraph": "The TalkBack focus has moved to a comment list item near the bottom. This item is almost entirely obscured by the sticky 'Comment...' input panel at the bottom of the screen, making the focused element nearly invisible.",
+      "before_screen": "YouTube comments section with a video playing in split-screen at the top, with focus on the video player.",
+      "after_screen": "YouTube comments section where focus has moved to a nearly completely obscured comment item at the bottom of the scrollable list.",
+      "talkback_focus_before": "Video player container",
+      "talkback_focus_after": "Partially obscured comment item above the bottom comment input field",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Video player",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "list_item",
+          "label": "Comment item",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the video player at the top to a comment list item at the bottom of the visible list."
+        },
+        {
+          "type": "state_changed",
+          "description": "The video playback progress updated from 1:18 to 1:19."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Partially obscured comment item",
+          "observation": "TalkBack focus shifts to an element that is almost entirely covered by the bottom sticky input bar, which may make it extremely difficult for low-vision users to see what is currently focused.",
+          "potentially_relevant_wcag": [
+            "2.4.7",
+            "2.4.11"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T17-29-21-626.png",
+      "after_filename": "start_2026-05-26T17-28-17-908.png",
+      "before_paragraph": "The screen displays a YouTube video comments pane open in a bottom sheet, showing pinned and popular comments. TalkBack focus is currently on a thin horizontal element near the bottom of the screen, just above the comment input field.",
+      "after_paragraph": "After the user interaction, the comments pane is closed, returning to the main video player view. TalkBack focus has moved to the video details section ('The Only Accessibility Video You Will Ever Need'). Additionally, an accessibility overlay warning has appeared at the bottom of the screen stating 'Your controls are modified because an accessibility service is on', but this new overlay did not receive initial focus.",
+      "before_screen": "YouTube video page with comments section open",
+      "after_screen": "YouTube video details page with an accessibility warning overlay at the bottom",
+      "talkback_focus_before": "Horizontal bar container above the comment input field",
+      "talkback_focus_after": "Video details container with the title 'The Only Accessibility Video You Will Ever Need'",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Comments Pane",
+          "state": "collapsed",
+          "change": "disappeared"
+        },
+        {
+          "type": "container",
+          "label": "Video Details",
+          "state": "visible",
+          "change": "focus_gained"
+        },
+        {
+          "type": "dialog",
+          "label": "Your controls are modified because an accessibility service is on. Settings, Dismiss",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_disappeared",
+          "description": "The comments bottom sheet was closed."
+        },
+        {
+          "type": "overlay_appeared",
+          "description": "An accessibility warning banner appeared at the bottom of the screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the comment section input area to the video title/details container on the main screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Your controls are modified because an accessibility service is on.",
+          "observation": "A critical system/accessibility warning dialog appeared at the bottom, but focus did not automatically move to it, potentially leaving screen reader users unaware of the new settings dialog.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "4.1.3"
+          ]
+        }
+      ]
+    }
+  ]
+}

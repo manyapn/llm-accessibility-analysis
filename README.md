@@ -15,6 +15,7 @@ The project compares manually observed accessibility issues against issues detec
 - `CLAUDE.md` — analysis pipeline instructions used with Claude Code.
 - `PROMPT_TEMPLATE.md` — reusable prompts for running each trace analysis, with ready-to-use prompts for 8 of the 9 tasks.
 - `.claude/skills/wcag/` — local WCAG 2.2 reference skill used during analysis.
+- `experiments/developer_triage/` — personal experimental prompts for post-processing raw detections into developer-facing repair queues.
 - `TalkBack-Portal/` — external data-collection frontend (own git history, gitignored from this repo).
 
 Each recording folder contains:
@@ -64,13 +65,51 @@ Input combos, run in order for every task:
 3. **Events + User Actions** — `events.jsonl` + `user_actions.jsonl`
 4. **Events + User Actions + Trees** — all three
 
-## Running the Analysis Pipeline
+## Workflow
+
+The canonical study workflow has two stages:
+
+1. **Raw data** — collect and store TalkBack traces under `data/recordings/`.
+2. **Trace analysis** — the main body of work. Analyze `events.jsonl`, `user_actions.jsonl`, and `trees/` into detection-level findings in `results/[TASK_ID]_analysis.md` and `results/[TASK_ID]_results.csv`.
+
+## Running Trace Analysis
 
 Each trace is analyzed in a **fresh Claude Code session** so combos don't share context:
 
 1. Start the session, then invoke the WCAG skill: `/wcag`.
 2. Use the per-task prompt in `PROMPT_TEMPLATE.md` (8 of 9 tasks have a ready-made prompt; PS1 does not — build one from the generic template at the top of the file).
 3. The pipeline runs all 4 input combos in order. For each issue found, it simultaneously writes a finding to `results/[TASK_ID]_analysis.md` and appends a row to `results/[TASK_ID]_results.csv` — see `CLAUDE.md` for the exact markdown format, CSV column order, and flagging rules (what counts as a real issue vs. an emulator artifact to exclude).
+
+## Experiments
+
+- `view_hierarchy.py` is isolated from the required workflow. It is a personal experiment for compacting Android view hierarchy JSONs and expanding compact node ids back to full node detail.
+- `compact_task_trees.py` is a task-level wrapper around `view_hierarchy.py`. It compacts every `trees/*.json` file for one recording folder and writes generated outputs outside the raw trace folder by default:
+
+```bash
+python3 compact_task_trees.py data/recordings/recording_manyapn_GM_2
+```
+
+Default output:
+
+```text
+experiments/compact_trees/recording_manyapn_GM_2/
+```
+
+Use `--out` to choose another destination:
+
+```bash
+python3 compact_task_trees.py data/recordings/recording_manyapn_GM_2 --out /tmp/gm2_compact_trees
+```
+
+The wrapper writes one `*.compact.json` file per source tree plus `manifest.json`, which maps each compact file back to the original tree and records size/node-count reductions. Add `--pretty` if you want indented JSON for manual reading.
+
+- `eval_compact_trees.py` checks whether generated compact trees are complete, valid JSON, schema-compatible, reproducible from the source trees, id-expandable, and meaningfully smaller:
+
+```bash
+python3 eval_compact_trees.py data/recordings/recording_manyapn_GM_2
+```
+
+- `experiments/developer_triage/` is a personal experiment for post-processing completed trace-analysis outputs into developer-facing repair queues. It is one step above trace analysis and is not part of the canonical study pipeline unless explicitly promoted later.
 
 ## Regenerating the Master Table
 
@@ -83,5 +122,4 @@ Reads all 9 `results/[TASK_ID]_results.csv` files in a fixed order, normalizes e
 ## Known Limitations
 
 - **Input combos were run sequentially within a single Claude Code session per trace, not in independent sessions**, due to token/context limits. This means a later combo's analysis could in principle be influenced by issues already surfaced in an earlier combo of the same session, rather than reflecting a clean read of just that combo's inputs. For stronger comparative validity between combos, re-run each combo in its own independent fresh session.
-- 
 - **Emulator-lag false positives are deliberately excluded.** Per `CLAUDE.md`'s "Do NOT Flag" list, things like zero-size `EditText` bounds during typing, repeated/triple taps, and speech-rate blips are emulator/recording artifacts, not real accessibility issues, and are documented separately (as an "Emulator Note") rather than counted as findings.

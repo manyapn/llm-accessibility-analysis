@@ -1,0 +1,2694 @@
+{
+  "task_id": "GM2",
+  "app": "Gmail",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 54,
+  "pairs_analyzed": 53,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T08-43-18-186.png",
+      "after_filename": "ss_2026-05-26T08-43-23-053.png",
+      "before_paragraph": "The screen shows the Android home screen with several app icons. TalkBack focus is currently on the Gmail app icon, highlighted with a green focus ring.",
+      "after_paragraph": "After activating the Gmail icon, the Gmail application opens to the 'Primary' inbox list. The home screen elements disappear, replaced by the Gmail interface, including the search bar, email list, and a 'Compose' floating action button. No TalkBack focus ring is visible on the new screen.",
+      "before_screen": "Android home screen with Gmail icon focused.",
+      "after_screen": "Gmail app inbox screen with no visible TalkBack focus ring.",
+      "talkback_focus_before": "Gmail app icon",
+      "talkback_focus_after": "null",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Gmail",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Play Store",
+          "state": "null",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Photos",
+          "state": "null",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "YouTube",
+          "state": "null",
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Gmail Inbox",
+          "state": "null",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Opened Gmail app from the home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the Gmail icon on the home screen; no active focus indicator is visible on the new screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Gmail Screen",
+          "observation": "No active TalkBack focus ring is visible upon opening the new screen, which may indicate focus is lost or not visually highlighted.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T08-43-23-053.png",
+      "after_filename": "ss_2026-05-26T08-43-26-020.png",
+      "before_paragraph": "The screen displays the Gmail inbox view with a list of recent emails, a search bar at the top, a floating 'Compose' button, and navigation tabs at the bottom. There is no active TalkBack focus indicator visible in this view.",
+      "after_paragraph": "A system permission dialog has appeared on top of the inbox, asking 'Allow Gmail to send you notifications?' with 'Allow' and 'Don't allow' options. The background is dimmed to indicate the modal overlay, and a '99+' unread badge has appeared on the mail tab in the bottom navigation bar. No active TalkBack focus indicator is visible on the new dialog.",
+      "before_screen": "Gmail inbox list view",
+      "after_screen": "Gmail inbox with a system notification permission dialog overlay",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "dialog",
+          "label": "Allow Gmail to send you notifications?",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Allow",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Don't allow",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "notification_badge",
+          "label": "99+",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_appeared",
+          "description": "System permission dialog for notifications overlaying the Gmail app."
+        },
+        {
+          "type": "state_changed",
+          "description": "An unread badge '99+' appeared on the bottom mail tab."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Allow Gmail to send you notifications? dialog",
+          "observation": "A modal dialog appeared but has no visual TalkBack focus indicator, which may mean focus did not automatically move to the dialog or its controls.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T08-43-26-020.png",
+      "after_filename": "ss_2026-05-26T08-43-27-103.png",
+      "before_paragraph": "The screen displays a notification permission dialog asking 'Allow Gmail to send you notifications?' over the Gmail inbox. No TalkBack focus outline is visible on the screen.",
+      "after_paragraph": "The TalkBack focus has moved to the 'Allow' button within the permission dialog, which is now outlined with a green focus ring.",
+      "before_screen": "Gmail inbox with an overlay dialog requesting notification permissions, unfocused.",
+      "after_screen": "Gmail inbox with the notification permission dialog, where the 'Allow' button is now focused by TalkBack.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Allow button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Allow",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Allow' button in the permission dialog."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Allow button",
+          "observation": "Focus is successfully placed on the primary action button of the modal dialog, facilitating user interaction.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T08-43-27-103.png",
+      "after_filename": "ss_2026-05-26T08-43-32-116.png",
+      "before_paragraph": "The screen shows a system permission dialog overlaying the Gmail app, asking 'Allow Gmail to send you notifications?'. TalkBack focus is currently on the 'Allow' button.",
+      "after_paragraph": "The permission dialog is dismissed, revealing the main Gmail inbox screen. TalkBack focus has moved to the 'Search in mail' search bar at the top of the screen.",
+      "before_screen": "Gmail app with 'Allow Gmail to send you notifications?' system permission dialog open, with TalkBack focus on the 'Allow' button",
+      "after_screen": "Gmail app inbox main screen with TalkBack focus on the search bar and a loading icon at the bottom of the screen",
+      "talkback_focus_before": "Allow button",
+      "talkback_focus_after": "Search in mail search bar",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Allow",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Don't allow",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "dialog",
+          "label": "Allow Gmail to send you notifications?",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "Search in mail",
+          "state": null,
+          "change": "focus_gained"
+        },
+        {
+          "type": "progressbar",
+          "label": null,
+          "state": "loading",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "dialog_closed",
+          "description": "The system notification permission dialog was dismissed."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the dismissed dialog's 'Allow' button to the 'Search in mail' search bar at the top of the screen."
+        },
+        {
+          "type": "content_appeared",
+          "description": "A loading indicator appeared near the bottom of the email list."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search in mail search bar",
+          "observation": "Focus reset to the top-most interactive element on the screen after the modal dialog was closed.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "progressbar",
+          "observation": "A loading indicator appeared without gaining focus; it's unclear if its presence or the completion of loading is announced to TalkBack users.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T08-43-32-116.png",
+      "after_filename": "ss_2026-05-26T08-43-35-758.png",
+      "before_paragraph": "The user is viewing their Gmail inbox with the TalkBack focus on the \"Search in mail\" edit box at the top of the screen. A circular progress indicator is visible near the bottom of the email list, showing that the app is refreshing or loading data.",
+      "after_paragraph": "The TalkBack focus has shifted to the \"Compose\" button in the bottom right corner of the screen. The loading progress indicator has disappeared, indicating the refresh is complete. This focus movement represents a significant jump from the top of the page to the bottom, bypassing the entire list of emails.",
+      "before_screen": "Gmail primary inbox with TalkBack focus on the search bar and a loading indicator visible near the bottom.",
+      "after_screen": "Gmail primary inbox with the loading indicator gone and TalkBack focus moved to the floating Compose button.",
+      "talkback_focus_before": "Search in mail",
+      "talkback_focus_after": "Compose",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Search in mail",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Button",
+          "label": "Compose",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "ProgressBar",
+          "label": null,
+          "state": null,
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Search in mail' search bar at the top of the screen to the 'Compose' button at the bottom right."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The loading progress spinner below the email list disappeared."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Compose",
+          "observation": "Focus shifted automatically from the top search bar to the bottom 'Compose' button after loading finished. This sudden jump in focus can confuse users as it bypasses the main email list content.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T08-43-35-758.png",
+      "after_filename": "ss_2026-05-26T08-43-42-766.png",
+      "before_paragraph": "The user is viewing their Gmail inbox on an Android device. TalkBack focus is currently on the 'Compose' floating action button in the bottom right corner.",
+      "after_paragraph": "After tapping 'Compose', the email composition screen opens. TalkBack focus has automatically shifted to the 'To' recipient input field, and the on-screen keyboard has appeared at the bottom of the screen to facilitate typing.",
+      "before_screen": "Gmail inbox list with the 'Compose' button focused",
+      "after_screen": "Gmail email composition screen with the 'To' input field focused and keyboard visible",
+      "talkback_focus_before": "Compose button",
+      "talkback_focus_after": "To text input field",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Compose",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "edit_text",
+          "label": "To",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Back",
+          "state": "null",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Attach file",
+          "state": "null",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Send",
+          "state": "null",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "More options",
+          "state": "null",
+          "change": "appeared"
+        },
+        {
+          "type": "keyboard",
+          "label": "Virtual keyboard",
+          "state": "null",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the inbox list to the email composition screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Compose' button in the inbox to the 'To' recipient input field on the compose screen."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "The soft keyboard appeared automatically when the composition screen opened with focus on a text input."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "To text input field",
+          "observation": "The input field has a visual 'To' label to its left, but the focused area itself is blank, relying on programmatic association or hints for non-visual users.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.6",
+            "3.3.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T08-43-42-766.png",
+      "after_filename": "ss_2026-05-26T08-43-43-695.png",
+      "before_paragraph": "The user is on the Gmail compose screen with the soft keyboard open. TalkBack focus is currently on the 'To' text input field, highlighted by a green boundary box.",
+      "after_paragraph": "The screen shows a couple of new visual elements. A 'Compose email' placeholder text area is now visible in the email body, and a 'Help me write' floating button has appeared above the keyboard. TalkBack focus remains unchanged on the 'To' text input field.",
+      "before_screen": "Gmail compose email screen with keyboard open and focus on the 'To' field.",
+      "after_screen": "Gmail compose screen showing new 'Compose email' placeholder and a 'Help me write' button, with focus remaining on the 'To' field.",
+      "talkback_focus_before": "To input field",
+      "talkback_focus_after": "To input field",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Compose email",
+          "state": "editable text field placeholder",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Help me write",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "content_appeared",
+          "description": "The 'Compose email' text field placeholder and 'Help me write' button have appeared on the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Help me write button",
+          "observation": "A new interactive 'Help me write' button appeared on the screen, but TalkBack focus remained on the 'To' input field. Screen reader users may not be aware of this new dynamic option.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Floating icon buttons on the right",
+          "observation": "There are two icon-only floating buttons on the right side of the screen (purple chat icon and grey wavy icon) that may require clear accessibility labels.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T08-43-43-695.png",
+      "after_filename": "ss_2026-05-26T08-43-44-459.png",
+      "before_paragraph": "The screen shows an email composition interface with the title 'Compose'. TalkBack focus, indicated by a green rectangular border, is on the empty input field next to the 'To' label. An on-screen keyboard is visible at the bottom of the screen.",
+      "after_paragraph": "No visual changes are observed between the two screenshots. The TalkBack focus remains on the empty 'To' input field, and the keyboard and other UI elements are in the exact same state.",
+      "before_screen": "Gmail compose screen with focus on 'To' field",
+      "after_screen": "Gmail compose screen with focus on 'To' field, unchanged",
+      "talkback_focus_before": "To input field",
+      "talkback_focus_after": "To input field",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating icons on the right (purple message bubble and grey icon)",
+          "observation": "These icon-only buttons may lack descriptive text labels for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Keyboard keys",
+          "observation": "Individual keys on the soft keyboard have small visual targets, though typical for standard system keyboards.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T08-43-44-459.png",
+      "after_filename": "ss_2026-05-26T08-43-54-396.png",
+      "before_paragraph": "The screen shows the Gmail compose email interface with the keyboard open. TalkBack focus is on the \"To\" recipient input field, highlighted by a green border.",
+      "after_paragraph": "There are no visible changes between the before and after screenshots. The screen state, keyboard, and TalkBack focus on the \"To\" input field remain identical.",
+      "before_screen": "Gmail email compose screen with the 'To' field focused and the keyboard open.",
+      "after_screen": "Gmail email compose screen, identical to the before screen with no changes.",
+      "talkback_focus_before": "To input field",
+      "talkback_focus_after": "To input field",
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movements detected between the two screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Purple chat bubble overlay icon",
+          "observation": "This floating overlay icon does not have a visible text label and may be difficult for screen readers to describe if not labeled properly.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Grey wave overlay icon",
+          "observation": "This floating overlay icon does not have a visible text label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T08-43-54-396.png",
+      "after_filename": "ss_2026-05-26T08-44-09-001.png",
+      "before_paragraph": "The screen shows a Gmail compose window. TalkBack focus is on the 'To' text field, which is empty and highlighted with a green focus ring. The onscreen keyboard is visible at the bottom of the screen.",
+      "after_paragraph": "After typing the letter 't', the focus ring is no longer visible. A list of contact suggestions has appeared below the 'To' field, showing several contacts whose names or emails contain 't'.",
+      "before_screen": "Gmail compose screen with empty 'To' field focused and keyboard open.",
+      "after_screen": "Gmail compose screen with 't' typed in the 'To' field and contact suggestions displayed.",
+      "talkback_focus_before": "To input field",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": "t",
+          "change": "state_changed"
+        },
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "ListView",
+          "label": "Contact suggestions",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the 'To' input field changed from empty to 't'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved off the 'To' input field and is no longer visible on screen."
+        },
+        {
+          "type": "content_appeared",
+          "description": "A list of contact suggestions containing 't' appeared below the input field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Contact suggestions list",
+          "observation": "A list of contact suggestions appeared dynamically as the user typed. It is important to verify if TalkBack announces the presence or number of suggestions to the user.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T08-44-09-001.png",
+      "after_filename": "ss_2026-05-26T08-44-09-805.png",
+      "before_paragraph": "The screen shows a compose email interface in Gmail with the 'To' field active. The letter 't' has been typed, and a list of contact suggestions starting with 't' is displayed below the field. The keyboard is visible at the bottom.",
+      "after_paragraph": "TalkBack focus has moved to the 'To' input field, which is now highlighted with a green outline. Visually, two contact suggestion icons have also updated from generic grey person icons to purple circle icons containing the letter 'S' for 's-tbiswas@lwsd.org' and 's-tnair@lwsd.org'.",
+      "before_screen": "Gmail compose screen with contact suggestions visible for search query 't'.",
+      "after_screen": "Gmail compose screen with TalkBack focus on the 'To' input field.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "To text input field",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "To",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "image",
+          "label": null,
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'To' input field."
+        },
+        {
+          "type": "state_changed",
+          "description": "Contact icons for 's-tbiswas' and 's-tnair' changed from generic person avatars to letter-based avatars."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Contact icons",
+          "observation": "Icons changed visually from generic person to letter 'S'. Ensure these decorative icons are marked as important=false or have consistent alternative text if they convey meaning.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T08-44-09-805.png",
+      "after_filename": "ss_2026-05-26T08-44-11-811.png",
+      "before_paragraph": "The user is composing an email in Gmail, with the TalkBack focus ring on the 'To' input field which contains the letter 't'. A list of suggested contacts matching 't' is displayed below the field.",
+      "after_paragraph": "The user has typed 'e', changing the input text to 'te'. The list of suggested contacts has updated dynamically to match 'te'. The visual TalkBack focus ring on the 'To' input field has disappeared.",
+      "before_screen": "Gmail compose screen with 'To' field active and populated with 't', displaying a list of suggestions.",
+      "after_screen": "Gmail compose screen with 'To' field updated to 'te' and a refreshed list of suggestions matching the new query.",
+      "talkback_focus_before": "To input field",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": "Text changed from 't' to 'te'",
+          "change": "state_changed"
+        },
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "Cleo-T@outlook.com",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "Caitlin Pham",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "True Martial Arts",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "s-tbiswas@lwsd.org",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "s-tnair@lwsd.org",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "Tanya",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "tests@goswerve.com",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "TED-Ed Students Talks Club",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "ListViewItem",
+          "label": "Add recipient te",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The input text in the 'To' field changed from 't' to 'te'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus ring was lost on the active text field after typing a character."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Suggestions matching 't' disappeared from the list."
+        },
+        {
+          "type": "content_appeared",
+          "description": "New suggestions matching 'te' appeared in the list."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "To input field",
+          "observation": "Focus indicator disappeared when text was entered, which may make it difficult for screen reader users to track active focus.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        },
+        {
+          "element": "Suggestions list",
+          "observation": "The content of the list of suggestions changes dynamically as the user types. It is important that these changes are announced to screen reader users (e.g., via a live region announcement).",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T08-44-11-811.png",
+      "after_filename": "ss_2026-05-26T08-44-14-133.png",
+      "before_paragraph": "The screen shows the Gmail compose window with 'te' typed in the 'To' field. A list of contact suggestions is displayed below the field, including 'tests@goswerve.com', 'TED-Ed Students Talks Club', and an option to 'Add recipient te'. The on-screen keyboard is visible at the bottom.",
+      "after_paragraph": "The user has typed an 's', changing the text in the 'To' field to 'tes'. The contact suggestions list has dynamically updated: 'TED-Ed Students Talks Club' has disappeared as it no longer matches, and the 'Add recipient' suggestion has updated to 'Add recipient tes'. No TalkBack focus ring is visible on either screen.",
+      "before_screen": "Gmail email composition screen showing contact suggestions matching 'te'",
+      "after_screen": "Gmail email composition screen showing contact suggestions matching 'tes'",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": "text: te",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "TED-Ed Students Talks Club",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "Add recipient te",
+          "state": "text: Add recipient tes",
+          "change": "state_changed"
+        },
+        {
+          "type": "TextView",
+          "label": "te",
+          "state": "text: tes",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The search query in the 'To' field changed from 'te' to 'tes' after typing 's'."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The contact suggestion 'TED-Ed Students Talks Club' disappeared because it does not match the new search query 'tes'."
+        },
+        {
+          "type": "state_changed",
+          "description": "The 'Add recipient' suggestion updated its text from 'te' to 'tes'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Contact suggestions list",
+          "observation": "Suggestions update dynamically as the user types. The screen reader should announce changes to the suggestions list or the number of results found.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Contact avatar icons (blue 't', red person)",
+          "observation": "These colored circular icons precede the text suggestions. If they are decorative, they should be marked as such; if they contain information (like presence or status), it must be conveyed textually.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T08-44-14-133.png",
+      "after_filename": "ss_2026-05-26T08-44-16-481.png",
+      "before_paragraph": "The screen shows the Gmail compose window with the 'To' field active. The user has typed 'tes', and matching autocomplete recipient suggestions are displayed below. The soft keyboard is visible at the bottom of the screen with 'tes' in the suggestion strip.",
+      "after_paragraph": "The user has typed the letter 't', updating the search query in the 'To' field to 'test'. Consequently, the keyboard suggestion strip and the 'Add recipient' list item both dynamically update to display 'test'. There is no active TalkBack focus ring in either screenshot.",
+      "before_screen": "Gmail Compose screen with 'tes' typed in the 'To' field",
+      "after_screen": "Gmail Compose screen with 'test' typed in the 'To' field",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "To",
+          "state": "text changed from 'tes' to 'test'",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "Add recipient test",
+          "state": "label changed from 'Add recipient tes' to 'Add recipient test'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "test",
+          "state": "keyboard suggestion changed from 'tes' to 'test'",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "User typed the letter 't' into the 'To' recipient input field, updating autocomplete suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient test",
+          "observation": "Dynamic update of search suggestions as user types. Screen reader needs to announce changes in suggestions or count changes to keep non-visual users informed of available options.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T08-44-16-481.png",
+      "after_filename": "ss_2026-05-26T08-44-18-780.png",
+      "before_paragraph": "The screen shows Gmail's compose window where the user has typed 'test' in the 'To' field. Below the field, a suggestions list shows two entries: 'tests@goswerve.com' and 'Add recipient test'. The soft keyboard is active, showing 'test' in its suggestion bar.",
+      "after_paragraph": "After the user types '@', the 'To' field updates to 'test@'. The suggestion list dynamically updates: 'tests@goswerve.com' disappears, and the remaining option updates to 'Add recipient test@'. Additionally, the keyboard's suggestion bar changes from displaying text suggestions to displaying system utility shortcuts.",
+      "before_screen": "Gmail compose screen with 'test' typed in the 'To' field and two recipient suggestions visible.",
+      "after_screen": "Gmail compose screen with 'test@' in the 'To' field and one updated recipient suggestion visible.",
+      "talkback_focus_before": "null",
+      "talkback_focus_after": "null",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "To test",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "list_item",
+          "label": "tests@goswerve.com",
+          "state": "null",
+          "change": "disappeared"
+        },
+        {
+          "type": "list_item",
+          "label": "Add recipient test",
+          "state": "null",
+          "change": "state_changed"
+        },
+        {
+          "type": "keyboard_suggestion_bar",
+          "label": "test",
+          "state": "null",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the 'To' input field changed from 'test' to 'test@'."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "The recipient suggestion 'tests@goswerve.com' disappeared from the list."
+        },
+        {
+          "type": "state_changed",
+          "description": "The 'Add recipient' suggestion updated its label to 'Add recipient test@' to match the input."
+        },
+        {
+          "type": "state_changed",
+          "description": "The keyboard suggestion strip switched from showing text suggestions to showing Gboard tool icons (GIF, clipboard, settings, theme)."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "recipient suggestions list",
+          "observation": "Suggestions dynamically filtered and changed content without direct focus. A blind user may not be aware that the list of options has shrunk or changed unless a status announcement is made.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T08-44-18-780.png",
+      "after_filename": "ss_2026-05-26T08-44-21-023.png",
+      "before_paragraph": "The Gmail compose screen is open with the focus in the 'To' field, which contains the text 'test@'. A soft keyboard is visible on the bottom half of the screen, and a recipient suggestion for 'Add recipient' with the email 'test@' is displayed below the input field.",
+      "after_paragraph": "The user typed the letter 'g', updating the text in the 'To' field to 'test@g'. Correspondingly, the recipient suggestion below has also updated its subtitle to 'test@g'. Focus remains in the active text input field, and there is no visible TalkBack focus indicator on either screen.",
+      "before_screen": "Gmail compose screen with 'To' field containing 'test@' and keyboard open",
+      "after_screen": "Gmail compose screen with 'To' field containing 'test@g' and keyboard open",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": "test@g",
+          "change": "state_changed"
+        },
+        {
+          "type": "TextView",
+          "label": "Add recipient test@g",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The user typed the character 'g' into the 'To' recipient input field, updating both the text field and the suggestion list below."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient test@g",
+          "observation": "The suggestion text changes dynamically as the user types. It is important to verify if TalkBack announces these updated suggestions or if they are marked as a live region.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T08-44-21-023.png",
+      "after_filename": "ss_2026-05-26T08-44-22-616.png",
+      "before_paragraph": "The screen shows a Gmail compose window where the user has typed 'test@g' into the 'To' field. Below the input field, a suggestion option is displayed as 'Add recipient test@g' with an avatar icon. The system keyboard is visible at the bottom.",
+      "after_paragraph": "The text in the 'To' field has updated to 'test@gm' after the user typed 'm'. Correspondingly, the suggestion below has updated to 'Add recipient test@gm'. The keyboard remains open and no visual TalkBack focus is shown.",
+      "before_screen": "Gmail compose email screen with 'test@g' in the To field and a suggestion dropdown active.",
+      "after_screen": "Gmail compose email screen with 'test@gm' in the To field and the updated suggestion dropdown active.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "To test@g",
+          "state": "editable text changed to 'test@gm'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Add recipient test@g",
+          "state": "text changed to 'Add recipient test@gm'",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The user entered 'm', updating the To field text and the recipient suggestion text."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient suggestion",
+          "observation": "As the text in the To field updates, the suggestions list updates dynamically. Ensure these dynamic changes are announced to screen reader users as status messages.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "before_filename": "ss_2026-05-26T08-44-22-616.png",
+      "after_filename": "ss_2026-05-26T08-44-24-474.png",
+      "before_paragraph": "The screen shows a Gmail compose window. The 'To' field contains the text 'test@gm', and a suggestion card below offers to 'Add recipient test@gm'. The Android onscreen keyboard is visible at the bottom of the screen, indicating text input is active. There is no visible TalkBack focus indicator on any element.",
+      "after_paragraph": "The text 'test@gma' is now in the 'To' field, indicating the user typed the letter 'a'. The suggestion card has updated to 'Add recipient test@gma'. TalkBack focus does not appear to have changed or moved, remaining on the active text input.",
+      "before_screen": "Gmail compose screen with 'test@gm' in the 'To' field and open keyboard.",
+      "after_screen": "Gmail compose screen with 'test@gma' in the 'To' field after typing 'a'.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "To",
+          "state": "text: test@gma",
+          "change": "state_changed"
+        },
+        {
+          "type": "text_view",
+          "label": "Add recipient test@gma",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The user entered the letter 'a' into the 'To' field, which updated both the text input and the dynamic 'Add recipient' suggestion card below it."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient test@gma",
+          "observation": "Dynamic suggestion text updates as the user types. This updated state needs to be conveyed to screen reader users, possibly via a live region or when navigating to the element.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "before_filename": "ss_2026-05-26T08-44-24-474.png",
+      "after_filename": "ss_2026-05-26T08-44-26-631.png",
+      "before_paragraph": "The screen shows Gmail's compose window where the user is typing in the 'To' field. The text 'test@gma' has been entered, and an autocomplete suggestion 'Add recipient test@gma' is displayed. No TalkBack focus ring is visible on any element.",
+      "after_paragraph": "After typing the letter 'i', the 'To' field updates to 'test@gmai' and the autocomplete suggestion updates to 'Add recipient test@gmai'. The keyboard remains visible, and there is still no TalkBack focus indicator on the screen.",
+      "before_screen": "Gmail compose screen with keyboard open and 'test@gma' in the 'To' field",
+      "after_screen": "Gmail compose screen with keyboard open and 'test@gmai' in the 'To' field",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "To",
+          "state": "text: test@gma to test@gmai",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Add recipient test@gma to Add recipient test@gmai",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "User typed 'i', updating the 'To' field and the corresponding autocomplete recipient suggestion."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient suggestion",
+          "observation": "Autocomplete suggestions update dynamically as the user types. It is important to verify that these changes are announced to screen reader users (e.g., via Accessibility Live Regions) or that the user is made aware that suggestions are available without losing typing focus.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "before_filename": "ss_2026-05-26T08-44-26-631.png",
+      "after_filename": "ss_2026-05-26T08-44-28-695.png",
+      "before_paragraph": "The screen shows the Gmail email compose interface with 'test@gmai' typed into the 'To' field. A dropdown suggestion to 'Add recipient' with the entered text is displayed below the recipient field. Gboard is open on the bottom half of the screen, and there is a floating 'Help me write' button as well as two smaller floating icon buttons on the right edge. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The AFTER screenshot is visually identical to the BEFORE screenshot. No changes in text, focus, or UI state are visible.",
+      "before_screen": "Gmail compose screen with an incomplete recipient address and the keyboard open.",
+      "after_screen": "Gmail compose screen, identical to the previous state.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes detected between the before and after screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating icon buttons on the right edge",
+          "observation": "The two small circular floating buttons on the right edge appear very small and may have a touch target size below the recommended 48x48dp.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "before_filename": "ss_2026-05-26T08-44-28-695.png",
+      "after_filename": "ss_2026-05-26T08-44-30-717.png",
+      "before_paragraph": "The screen shows the Gmail email composition window with the 'To' field containing 'test@gmail'. Below the input field, a recipient suggestion card 'Add recipient' is displayed. The soft keyboard is active on the lower half of the screen, and no TalkBack focus ring is visible.",
+      "after_paragraph": "The user has entered a period, changing the text in the 'To' field to 'test@gmail.'. The suggestion card and active keyboard remain on screen, with no change in focus.",
+      "before_screen": "Gmail compose screen with 'test@gmail' in the 'To' field.",
+      "after_screen": "Gmail compose screen with 'test@gmail.' in the 'To' field.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "To",
+          "state": "test@gmail.",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the 'To' recipient input field updated to include a period at the end ('test@gmail.')."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "To text field",
+          "observation": "Text input changed without a visible TalkBack focus ring, which is common during active typing, but standard screen reader announcements for typed characters should occur.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "before_filename": "ss_2026-05-26T08-44-30-717.png",
+      "after_filename": "ss_2026-05-26T08-44-34-004.png",
+      "before_paragraph": "The user is composing an email in Gmail. The 'To' field has 'test@gmail.' entered, and a dynamic drop-down suggestion 'Add recipient test@gmail.' is displayed below it. The virtual keyboard is visible at the bottom of the screen. No TalkBack focus ring is active.",
+      "after_paragraph": "The user typed the letter 'c', updating the recipient input to 'test@gmail.c'. Consequently, the suggestion text updated to 'Add recipient test@gmail.c'. There are no other visual changes, and TalkBack focus remains inactive.",
+      "before_screen": "Gmail compose screen with 'To' field showing 'test@gmail.' and a contact suggestion dropdown.",
+      "after_screen": "Gmail compose screen after typing 'c', showing 'test@gmail.c' and updated suggestion dropdown.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "editable_text",
+          "label": "To test@gmail.",
+          "state": "value changed to test@gmail.c",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Add recipient test@gmail.",
+          "state": "value changed to Add recipient test@gmail.c",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The user entered 'c' into the To field, which updated both the text input and the contact suggestion dropdown."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient test@gmail.c",
+          "observation": "This suggestion list item updates dynamically as the user types. It is important that these changes are announced to screen reader users, or that they are aware of the presence of dynamic suggestions.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "before_filename": "ss_2026-05-26T08-44-34-004.png",
+      "after_filename": "ss_2026-05-26T08-44-36-501.png",
+      "before_paragraph": "The screen shows Gmail's compose window where the user is typing in the 'To' field. The text typed so far is 'test@gmail.c', and a suggestion to 'Add recipient' with this address is shown below. No TalkBack focus frame is visible on screen.",
+      "after_paragraph": "After the interaction, the letter 'o' has been added to the input field, changing the text to 'test@gmail.co'. The corresponding suggestion below also updates to 'test@gmail.co'. TalkBack focus does not visibly shift as this is a text entry update.",
+      "before_screen": "Gmail compose screen with text 'test@gmail.c' in the To field and an active suggestion dropdown.",
+      "after_screen": "Gmail compose screen with text 'test@gmail.co' in the To field and an updated suggestion dropdown.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "test@gmail.c",
+          "state": "test@gmail.co",
+          "change": "state_changed"
+        },
+        {
+          "type": "TextView",
+          "label": "test@gmail.c",
+          "state": "test@gmail.co",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the recipient field and the suggestion item updated dynamically from 'test@gmail.c' to 'test@gmail.co' as the user continued typing."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Suggestion popup ('Add recipient')",
+          "observation": "As the user types, suggestions update dynamically. These updates should ideally be announced by TalkBack using an accessibility live region or status message so the user knows suggestions are available without having to navigate to them.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "before_filename": "ss_2026-05-26T08-44-36-501.png",
+      "after_filename": "ss_2026-05-26T08-44-38-694.png",
+      "before_paragraph": "The user is composing an email in Gmail. In the 'To' input field, the text 'test@gmail.co' is present, and a dropdown suggestion below it offers to 'Add recipient test@gmail.co'. The on-screen keyboard is visible at the bottom of the screen. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The text in the 'To' input field has been updated to 'test@gmail.com', likely after the user pressed 'm' on the keyboard. Consequently, the suggestion below has also updated to 'Add recipient test@gmail.com'. There is still no active TalkBack focus indicator shown on screen.",
+      "before_screen": "Gmail compose screen with a partially typed email address 'test@gmail.co' and a dropdown suggestion.",
+      "after_screen": "Gmail compose screen with the typed email address updated to 'test@gmail.com' and the updated dropdown suggestion.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "To test@gmail.com",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "TextView",
+          "label": "Add recipient test@gmail.com",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The recipient text input field and the corresponding dropdown suggestion were updated to reflect the addition of the letter 'm' at the end of the email address."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating shortcut buttons on the right edge",
+          "observation": "There are two floating round overlay buttons on the right edge of the screen (one purple chat icon, one grey icon) which may belong to a third-party app or system utility. It is visually unclear if these have appropriate text labels for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "before_filename": "ss_2026-05-26T08-44-38-694.png",
+      "after_filename": "ss_2026-05-26T08-44-40-864.png",
+      "before_paragraph": "The screen shows a Gmail compose window where the user has typed 'test@gmail.com' into the 'To' field. A dropdown list item suggests 'Add recipient test@gmail.com' below the input field, but there is no active TalkBack focus ring visible in the before screenshot.",
+      "after_paragraph": "The TalkBack focus has moved to the 'Add recipient' suggestion card, highlighting it with a green focus ring. This allows the user to select the suggested recipient to add them to the email.",
+      "before_screen": "Gmail email compose screen with recipient dropdown suggestion and keyboard visible.",
+      "after_screen": "Gmail email compose screen with the recipient suggestion card focused by TalkBack.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Add recipient test@gmail.com suggestion card",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Add recipient test@gmail.com",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Add recipient' suggestion card below the 'To' field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Add recipient test@gmail.com suggestion card",
+          "observation": "The suggestion card groups the contact avatar image and text together into a single focusable element, which is good for non-visual navigation.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 26,
+      "before_filename": "ss_2026-05-26T08-44-40-864.png",
+      "after_filename": "ss_2026-05-26T08-44-44-718.png",
+      "before_paragraph": "The screen shows a compose email interface in Gmail with the keyboard open. TalkBack focus is on the suggestion dropdown item labeled 'Add recipient test@gmail.com'.",
+      "after_paragraph": "After selecting the recipient, the dropdown disappears and the contact is added as a chip in the 'To' field. TalkBack focus moves unexpectedly backward up the screen to the 'From' label, rather than progressing to the 'Subject' field or remaining in the 'To' field to add more recipients.",
+      "before_screen": "Compose email screen with recipient suggestions dropdown open and focused",
+      "after_screen": "Compose email screen with recipient selected and focus moved to the From label",
+      "talkback_focus_before": "Add recipient test@gmail.com suggestion",
+      "talkback_focus_after": "'From' label",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Add recipient test@gmail.com",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "test@gmail.com",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "textview",
+          "label": "From",
+          "state": "focused",
+          "change": "focus_gained"
+        },
+        {
+          "type": "edittext",
+          "label": "Subject",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "edittext",
+          "label": "Compose email",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "content_disappeared",
+          "description": "The recipient suggestion dropdown closed."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The selected recipient chip was added to the 'To' field, and the Subject and Compose email text fields became visible."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus jumped backward to the 'From' label instead of proceeding down the form."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "'From' label",
+          "observation": "Focus moved unexpectedly to a previous element in the logical tab order ('From' label) after adding a recipient, rather than staying in the 'To' field or moving to the 'Subject' field.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 27,
+      "before_filename": "ss_2026-05-26T08-44-44-718.png",
+      "after_filename": "ss_2026-05-26T08-44-48-094.png",
+      "before_paragraph": "The screen shows the Gmail email composition window. TalkBack focus is currently on the 'From' label at the top left of the composition area.",
+      "after_paragraph": "TalkBack focus has moved down to the 'Subject' input field, highlighting it with a green focus ring. A blue cursor is now visible in the 'To' input field, creating a potential mismatch between the active input focus and the screen reader's accessibility focus.",
+      "before_screen": "Gmail email compose screen with keyboard visible and focus on 'From' label.",
+      "after_screen": "Gmail email compose screen with focus moved to 'Subject' field and text cursor visible in 'To' field.",
+      "talkback_focus_before": "From",
+      "talkback_focus_after": "Subject",
+      "changed_elements": [
+        {
+          "type": "TextView",
+          "label": "From",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "EditText",
+          "label": "Subject",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack accessibility focus moved from the 'From' label to the 'Subject' text input field."
+        },
+        {
+          "type": "state_changed",
+          "description": "A text insertion cursor appeared in the 'To' field, even though TalkBack focus is on the 'Subject' field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "To field and Subject field",
+          "observation": "There is a discrepancy between the visual text input cursor (which is in the 'To' field) and the TalkBack accessibility focus ring (which is on the 'Subject' field). This can lead to confusion about where typed text will be entered.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 28,
+      "before_filename": "ss_2026-05-26T08-44-48-094.png",
+      "after_filename": "ss_2026-05-26T08-44-50-218.png",
+      "before_paragraph": "The screen shows Gmail's compose email interface. TalkBack focus is on the 'Subject' text input field, highlighted by a green box. A virtual keyboard is open at the bottom of the screen in lowercase mode.",
+      "after_paragraph": "The interface remains identical, and the TalkBack focus stays on the 'Subject' text field. The only change is on the virtual keyboard, where the Shift key has been activated, changing the letter keys to uppercase. Additionally, the symbol key next to the spacebar changed from '@' to ',' and the voice input microphone icon on the keyboard toolbar changed from disabled (slashed) to enabled.",
+      "before_screen": "Gmail compose screen with focus on the Subject input and lowercase virtual keyboard visible.",
+      "after_screen": "Gmail compose screen with focus still on the Subject input, but keyboard is now in uppercase mode.",
+      "talkback_focus_before": "Subject text field",
+      "talkback_focus_after": "Subject text field",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Shift",
+          "state": "selected",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Voice input",
+          "state": "enabled",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "@",
+          "state": "null",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": ",",
+          "state": "null",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The virtual keyboard shifted to uppercase mode, and some key layouts updated (e.g. '@' key became ',')."
+        }
+      ],
+      "accessibility_signals": []
+    },
+    {
+      "step": 29,
+      "before_filename": "ss_2026-05-26T08-44-50-218.png",
+      "after_filename": "ss_2026-05-26T08-44-53-094.png",
+      "before_paragraph": "The screen shows a Gmail compose window with the 'Subject' text input field highlighted by a green focus ring. The on-screen keyboard is visible at the bottom of the screen with uppercase letters.",
+      "after_paragraph": "The letter 'H' has been typed into the 'Subject' field, and the green focus ring has disappeared from it. Additionally, the on-screen keyboard has changed to lowercase letters, and a row of word suggestions ('H', 'Hey', 'How') has appeared above the keyboard.",
+      "before_screen": "Gmail email compose screen with the 'Subject' field focused and empty.",
+      "after_screen": "Gmail email compose screen with 'H' typed in the 'Subject' field, focus ring gone, and word suggestions shown on the keyboard.",
+      "talkback_focus_before": "Subject text input field",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Subject",
+          "state": "value changed from empty to 'H'",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Button",
+          "label": "H",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Hey",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "How",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "The green accessibility focus ring disappeared from the 'Subject' input field after text was entered."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Word suggestions 'H', 'Hey', and 'How' appeared above the virtual keyboard."
+        },
+        {
+          "type": "state_changed",
+          "description": "The virtual keyboard layout switched from uppercase to lowercase keys."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Subject text input",
+          "observation": "Focus ring disappeared after typing began, which may make it difficult to track focus state during active text entry.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 30,
+      "before_filename": "ss_2026-05-26T08-44-53-094.png",
+      "after_filename": "ss_2026-05-26T08-44-55-426.png",
+      "before_paragraph": "The user is composing an email in Gmail with the cursor currently in the subject line, which contains the letter 'H'. The onscreen keyboard is visible, showing word suggestions 'H', 'Hey', and 'How' above the keys. No TalkBack focus indicator is visually present on the screen.",
+      "after_paragraph": "The user has typed the letter 'e', updating the subject line text to 'He'. The keyboard's word suggestions have updated to 'He', 'Hey', and 'He's'. There is still no active TalkBack focus indicator visible.",
+      "before_screen": "Gmail compose screen with the cursor in the subject line after the letter 'H' and keyboard open.",
+      "after_screen": "Gmail compose screen with the subject line updated to 'He' and updated keyboard suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Subject",
+          "state": "Text changed from 'H' to 'He'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "H",
+          "state": "Changed to He",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "How",
+          "state": "Changed to He's",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The user typed 'e', updating the subject line from 'H' to 'He' and refreshing the keyboard suggestion bar."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating icons on the right edge",
+          "observation": "There are floating overlay icons (purple comment bubble and grey wave icon) on the right side of the screen that may lack descriptive labels or clear touch target sizes.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "before_filename": "ss_2026-05-26T08-44-55-426.png",
+      "after_filename": "ss_2026-05-26T08-44-57-395.png",
+      "before_paragraph": "The screen shows a Gmail compose window with 'He' typed in the subject line. The on-screen keyboard (Gboard) is visible at the bottom of the screen, displaying word suggestions 'He', 'Hey', and 'He's'. No TalkBack focus frame is visible on the screen.",
+      "after_paragraph": "The character 'l' has been typed, updating the subject line to 'Hel'. The keyboard suggestions have updated to 'Hel', 'Hello', and 'Help'. There is still no visible TalkBack focus frame.",
+      "before_screen": "Gmail compose screen with Gboard open, showing 'He' in the subject line.",
+      "after_screen": "Gmail compose screen with Gboard open, showing 'Hel' in the subject line.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Subject",
+          "state": "text changed from 'He' to 'Hel'",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion 1",
+          "state": "text changed from 'He' to 'Hel'",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion 2",
+          "state": "text changed from 'Hey' to 'Hello'",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Keyboard suggestion 3",
+          "state": "text changed from 'He's' to 'Help'",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "Subject text field updated from 'He' to 'Hel' after user input."
+        },
+        {
+          "type": "other",
+          "description": "Keyboard suggestions updated to match the new text input."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating icons on the right edge (purple message icon and grey logo icon)",
+          "observation": "These floating action buttons are small and close together, potentially having overlapping or small touch targets.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "before_filename": "ss_2026-05-26T08-44-57-395.png",
+      "after_filename": "ss_2026-05-26T08-44-59-139.png",
+      "before_paragraph": "The screen shows a Gmail compose window with 'Hel' typed in the subject line. The keyboard is active at the bottom, showing word suggestions 'Hel', 'Hello', and 'Help'. No TalkBack focus outline is visible on the screen.",
+      "after_paragraph": "After typing the letter 'l', the subject line text updates to 'Hell'. The keyboard suggestions also update to 'Hell', 'He'll', and 'Hello'. No visual focus indicator is present in this screenshot.",
+      "before_screen": "Gmail compose screen with text 'Hel' in the subject line and active keyboard.",
+      "after_screen": "Gmail compose screen with text 'Hell' in the subject line and updated keyboard suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Subject",
+          "state": "text changed from 'Hel' to 'Hell'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard Suggestion 1",
+          "state": "text changed from 'Hel' to 'Hell'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard Suggestion 2",
+          "state": "text changed from 'Hello' to 'He'll'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard Suggestion 3",
+          "state": "text changed from 'Help' to 'Hello'",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "User typed the letter 'l', updating the text field and keyboard suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating icons on the right edge",
+          "observation": "Two small overlay buttons (purple and grey) are displayed on the right edge of the screen, which appear to have small touch targets and lack clear text labels.",
+          "potentially_relevant_wcag": [
+            "2.5.8",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "before_filename": "ss_2026-05-26T08-44-59-139.png",
+      "after_filename": "ss_2026-05-26T08-45-01-059.png",
+      "before_paragraph": "The screen shows a Gmail compose window with 'Hell' typed into the subject field. The soft keyboard is active, displaying spelling suggestions 'Hell', 'He'll', and 'Hello' above the key rows. There is no TalkBack accessibility focus ring visible.",
+      "after_paragraph": "The subject field now displays 'Hello'. The keyboard suggestions have changed to 'Hello', 'Jello', and two emojis. TalkBack focus is still not visually indicated in the screenshot.",
+      "before_screen": "Gmail compose screen with 'Hell' in the subject line and active keyboard.",
+      "after_screen": "Gmail compose screen with 'Hello' in the subject line and updated keyboard suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Hell",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Hell",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "He'll",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "Button",
+          "label": "Hello",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Jello",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "👋",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "🤗",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the subject line field changed from 'Hell' to 'Hello'."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The keyboard suggestions updated to 'Hello', 'Jello', and emoji icons."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Keyboard suggestions (Emojis)",
+          "observation": "Emojis (waving hand and hugging face) are displayed as suggestions. Ensure these have descriptive text alternatives for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "before_filename": "ss_2026-05-26T08-45-01-059.png",
+      "after_filename": "ss_2026-05-26T08-45-11-415.png",
+      "before_paragraph": "The screen shows a Gmail compose window with the subject line containing 'Hello'. The keyboard is active at the bottom, and there is no visible TalkBack focus ring on any element.",
+      "after_paragraph": "An active blue insertion cursor appears at the end of 'Hello' in the subject line, indicating that this input field has gained system text focus. No other changes are present on the screen.",
+      "before_screen": "Gmail compose screen with 'Hello' in the subject line and keyboard visible.",
+      "after_screen": "Gmail compose screen with the cursor active in the 'Hello' subject line.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Hello",
+          "state": "focused with cursor",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The subject line text field gained an active cursor, indicating input focus."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating purple speech bubble icon",
+          "observation": "This overlay button is icon-only and may lack an accessible label, and its touch target is relatively small.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.5.8"
+          ]
+        },
+        {
+          "element": "Floating grey 'm' logo icon",
+          "observation": "This overlay button is icon-only, has a small touch target, and overlaps slightly with the purple bubble icon above it.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 35,
+      "before_filename": "ss_2026-05-26T08-45-11-415.png",
+      "after_filename": "ss_2026-05-26T08-45-20-847.png",
+      "before_paragraph": "The screen shows the Gmail email compose interface. The 'Subject' field contains the text 'Hello' with an active cursor, and the keyboard is displayed at the bottom of the screen. No TalkBack focus frame is visible.",
+      "after_paragraph": "The TalkBack focus has moved to the 'Compose email' text field, which is now highlighted with a green focus indicator. The cursor remains in the 'Subject' field, but the screen reader focus is now on the body input area.",
+      "before_screen": "Gmail compose screen with the cursor in the Subject field.",
+      "after_screen": "Gmail compose screen with TalkBack focus on the 'Compose email' text field.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Compose email (EditText)",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Compose email",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Compose email' text field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Compose email",
+          "observation": "Focus moved to the 'Compose email' input field, but the text cursor visually remains in the 'Subject' field ('Hello'). This discrepancy between visual text input cursor and screen reader focus could be confusing.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "before_filename": "ss_2026-05-26T08-45-20-847.png",
+      "after_filename": "ss_2026-05-26T08-45-25-085.png",
+      "before_paragraph": "The screen shows an email composition interface in Gmail. TalkBack focus is currently on the 'Compose email' text field, highlighted by a green border, while the active text input cursor is positioned in the Subject line containing 'Hello'.",
+      "after_paragraph": "The letter 't' has been entered, updating the Subject line text to 'Hellot'. The green TalkBack focus indicator has disappeared from the 'Compose email' field, and no other element on the screen is currently focused.",
+      "before_screen": "Gmail compose screen with TalkBack focus on the 'Compose email' field and text cursor in the Subject line.",
+      "after_screen": "Gmail compose screen after typing 't', showing 'Hellot' in the Subject line and no active TalkBack focus ring.",
+      "talkback_focus_before": "Compose email (text field)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Compose email",
+          "state": "focusable",
+          "change": "focus_lost"
+        },
+        {
+          "type": "EditText",
+          "label": "Hellot",
+          "state": "editing",
+          "change": "state_changed"
+        },
+        {
+          "type": "Button",
+          "label": "Hellot",
+          "state": "keyboard suggestion",
+          "change": "appeared"
+        },
+        {
+          "type": "Button",
+          "label": "Hello",
+          "state": "keyboard suggestion",
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus was lost from the 'Compose email' field and is no longer visible on the screen after typing a character."
+        },
+        {
+          "type": "state_changed",
+          "description": "The text in the Subject line updated from 'Hello' to 'Hellot'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Compose email (text field)",
+          "observation": "TalkBack focus was on the 'Compose email' field while the text insertion cursor was active in the Subject line, which is mismatching and potentially confusing.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.2"
+          ]
+        },
+        {
+          "element": "Hellot (text field)",
+          "observation": "Typing a character caused TalkBack to lose focus entirely instead of keeping focus on the active input field.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 37,
+      "before_filename": "ss_2026-05-26T08-45-25-085.png",
+      "after_filename": "ss_2026-05-26T08-45-28-478.png",
+      "before_paragraph": "The Gmail compose screen is visible with the keyboard open. The Subject field contains the text 'Hellot', which is underlined as a potential misspelling. No TalkBack focus frame is visible.",
+      "after_paragraph": "The screen remains almost identical, except a text insertion cursor (caret) is now visible at the end of 'Hellot' in the Subject field, indicating that the field is active for text input. TalkBack focus does not appear to have changed visually.",
+      "before_screen": "Gmail compose email screen with keyboard active",
+      "after_screen": "Gmail compose email screen with cursor active in Subject field",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Hellot",
+          "state": "cursor active",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text insertion cursor appeared at the end of the text 'Hellot' in the Subject field."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons (purple chat icon, grey waves icon on the right edge)",
+          "observation": "These overlay buttons are quite small visually and may have touch targets below 48x48dp, and they lack clear visible text labels.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.5.3",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 38,
+      "before_filename": "ss_2026-05-26T08-45-28-478.png",
+      "after_filename": "ss_2026-05-26T08-45-29-434.png",
+      "before_paragraph": "The user is composing an email in Gmail. The subject field contains the misspelled text 'Hellot' with the cursor at the end. The virtual keyboard is open, and the suggestion bar shows 'Hellot', 'Hello this', and 'Hello there'. No TalkBack focus ring is visible.",
+      "after_paragraph": "The user has deleted the letter 't' from 'Hellot' to make it 'Hello'. Consequently, the keyboard suggestion bar has updated to show 'Hello', 'Jello', and emoji suggestions. No visual focus ring has appeared.",
+      "before_screen": "Gmail compose screen with 'Hellot' in the subject field and the keyboard open.",
+      "after_screen": "Gmail compose screen with 'Hello' in the subject field after deleting 't', showing updated keyboard suggestions.",
+      "talkback_focus_before": "null",
+      "talkback_focus_after": "null",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Hellot",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Hellot (suggestion)",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Hello this (suggestion)",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Hello there (suggestion)",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The subject line text changed from 'Hellot' to 'Hello' due to a backspace action."
+        },
+        {
+          "type": "state_changed",
+          "description": "The keyboard suggestions bar updated to display 'Hello', 'Jello', and emoji shortcuts instead of the previous text suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Keyboard suggestions",
+          "observation": "Suggestions updated dynamically. In screen readers, dynamic updates like keyboard suggestions are usually not announced automatically to avoid chatter, but users need to know how to access them.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 39,
+      "before_filename": "ss_2026-05-26T08-45-29-434.png",
+      "after_filename": "ss_2026-05-26T08-45-32-648.png",
+      "before_paragraph": "The screen displays a Gmail email composition window with a subject line 'Hello' and an empty 'Compose email' body field. The onscreen keyboard is active, and no TalkBack focus ring is visible.",
+      "after_paragraph": "TalkBack focus has moved to the 'Compose email' text field, marked by a green focus border. The rest of the screen remains unchanged.",
+      "before_screen": "Gmail compose screen with active keyboard",
+      "after_screen": "Gmail compose screen with TalkBack focus on 'Compose email' text field",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Compose email text field",
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Compose email",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Compose email' input field."
+        }
+      ],
+      "accessibility_signals": []
+    },
+    {
+      "step": 40,
+      "before_filename": "ss_2026-05-26T08-45-32-648.png",
+      "after_filename": "ss_2026-05-26T08-45-35-206.png",
+      "before_paragraph": "TalkBack focus is on the \"Compose email\" text input field in the Gmail compose screen. The keyboard is active at the bottom, showing lowercase letters and a word suggestion bar with options like \"Hello\" and \"Jello\".",
+      "after_paragraph": "TalkBack focus remains on the \"Compose email\" text input field, but the field's placeholder text has disappeared and its focus box has collapsed to a thin horizontal line. The keyboard layout has changed to uppercase letters, and the word suggestion bar has been replaced by the keyboard toolbar (showing GIF, Clipboard, and Settings icons).",
+      "before_screen": "Gmail compose screen with focus on the 'Compose email' text field and lowercase keyboard active with suggestions.",
+      "after_screen": "Gmail compose screen with focus on the empty 'Compose email' text field and uppercase keyboard active with toolbar.",
+      "talkback_focus_before": "Compose email text field",
+      "talkback_focus_after": "Compose email text field",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Compose email",
+          "state": "collapsed height, empty text",
+          "change": "state_changed"
+        },
+        {
+          "type": "layout",
+          "label": "Keyboard suggestion bar",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Keyboard toolbar",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Keyboard keys",
+          "state": "uppercase",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The compose email text field placeholder disappeared, and the input area visual size collapsed to a thin line."
+        },
+        {
+          "type": "keyboard_appeared",
+          "description": "The keyboard switched from lowercase layout with text suggestions to uppercase layout with a utility toolbar."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Compose email text field",
+          "observation": "In the AFTER screen, the focus indicator for the empty input field is extremely thin (only a few pixels high), which may make the active input area difficult to distinguish visually.",
+          "potentially_relevant_wcag": [
+            "1.4.11",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 41,
+      "before_filename": "ss_2026-05-26T08-45-35-206.png",
+      "after_filename": "ss_2026-05-26T08-45-39-455.png",
+      "before_paragraph": "The screen shows a Gmail compose window. TalkBack focus is active on the main email body text field, highlighted by a green boundary. The virtual keyboard is shown in uppercase mode.",
+      "after_paragraph": "The character 'T' has been typed into the body text field. The keyboard state has transitioned to lowercase, and spelling suggestions ('T', 'The', 'That's') have appeared above it. Visual TalkBack focus is no longer present on the text field, meaning the active focus indicator has disappeared after typing.",
+      "before_screen": "Gmail email composition screen with the main text field focused and keyboard in uppercase mode",
+      "after_screen": "Gmail email composition screen after typing the letter 'T', with lowercase keyboard and suggestions visible, and no visible TalkBack focus ring",
+      "talkback_focus_before": "Email body edit text area (highlighted by green rectangle)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "EditText",
+          "label": "Email body",
+          "state": "Text changed from empty to 'T'",
+          "change": "state_changed"
+        },
+        {
+          "type": "EditText",
+          "label": "Email body",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Keyboard",
+          "label": "Virtual Keyboard",
+          "state": "Shifted from uppercase to lowercase",
+          "change": "state_changed"
+        },
+        {
+          "type": "SuggestionBar",
+          "label": "Keyboard suggestions",
+          "state": "Showing 'T', 'The', 'That's'",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus indicator disappeared from the email body input field after a letter was typed."
+        },
+        {
+          "type": "state_changed",
+          "description": "Text in the email body updated with 'T' and keyboard keys changed to lowercase."
+        },
+        {
+          "type": "content_appeared",
+          "description": "Text suggestions appeared above the keyboard layout."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Email body text field",
+          "observation": "TalkBack focus ring disappeared from the active input field after typing 'T'. This leaves no visual indicator of where screen reader focus currently lies.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 42,
+      "before_filename": "ss_2026-05-26T08-45-39-455.png",
+      "after_filename": "ss_2026-05-26T08-45-41-690.png",
+      "before_paragraph": "The screen shows Gmail's email composition interface. The cursor is in the body text field, where the single letter 'T' has been typed. The on-screen keyboard is visible, showing word suggestions: 'T', 'The', and 'That's'. No visual TalkBack focus indicator is present on the screen.",
+      "after_paragraph": "The character 'e' has been typed, updating the text in the email body to 'Te'. The keyboard's word suggestions have updated accordingly to 'Te', 'The', and 'Tell'. No TalkBack focus indicator is visible after this character input.",
+      "before_screen": "Gmail email compose screen with keyboard active and letter 'T' entered in the body.",
+      "after_screen": "Gmail email compose screen after entering the letter 'e', showing 'Te' in the body.",
+      "talkback_focus_before": "null",
+      "talkback_focus_after": "null",
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Email body",
+          "state": "text changed from 'T' to 'Te'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "T",
+          "state": "changed to 'Te'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "That's",
+          "state": "changed to 'Tell'",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "User typed the letter 'e', updating the email body text and the keyboard suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating icons on the right edge",
+          "observation": "There are two floating icon buttons on the right edge (above the 'Help me write' button) that lack visible text labels.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 43,
+      "before_filename": "ss_2026-05-26T08-45-41-690.png",
+      "after_filename": "ss_2026-05-26T08-45-44-247.png",
+      "before_paragraph": "The screen shows the Gmail email composition window with the keyboard open. The user has typed 'Te' in the email body. The keyboard's predictive text bar displays suggestions: 'Te', 'The', and 'Tell'. No TalkBack focus indicator is visible.",
+      "after_paragraph": "The letter 's' has been typed, updating the body text to 'Tes'. The predictive text bar has updated accordingly to show 'Tes', 'Yes', and 'test@gmail.com'. No TalkBack focus indicator is visible on the screen.",
+      "before_screen": "Gmail email composition screen with keyboard open and 'Te' typed in the body.",
+      "after_screen": "Gmail email composition screen with keyboard open and 'Tes' typed in the body.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Tes",
+          "state": "editing",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Tes",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Yes",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "test@gmail.com",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the body of the email changed from 'Te' to 'Tes' as a result of typing."
+        },
+        {
+          "type": "state_changed",
+          "description": "The keyboard suggestion bar updated its suggestions from 'Te', 'The', 'Tell' to 'Tes', 'Yes', 'test@gmail.com'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Keyboard suggestions bar",
+          "observation": "Suggestions update dynamically as the user types. Ensure these updates are accessible to screen reader users if they choose to navigate to them, without causing disruptive announcements during active typing.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 44,
+      "before_filename": "ss_2026-05-26T08-45-44-247.png",
+      "after_filename": "ss_2026-05-26T08-45-45-629.png",
+      "before_paragraph": "The screen shows an email compose interface in Gmail, with the text 'Tes' typed in the body. The onscreen keyboard is visible, showing word suggestions 'Tes', 'Yes', and 'test@gmail.com'. No active TalkBack focus ring is visible.",
+      "after_paragraph": "The text in the email body has been updated from 'Tes' to 'Test'. The onscreen keyboard suggestions have updated to 'Test', 'test@gmail.com', and 'Rest' to reflect the new text. There is still no active TalkBack focus ring visible.",
+      "before_screen": "Gmail compose screen with text 'Tes' in body and open keyboard.",
+      "after_screen": "Gmail compose screen with text updated to 'Test' in body and updated keyboard suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Tes",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Tes",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Yes",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "test@gmail.com",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "The text in the compose body was edited to 'Test', which updated the text field content and the keyboard suggestions."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating circular button above 'Help me write'",
+          "observation": "An overlay icon button is visible above the 'Help me write' pill button, containing what looks like a stylized 'm' or waves, which may lack an accessible label.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 45,
+      "before_filename": "ss_2026-05-26T08-45-45-629.png",
+      "after_filename": "ss_2026-05-26T08-45-47-149.png",
+      "before_paragraph": "The screen shows an email composition interface in Gmail with the keyboard open. The user has typed 'Test' in the email body text field. The keyboard suggestion bar displays 'Test', 'test@gmail.com', and 'Rest'. No TalkBack accessibility focus ring is visually active.",
+      "after_paragraph": "The user typed the letter 'i', changing the text in the email body to 'Testi'. Consequently, the suggestion bar above the keyboard updated to show 'Testi', 'Testing', and 'Testimony'. No focus ring is visible, as the user is actively typing.",
+      "before_screen": "Gmail email compose screen with the word 'Test' typed in the body and Gboard open.",
+      "after_screen": "Gmail email compose screen with 'Testi' typed in the body and updated keyboard suggestions.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Email body",
+          "state": "text changed from 'Test' to 'Testi'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Suggestion 1: Test to Testi",
+          "state": "label changed from 'Test' to 'Testi'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Suggestion 2: test@gmail.com to Testing",
+          "state": "label changed from 'test@gmail.com' to 'Testing'",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Suggestion 3: Rest to Testimony",
+          "state": "label changed from 'Rest' to 'Testimony'",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the email body updated from 'Test' to 'Testi' as the user typed."
+        },
+        {
+          "type": "state_changed",
+          "description": "Keyboard suggestions updated to 'Testi', 'Testing', and 'Testimony'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "floating overlay buttons",
+          "observation": "Two small overlay buttons (purple chat bubble and grey logo icon) are present on the right edge, potentially blocking content and requiring verification of accessibility labels.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 46,
+      "before_filename": "ss_2026-05-26T08-45-47-149.png",
+      "after_filename": "ss_2026-05-26T08-45-48-950.png",
+      "before_paragraph": "The user is composing an email in Gmail, with the text 'Testi' in the body field. Gboard is open at the bottom of the screen, displaying word suggestions 'Testi', 'Testing', and 'Testimony'. No TalkBack focus indicator is visible on the screen.",
+      "after_paragraph": "The letter 'n' has been typed, changing the body text to 'Testin'. The first and third keyboard suggestions have updated to 'Testin' and 'Resting' respectively. TalkBack focus is not visible, with the system focus remaining on the text cursor in the body input field.",
+      "before_screen": "Gmail email compose screen with the text 'Testi' typed in the body.",
+      "after_screen": "Gmail email compose screen with the text 'Testin' typed in the body.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "edit_text",
+          "label": "Email body",
+          "state": "Testin",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Testin",
+          "state": "keyboard suggestion",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Resting",
+          "state": "keyboard suggestion",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the body input changed from 'Testi' to 'Testin', causing the keyboard suggestions to update."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Keyboard suggestions",
+          "observation": "Keyboard suggestions update dynamically as the user types. Users with screen readers may not be aware of these live suggestion changes unless explicitly announced or navigated to.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 47,
+      "before_filename": "ss_2026-05-26T08-45-48-950.png",
+      "after_filename": "ss_2026-05-26T08-45-50-849.png",
+      "before_paragraph": "The screen shows a Gmail compose window. The body text field contains the misspelled word 'Testin', which is underlined. Gboard is open at the bottom, displaying suggestions: 'Testin', 'Testing', and 'Resting'. No TalkBack accessibility focus ring is visible on the screen.",
+      "after_paragraph": "The misspelled word 'Testin' has been corrected to 'Testing' in the email body. Consequently, the suggestion strip on Gboard has updated to show 'Testing', 'Resting', and 'Testings'. There is still no active TalkBack focus ring displayed.",
+      "before_screen": "Gmail compose screen with body text 'Testin' and Gboard suggestions 'Testin', 'Testing', 'Resting'.",
+      "after_screen": "Gmail compose screen with body text corrected to 'Testing' and Gboard suggestions updated to 'Testing', 'Resting', 'Testings'.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "editable_text",
+          "label": "Testin",
+          "state": "focused",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Testin",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Testing",
+          "state": null,
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Resting",
+          "state": null,
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The text in the compose body was corrected from 'Testin' to 'Testing'."
+        },
+        {
+          "type": "state_changed",
+          "description": "Gboard keyboard suggestion strip updated its suggestions based on the new text input."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Gboard suggestion strip",
+          "observation": "Suggestions update dynamically as text changes. Dynamic updates may need to be announced or easily navigable via screen reader.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Purple bubble icon on the right",
+          "observation": "An icon-only floating button is present, which may require an explicit content description for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 48,
+      "before_filename": "ss_2026-05-26T08-45-50-849.png",
+      "after_filename": "ss_2026-05-26T08-45-54-042.png",
+      "before_paragraph": "The screen shows the Gmail email compose interface with the virtual keyboard open. The 'To' field contains 'test@gmail.com', the subject is 'Hello', and the body contains the text 'Testing' with a blue underline. A 'Help me write' button is visible above the keyboard, and two floating action buttons are on the right edge. There is no active TalkBack focus ring visible on the screen.",
+      "after_paragraph": "The AFTER screenshot is visually identical to the BEFORE screenshot. No elements have appeared, disappeared, changed state, or gained TalkBack focus.",
+      "before_screen": "Gmail compose screen with the keyboard open and 'Testing' in the body text.",
+      "after_screen": "Gmail compose screen, identical to the before screen.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movements were detected between the two screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons on the right",
+          "observation": "There are two icon-only floating action buttons on the right edge of the screen that may lack descriptive text labels for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 49,
+      "before_filename": "ss_2026-05-26T08-45-54-042.png",
+      "after_filename": "ss_2026-05-26T08-45-54-745.png",
+      "before_paragraph": "The user is on the Gmail email composition screen with the keyboard visible at the bottom. The email has a recipient, subject 'Hello', and body 'Testing'. There is no active TalkBack focus ring visible in the screenshot.",
+      "after_paragraph": "The TalkBack focus ring appears, highlighting the 'More options' button (three vertical dots) in the top right corner of the screen. No other elements have changed on the screen.",
+      "before_screen": "Gmail compose screen with keyboard open and no visible TalkBack focus.",
+      "after_screen": "Gmail compose screen with TalkBack focus highlighted on the 'More options' menu button in the top right.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "More options button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "More options",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'More options' button in the top-right corner."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "More options button",
+          "observation": "This is an icon-only button (three vertical dots) that requires a text alternative for screen reader users.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 50,
+      "before_filename": "ss_2026-05-26T08-45-54-745.png",
+      "after_filename": "ss_2026-05-26T08-45-57-972.png",
+      "before_paragraph": "In the BEFORE screenshot, TalkBack focus is on the 'More options' button (represented by three vertical dots) in the top-right corner of the Gmail compose screen. The screen is in the middle of composing an email, with 'Testing' written in the body, and the software keyboard is visible at the bottom.",
+      "after_paragraph": "In the AFTER screenshot, the TalkBack focus has shifted to the 'Navigate up' button (represented by a back arrow) in the top-left corner. No other changes are visible on the screen, and the keyboard remains active.",
+      "before_screen": "Gmail email compose screen with the 'More options' button focused.",
+      "after_screen": "Gmail email compose screen with the 'Navigate up' (back arrow) button focused.",
+      "talkback_focus_before": "More options button",
+      "talkback_focus_after": "Navigate up button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "More options",
+          "state": "focusable",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Navigate up",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'More options' button in the top-right corner to the 'Navigate up' button in the top-left corner."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Navigate up button",
+          "observation": "Icon-only button without visible text label. Needs appropriate text alternative.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "More options button",
+          "observation": "Icon-only button without visible text label. Needs appropriate text alternative.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 51,
+      "before_filename": "ss_2026-05-26T08-45-57-972.png",
+      "after_filename": "ss_2026-05-26T08-46-04-073.png",
+      "before_paragraph": "In the Gmail compose screen, the screen reader focus is set on the 'Navigate up' (back) button in the top-left corner. The virtual keyboard is visible, and the user has typed some text.",
+      "after_paragraph": "After an interaction, a toast notification stating 'Message saved as draft.' appears near the bottom. The green TalkBack focus indicator is no longer visible on any on-screen element, suggesting focus has been lost or moved to an untracked element.",
+      "before_screen": "Gmail compose email screen with TalkBack focus on the back button",
+      "after_screen": "Gmail compose email screen with a 'Message saved as draft' toast visible and no active TalkBack focus indicator",
+      "talkback_focus_before": "Navigate up button",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Navigate up",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "status_bar/toast",
+          "label": "Message saved as draft.",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved away from the 'Navigate up' button and is no longer visible on screen."
+        },
+        {
+          "type": "toast_appeared",
+          "description": "A toast notification with the text 'Message saved as draft.' appeared at the bottom of the screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Message saved as draft. toast",
+          "observation": "A toast message appeared. If it is not announced automatically to screen reader users, they will not know their draft was saved.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        },
+        {
+          "element": "Screen focus",
+          "observation": "TalkBack focus is lost/not visible after the interaction, which can disorient users as they don't know where the next swipe will take them.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 52,
+      "before_filename": "ss_2026-05-26T08-46-04-073.png",
+      "after_filename": "ss_2026-05-26T08-46-07-505.png",
+      "before_paragraph": "The user is on the email composition screen in Gmail, with the text cursor in the body field which contains 'Testing'. The on-screen keyboard is active, and a toast message 'Message saved as draft.' is visible at the bottom of the screen above the keyboard.",
+      "after_paragraph": "The screen has transitioned back to the main Gmail inbox ('Primary'). The draft has been saved, and the keyboard has disappeared. TalkBack focus is now on the 'Search in mail' container at the top of the screen, which is highlighted with a green outline.",
+      "before_screen": "Gmail compose screen with keyboard active",
+      "after_screen": "Gmail inbox screen with focus on the search bar",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Search in mail container",
+      "changed_elements": [
+        {
+          "type": "keyboard",
+          "label": "On-screen keyboard",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Compose screen contents",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Inbox screen contents",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "search_bar",
+          "label": "Search in mail",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the Compose screen back to the Inbox screen."
+        },
+        {
+          "type": "keyboard_disappeared",
+          "description": "The on-screen keyboard is no longer visible."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved to the 'Search in mail' bar at the top of the inbox screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Search in mail container",
+          "observation": "The focus outline encompasses the search bar container, which contains the navigation drawer button, search text input, and user profile button. It needs to be checked if these sub-elements are individually accessible or if they are grouped unexpectedly.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 53,
+      "before_filename": "ss_2026-05-26T08-46-07-505.png",
+      "after_filename": "start_2026-05-26T08-43-10-346.png",
+      "before_paragraph": "The Gmail app is open, displaying the primary inbox. TalkBack focus is currently on the 'Search in mail' search bar at the very top of the screen. At the bottom of the screen, a temporary toast message reading 'Message saved as draft' is visible.",
+      "after_paragraph": "The screen has transitioned to the Android home screen. TalkBack focus has shifted to the date widget displaying 'Tue, May 26' near the top of the screen, representing a complete change of application context.",
+      "before_screen": "Gmail inbox list with 'Search in mail' bar focused",
+      "after_screen": "Android home screen with date widget focused",
+      "talkback_focus_before": "Search in mail search bar",
+      "talkback_focus_after": "Tue, May 26 date widget",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Search in mail",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "text",
+          "label": "Message saved as draft.",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "widget",
+          "label": "Tue, May 26",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Play Store",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Gmail",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "Photos",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "icon",
+          "label": "YouTube",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the Gmail application to the Android home screen."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the 'Search in mail' input field in Gmail to the 'Tue, May 26' date widget on the home screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Message saved as draft.",
+          "observation": "A toast message appeared near the bottom without taking keyboard focus. It is important to ensure this is announced to screen reader users as a status message.",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -22,7 +22,7 @@ Raw trace folders live in `data/recordings/`. Each trace folder contains:
 3. **Events + User Actions** — `events.jsonl` + `user_actions.jsonl`
 4. **Events + User Actions + Trees** — all three
 
-## Analysis Pipeline (per trace, fresh session)
+## Trace Analysis Pipeline (per trace, fresh session)
 For each combo, do both steps simultaneously before moving to the next combo:
 
 **Step A — Write to `[TASK_ID]_analysis.md`:**

@@ -1,0 +1,2464 @@
+{
+  "task_id": "AM2",
+  "app": "Amazon",
+  "model": "gemini-3.5-flash",
+  "generated": "2026-06-25",
+  "total_frames": 48,
+  "pairs_analyzed": 47,
+  "steps": [
+    {
+      "step": 1,
+      "before_filename": "ss_2026-05-26T17-18-04-864.png",
+      "after_filename": "ss_2026-05-26T17-18-07-778.png",
+      "before_paragraph": "The screen shows Amazon search results for \"wireless headphones\" with several filter chips at the top. TalkBack focus is currently on the \"Prime\" filter toggle button on the second row, which is in the active (ON) state.",
+      "after_paragraph": "The TalkBack focus has moved from the \"Prime\" filter toggle to the \"Up to $15\" filter chip on the first row. The green focus ring is now highlighting the \"Up to $15\" button.",
+      "before_screen": "Amazon search results for wireless headphones, with the Prime filter toggle selected by TalkBack.",
+      "after_screen": "Amazon search results for wireless headphones, with the 'Up to $15' filter chip selected by TalkBack.",
+      "talkback_focus_before": "Prime filter toggle button",
+      "talkback_focus_after": "'Up to $15' filter button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Prime filter",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Up to $15",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Prime' toggle button to the 'Up to $15' price filter chip."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter chips ('Up to $15', 'Prime', '$15 to $20', etc.)",
+          "observation": "The filter chips have a height of approximately 36dp, which is below the recommended 48dp minimum touch target size.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "before_filename": "ss_2026-05-26T17-18-07-778.png",
+      "after_filename": "ss_2026-05-26T17-18-08-933.png",
+      "before_paragraph": "The screen displays Amazon search results for 'wireless headphones'. At the top, there is a search bar and several filter options like '$15 to $20' and a Prime toggle. Below the filters is a sponsored section featuring two models of DOQAUS Bluetooth headphones. No TalkBack focus ring is visible on any element in this screenshot.",
+      "after_paragraph": "The AFTER screenshot is identical to the BEFORE screenshot. There are no visual changes, state changes, or visible movements of the TalkBack focus indicator.",
+      "before_screen": "Amazon search results page for wireless headphones showing product listings and filters.",
+      "after_screen": "The same Amazon search results page, unchanged.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Filter button '1' with icon",
+          "observation": "The filter button containing '1' and an icon is quite small, which may make it difficult to target accurately.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        },
+        {
+          "element": "Shop DOQAUS >",
+          "observation": "The link text 'Shop DOQAUS >' is somewhat vague and relies on visual context of the sponsored section above it.",
+          "potentially_relevant_wcag": [
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Sponsored label",
+          "observation": "The 'Sponsored' label text is small and in a light gray color, which may have insufficient contrast against the white background.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "before_filename": "ss_2026-05-26T17-18-08-933.png",
+      "after_filename": "ss_2026-05-26T17-18-11-307.png",
+      "before_paragraph": "The screen shows Amazon search results for \"wireless headphones\" with several horizontal filter rows at the top. The visible price filters include \"$15 to $20\", \"Up to $15\", and \"$20 to $35\". There is no active TalkBack focus ring visible on the screen.",
+      "after_paragraph": "The horizontal filter rows have scrolled to the right, revealing new options. The first row now shows \"$35 & above\" (selected with a green border) and \"Most Purchased\", while the second row now shows \"Wireless Technology\", \"Brands\", and \"Noise Control\". No TalkBack focus ring is visible.",
+      "before_screen": "Amazon search results for wireless headphones with price filters visible at the top.",
+      "after_screen": "Amazon search results after the top filter rows have been scrolled horizontally, showing new filter options.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "$15 to $20",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Up to $15",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$35 & above",
+          "state": "selected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Most Purchased",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Discover",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Brands",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Noise Control",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The horizontal filter rows at the top of the page scrolled to the right, showing new filter options and hiding previous ones."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter chips at screen edges",
+          "observation": "Filter chips like 'o $15' and 'ectivity' are visually clipped at the screen edges during horizontal scrolling, which can make text hard to read.",
+          "potentially_relevant_wcag": [
+            "1.4.10"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "before_filename": "ss_2026-05-26T17-18-11-307.png",
+      "after_filename": "ss_2026-05-26T17-18-13-148.png",
+      "before_paragraph": "The screen displays Amazon search results for \"wireless headphones\" with filter chips at the top and product listings below, including DOQAUS and Picun brands. No TalkBack focus ring is visible on any element.",
+      "after_paragraph": "There are no visual changes between the BEFORE and AFTER screenshots. The screen state, scroll position, and lack of a visible TalkBack focus ring remain identical.",
+      "before_screen": "Amazon search results page for wireless headphones",
+      "after_screen": "Amazon search results page for wireless headphones, unchanged",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Shop DOQAUS > link",
+          "observation": "Vague link text that may lack sufficient context when read out of order by a screen reader.",
+          "potentially_relevant_wcag": [
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Purple chat floating action button",
+          "observation": "Icon-only button without an obvious text label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Grey hand/feedback floating action button",
+          "observation": "Icon-only button without an obvious text label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "before_filename": "ss_2026-05-26T17-18-13-148.png",
+      "after_filename": "ss_2026-05-26T17-18-14-254.png",
+      "before_paragraph": "The screen displays Amazon search results for 'wireless headphones'. Several products are shown, including DOQAUS Bluetooth headphones and a sponsored listing for Picun B8 headphones. No TalkBack focus indicator is visually present on the screen.",
+      "after_paragraph": "There are no visual changes between the BEFORE and AFTER screenshots. The screen state, displayed content, and lack of a visible TalkBack focus indicator remain identical.",
+      "before_screen": "Amazon search results page for 'wireless headphones'",
+      "after_screen": "Amazon search results page for 'wireless headphones' (identical to before)",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Filter buttons at the top (e.g., '$20 to $35', '$35 & above')",
+          "observation": "These filter chips appear to have a height of less than 48dp, which may make them difficult to target for users with motor impairments.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        },
+        {
+          "element": "Floating action buttons on the right ('speech bubble' and 'M' logo)",
+          "observation": "These floating icons overlap slightly with the background content and do not have clear text labels associated with them on screen.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "before_filename": "ss_2026-05-26T17-18-14-254.png",
+      "after_filename": "ss_2026-05-26T17-18-15-427.png",
+      "before_paragraph": "The screen displays Amazon search results for 'wireless headphones' with sponsored products from DOQAUS and Picun brands. No TalkBack focus ring is visible on the screen.",
+      "after_paragraph": "The AFTER screenshot is visually identical to the BEFORE screenshot. No visual changes or focus movements are detected between the two states.",
+      "before_screen": "Amazon search results page for wireless headphones showing various product listings.",
+      "after_screen": "Amazon search results page, unchanged from the previous screen.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Filter button 'o $15'",
+          "observation": "The filter text is clipped on the left, displaying as 'o $15' instead of 'Under $15'.",
+          "potentially_relevant_wcag": [
+            "1.4.4",
+            "1.4.10"
+          ]
+        },
+        {
+          "element": "Floating action buttons on the bottom right",
+          "observation": "There are two floating buttons (a purple chat bubble and a grey icon) that overlap the product listing content and may lack clear textual labels for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "before_filename": "ss_2026-05-26T17-18-15-427.png",
+      "after_filename": "ss_2026-05-26T17-18-16-708.png",
+      "before_paragraph": "The BEFORE screenshot shows Amazon search results for 'wireless headphones'. At the top of the product listings, there are two rows of horizontal filter chips, with 'Most Purchased' selected in the first row with a green border.",
+      "after_paragraph": "In the AFTER screenshot, the horizontal filter chips have changed, indicating a horizontal scroll occurred. The top row now shows filters like 'Get It by Tomorrow' (selected with a green border) and 'All Discounts', and the second row has updated to show filters like 'Age Range' and 'Headphones Form...'. There is no visible TalkBack focus ring in either screenshot.",
+      "before_screen": "Amazon search results for wireless headphones with top filter chips showing price ranges and 'Most Purchased' selected.",
+      "after_screen": "Amazon search results after scrolling the filter chips horizontally, now showing delivery speed options with 'Get It by Tomorrow' selected.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "$20 to $35",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$35 & above",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Most Purchased",
+          "state": "selected",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Wireless Technology",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Brands",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It Fast",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It by Tomorrow",
+          "state": "selected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "All Discounts",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Age Range",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Headphones Form...",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The horizontal filter chips at the top were scrolled, revealing new filtering options and hiding previous ones."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter chips row",
+          "observation": "Filter chips are partially clipped on the left and right edges of the screen, which is common for scrollable lists but needs to be scrollable via TalkBack gestures.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.1.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "before_filename": "ss_2026-05-26T17-18-16-708.png",
+      "after_filename": "ss_2026-05-26T17-18-17-304.png",
+      "before_paragraph": "The screenshot shows an Amazon search results page for 'wireless headphones' with several filter options at the top and product listings below. No TalkBack focus indicator is visible on the screen.",
+      "after_paragraph": "The AFTER screenshot is visually identical to the BEFORE screenshot. No changes, focus movements, or state updates are detected.",
+      "before_screen": "Amazon search results page for wireless headphones",
+      "after_screen": "Amazon search results page for wireless headphones (identical to BEFORE)",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or focus movements detected between the BEFORE and AFTER screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Camera icon in search bar",
+          "observation": "Icon-only control that may lack an accessible label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Shop DOQAUS >",
+          "observation": "Vague link text that relies on visual context.",
+          "potentially_relevant_wcag": [
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Floating purple chat icon",
+          "observation": "Floating icon button without a visible text label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Floating grey wave icon",
+          "observation": "Floating icon button without a visible text label.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 9,
+      "before_filename": "ss_2026-05-26T17-18-17-304.png",
+      "after_filename": "ss_2026-05-26T17-18-18-398.png",
+      "before_paragraph": "The screen shows search results for 'wireless headphones' on Amazon, displaying filter options at the top and product listings for DOQAUS and Picun headphones. There is no active TalkBack focus indicator visible on the screen.",
+      "after_paragraph": "No changes are detected between the BEFORE and AFTER screenshots. The screen state, content, and lack of visible TalkBack focus remain identical.",
+      "before_screen": "Amazon search results page for 'wireless headphones'",
+      "after_screen": "Amazon search results page for 'wireless headphones' (identical to before)",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "M floating action button",
+          "observation": "A circular grey floating button with a white 'M'-like logo has low contrast and its purpose is not immediately clear from the icon alone.",
+          "potentially_relevant_wcag": [
+            "1.4.3",
+            "1.4.11",
+            "2.5.3"
+          ]
+        },
+        {
+          "element": "DOQAUS and Picun rating stars",
+          "observation": "Star ratings and review counts are visually small, which may be difficult for users with low vision to read.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 10,
+      "before_filename": "ss_2026-05-26T17-18-18-398.png",
+      "after_filename": "ss_2026-05-26T17-18-20-597.png",
+      "before_paragraph": "The BEFORE screen displays Amazon search results for 'wireless headphones' with several horizontal filter chips near the top of the page. TalkBack focus is currently on the 'All Discounts' filter chip, indicated by a green focus border.",
+      "after_paragraph": "In the AFTER screen, the green TalkBack focus border has shifted to the left onto the 'Get It by Tomorrow' filter chip. The content on the screen remains identical, indicating a simple navigation step between filter options.",
+      "before_screen": "Amazon search results for wireless headphones with the 'All Discounts' filter chip focused",
+      "after_screen": "Amazon search results for wireless headphones with the 'Get It by Tomorrow' filter chip focused",
+      "talkback_focus_before": "All Discounts filter chip",
+      "talkback_focus_after": "Get It by Tomorrow filter chip",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "All Discounts",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Get It by Tomorrow",
+          "state": "null",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'All Discounts' filter chip to the 'Get It by Tomorrow' filter chip."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Sponsored information icon (i)",
+          "observation": "The sponsored information icon next to 'Sponsored' is very small and may be difficult to target individually.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "before_filename": "ss_2026-05-26T17-18-20-597.png",
+      "after_filename": "ss_2026-05-26T17-18-22-911.png",
+      "before_paragraph": "The user is browsing search results for 'wireless headphones' on Amazon. TalkBack focus is currently on the 'Get It by Tomorrow' filter button, indicated by a green focus ring.",
+      "after_paragraph": "The TalkBack focus has shifted to the left, now highlighting the 'Get It Fast' filter button with the green focus ring. No other visual changes are present on the screen.",
+      "before_screen": "Amazon search results page for 'wireless headphones' with focus on 'Get It by Tomorrow' filter chip.",
+      "after_screen": "Amazon search results page for 'wireless headphones' with focus shifted to 'Get It Fast' filter chip.",
+      "talkback_focus_before": "Get It by Tomorrow button",
+      "talkback_focus_after": "Get It Fast button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Get It by Tomorrow",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Get It Fast",
+          "state": "not focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Get It by Tomorrow' filter chip to the 'Get It Fast' filter chip."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Get It Fast button",
+          "observation": "The filter chips are horizontally scrollable and close to each other, but have sufficient spacing.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "before_filename": "ss_2026-05-26T17-18-22-911.png",
+      "after_filename": "ss_2026-05-26T17-18-23-686.png",
+      "before_paragraph": "The screen shows an Amazon search results page for \"wireless headphones\". At the top, there are two horizontal rows of filters. In the first row, the \"Get It Fast\" filter is selected, marked by a green outline. The second row of filters starts with \"Condition\" and \"Age Range\". Below the filters, sponsored product listings for DOQAUS headphones are displayed.",
+      "after_paragraph": "The horizontal filter rows have been scrolled. In the top row, \"★ ★ ★ ★ & Up\" is now selected with a green outline, while \"Get It Fast\" is unselected. The second row has also shifted to display \"Brands\" and \"Noise Control\" at the beginning. The product listings below remain unchanged.",
+      "before_screen": "Amazon search results for wireless headphones with the 'Get It Fast' filter active.",
+      "after_screen": "Amazon search results with the '4 stars and up' filter active after scrolling the filter rows.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Get It Fast",
+          "state": "unselected",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "★ ★ ★ ★ & Up",
+          "state": "selected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Most Purchased",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It by Tomorrow",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "All Discounts",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Brands",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Noise Control",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Headphones Form ...",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Features",
+          "state": null,
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The top and second rows of horizontal filters were scrolled to reveal different filter options."
+        },
+        {
+          "type": "state_changed",
+          "description": "The selected filter changed from 'Get It Fast' to '★ ★ ★ ★ & Up'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "★ ★ ★ ★ & Up filter",
+          "observation": "The filter label uses star icons. It must have a text alternative like '4 stars and up' for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Horizontal filter rows",
+          "observation": "Horizontal scrolling containers can be difficult to navigate and scroll with screen readers, as off-screen elements may not be easily discoverable.",
+          "potentially_relevant_wcag": [
+            "2.1.1",
+            "2.5.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "before_filename": "ss_2026-05-26T17-18-23-686.png",
+      "after_filename": "ss_2026-05-26T17-18-39-094.png",
+      "before_paragraph": "The screen shows search results for \"wireless headphones\" on Amazon. Filter chips such as \"Most Purchased\", \"4 Stars & Up\", and \"Noise Control\" are visible at the top, and a sponsored product card for \"Picun B8 Bluetooth Headphones\" is displayed at the bottom.",
+      "after_paragraph": "After filters are applied, the filter row updates: a new filter button with a '2' badge (representing applied filters) is now focused. A 'Prime' toggle switch appears next to it in the 'on' state, and several filter chips have changed (e.g., '$15 to $20' and 'Discover' are now visible). The sponsored product card at the bottom has also updated to 'TuneFlux Bluetooth Headphones'.",
+      "before_screen": "Amazon search results for wireless headphones with initial filter chips.",
+      "after_screen": "Amazon search results with applied filters, showing updated filter chips and focused filter button.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Filter button with badge '2'",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Filters (2 applied)",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "switch",
+          "label": "Prime",
+          "state": "checked",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Most Purchased",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It Fast",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$15 to $20",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Up to $20",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Brands",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Noise Control",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Condition",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Age Range",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Discover",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Connectivity",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Wireless Tech",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Picun B8 Bluetooth Headphones sponsored product card",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "TuneFlux Bluetooth Headphones sponsored product card",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "Focus moved to the newly appeared filter button containing the '2' badge."
+        },
+        {
+          "type": "content_appeared",
+          "description": "New filter options and a different sponsored product card appeared after the search results refreshed."
+        },
+        {
+          "type": "content_disappeared",
+          "description": "Several initial filter chips and the previous sponsored product card disappeared from the view."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter button with badge '2'",
+          "observation": "The filter button uses a numeric badge ('2') alongside an icon. It needs to be clearly announced as '2 filters applied' or similar, rather than just reading '2' or 'filter icon'.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Prime toggle",
+          "observation": "The Prime switch relies on a checkmark icon '✓prime' and a visual toggle. TalkBack needs to correctly read this as a checkbox or switch state (e.g., 'Prime switch, checked').",
+          "potentially_relevant_wcag": [
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Search Results list",
+          "observation": "When filters are updated, the list of products updates dynamically. This should ideally be accompanied by an accessibility live-region announcement indicating that the search results have updated (e.g., 'Results updated').",
+          "potentially_relevant_wcag": [
+            "4.1.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "before_filename": "ss_2026-05-26T17-18-39-094.png",
+      "after_filename": "ss_2026-05-26T17-18-42-161.png",
+      "before_paragraph": "The user is on an Amazon search results page for 'wireless headphones'. TalkBack focus is on the filter button in the upper-left, which displays '2' with a filter icon, indicating two active filters.",
+      "after_paragraph": "After clicking the filter button, a full-screen 'Filters' overlay opens, presenting a list of filter categories on the left and specific filter tags on the right. There is currently no active TalkBack focus ring visible on the new screen, meaning focus may have been lost during the transition.",
+      "before_screen": "Amazon search results page for 'wireless headphones' with the filter button focused.",
+      "after_screen": "Amazon Filters screen showing various suggested filters, categories, and a 'Show results' button.",
+      "talkback_focus_before": "Filter button with label '2' and filter icon",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Filter button with '2' icon",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "text",
+          "label": "Filters (2)",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Close",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list",
+          "label": "Filter categories (Suggested Filters, Prime & Delivery, etc.)",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Suggested Filters grid",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Clear Filters",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Show 5,618 results",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_appeared",
+          "description": "The Filters page opened as an overlay or new screen over the search results."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus was lost from the filter button and is not visibly set on any element in the new Filters screen."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Close button (X icon)",
+          "observation": "The close button in the top right of the Filters screen is an icon-only button and needs to ensure it has a proper text alternative like 'Close'.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Filters screen",
+          "observation": "No element has active TalkBack focus when the filter screen opens, which may force screen reader users to search for the start of the page.",
+          "potentially_relevant_wcag": [
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "before_filename": "ss_2026-05-26T17-18-42-161.png",
+      "after_filename": "ss_2026-05-26T17-18-49-680.png",
+      "before_paragraph": "The screen shows a filter selection overlay for \"wireless headphones\" with filter categories on the left and filter chips on the right. At the bottom right, a prominent yellow button reads \"Show 5,618 results\", indicating the current number of items matching the selected filters.",
+      "after_paragraph": "After activating the \"Show results\" button, the filter overlay closes, and the user is returned to the main search results screen. The search results now display wireless headphone products, such as DOQAUS models, and the applied filter chips are shown in a horizontal scroll at the top of the page. No explicit TalkBack focus is visible on the new screen.",
+      "before_screen": "Filter selection panel for wireless headphones with category sidebar and filter chips.",
+      "after_screen": "Search results page for wireless headphones displaying filtered product cards.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Show 5,618 results",
+          "state": "enabled",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Clear Filters",
+          "state": "enabled",
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Suggested Filters panel",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Filters applied: 2",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Product Search Results List",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_disappeared",
+          "description": "The Filter selection overlay is closed."
+        },
+        {
+          "type": "content_appeared",
+          "description": "The search results screen containing product listings is revealed."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filters applied button (labeled '2' with filter icon)",
+          "observation": "The filter button at the top left of the AFTER screen relies on a number '2' inside a filter icon; it needs to be clearly announced as 'Filters applied: 2' rather than just '2 button' or 'filter icon 2'.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Star rating",
+          "observation": "The star rating visual representation (stars next to '4.4' and '7,594') must have a screen reader description indicating both the rating value and the number of reviews in a single readable string.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "1.3.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "before_filename": "ss_2026-05-26T17-18-49-680.png",
+      "after_filename": "ss_2026-05-26T17-18-54-437.png",
+      "before_paragraph": "The screen shows search results for 'wireless headphones' on Amazon. A filter button with a '2' badge is located near the top left, indicating two active filters are currently applied.",
+      "after_paragraph": "After selecting the filter button, a full-screen 'Filters' overlay opens, presenting various filtering categories and tags. The underlying search results are now covered by this overlay. There is no visible TalkBack focus ring on either screenshot.",
+      "before_screen": "Amazon search results for wireless headphones with a filter button near the top left.",
+      "after_screen": "Amazon search filter panel showing suggested filters and a list of filter categories.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Close",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "text",
+          "label": "Filters (2)",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Clear Filters",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Show 5,618 results",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "Filter options panel",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "overlay_appeared",
+          "description": "A full-screen filter overlay has appeared over the search results."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Close button (X icon)",
+          "observation": "The close button next to 'Filters (2)' is an icon-only control and needs to ensure it has an appropriate text label (e.g., 'Close filters').",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Prime switch toggle",
+          "observation": "The Prime logo is used alongside a toggle switch. This needs to be correctly associated so that a screen reader reads it as 'Prime, toggle switch'.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "before_filename": "ss_2026-05-26T17-18-54-437.png",
+      "after_filename": "ss_2026-05-26T17-19-01-358.png",
+      "before_paragraph": "The screen shows an Amazon search filter page with a sidebar on the left and various filter chips under 'Suggested Filters' on the right. At the bottom, a 'Clear Filters' button and a prominent yellow 'Show 5,618 results' button are displayed. No active TalkBack focus ring is visible.",
+      "after_paragraph": "After activating the 'Show 5,618 results' button, the filter page closes, returning the user to the search results page. The top filter pill, displaying '2' indicating active filters, now has a distinct blue and green focus border, indicating focus has moved to the top of the search results page.",
+      "before_screen": "Amazon app showing the Filter overlay screen with multiple suggested filter chips.",
+      "after_screen": "Amazon search results page for 'wireless headphones' with the filter page dismissed and focus on the filter summary button.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Button with label '2' and filter icon at the top left of the results page",
+      "changed_elements": [
+        {
+          "type": "dialog",
+          "label": "Filters (2)",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Show 5,618 results",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Filter summary showing 2 active filters",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "list",
+          "label": "Search results for wireless headphones",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "dialog_closed",
+          "description": "The Filters overlay was dismissed after selecting 'Show 5,618 results'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the filter dialog's submit button to the top-left filter summary pill on the search results page."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter summary button [2 | filter icon]",
+          "observation": "The filter button contains both a number ('2') and a filter icon inside a complex border. It should be confirmed that this is read as a single cohesive button (e.g., 'Filters, 2 active') rather than separate elements.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "before_filename": "ss_2026-05-26T17-19-01-358.png",
+      "after_filename": "ss_2026-05-26T17-19-05-538.png",
+      "before_paragraph": "The screen shows Amazon search results for wireless headphones. TalkBack focus is currently on the filter button in the top left, which displays '2' alongside a filter settings icon, outlined with a green focus indicator.",
+      "after_paragraph": "The screen content remains identical to the previous screenshot, but the green TalkBack focus ring has disappeared from the filter button. No other element on screen shows a focus indicator, suggesting focus has been lost or moved to an invisible or unidentifiable element.",
+      "before_screen": "Amazon search results page for 'wireless headphones' with the first filter button focused.",
+      "after_screen": "Amazon search results page with no visible TalkBack focus indicator.",
+      "talkback_focus_before": "Filter button with '2' and filter icon (top-left of filter row)",
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Filters",
+          "state": "focused",
+          "change": "focus_lost"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved off the 'Filters' button, leaving the screen with no visible focus indicator."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Entire screen",
+          "observation": "No active focus indicator is visible in the AFTER screenshot, which can make navigation difficult for keyboard and screen reader users.",
+          "potentially_relevant_wcag": [
+            "2.4.7"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "before_filename": "ss_2026-05-26T17-19-05-538.png",
+      "after_filename": "ss_2026-05-26T17-19-06-962.png",
+      "before_paragraph": "The screen shows Amazon search results for \"wireless headphones\" with several filter chips at the top. The first row includes a filter button labeled \"2\", a rating filter \"& Up\", and price filters. The second row includes a Prime toggle, \"Discover\", and \"Connectivity\" dropdowns. No TalkBack focus ring is visible.",
+      "after_paragraph": "The filter chips at the top have been scrolled horizontally to the left. The \"2\" filter button, Prime toggle, and \"Discover\" dropdown have scrolled off-screen. New filters such as \"$20 to $35\" and \"Brands\" are now visible on the right. No TalkBack focus ring is visible.",
+      "before_screen": "Amazon search results for wireless headphones showing filter options and product listings.",
+      "after_screen": "Amazon search results showing horizontally scrolled filter chips.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "2",
+          "state": "selected",
+          "change": "disappeared"
+        },
+        {
+          "type": "checkbox",
+          "label": "prime",
+          "state": "checked",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Discover",
+          "state": "collapsed",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$20 to $35",
+          "state": "unselected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Brands",
+          "state": "collapsed",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The filter chip rows at the top of the screen scrolled horizontally to the left, changing the visible filters."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter chips container",
+          "observation": "Horizontal scrolling container of filter options may be difficult to navigate sequentially with TalkBack if items are clipped or off-screen.",
+          "potentially_relevant_wcag": [
+            "2.1.1",
+            "2.4.3",
+            "1.4.10"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "before_filename": "ss_2026-05-26T17-19-06-962.png",
+      "after_filename": "ss_2026-05-26T17-19-07-147.png",
+      "before_paragraph": "The BEFORE screen shows the search results page for \"wireless headphones\" on Amazon. It displays various product listings, including DOQAUS and TuneFlux Bluetooth headphones, along with search filters and category tags at the top. There is no active TalkBack focus ring visible in this screenshot.",
+      "after_paragraph": "The AFTER screen is visually identical to the BEFORE screen. No changes in content, layout, or TalkBack focus are observed between the two screenshots.",
+      "before_screen": "Amazon search results page for wireless headphones, showing DOQAUS headphones with prices and ratings.",
+      "after_screen": "Amazon search results page, identical to the before screen.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Product titles (e.g., 'DOQAUS Bluetooth Headphones Over Ear Wir...')",
+          "observation": "Product titles are truncated with ellipses, which may prevent screen readers or users from reading the full product name without navigating to the product page.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Floating action buttons (chat and logo icons on the right)",
+          "observation": "These buttons are icon-only and may lack sufficient text labels or descriptive accessible names.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "before_filename": "ss_2026-05-26T17-19-07-147.png",
+      "after_filename": "ss_2026-05-26T17-19-08-578.png",
+      "before_paragraph": "The screen displays search results for \"wireless headphones\" on Amazon. At the top, there are horizontally scrollable rows of filter buttons, including price ranges like \"$15 to $20\" and \"Up to $20\", and categories like \"Connectivity\" and \"Wireless Technology\". No TalkBack focus ring is visible on the screen.",
+      "after_paragraph": "The horizontal filter rows at the top have been scrolled to the left, revealing new options. The price filters now display \"$35 to $60\" and \"$60 & above\", while the attribute filters now show \"Noise Control\" and \"Condition\". The \"Wireless Technology\" filter is now partially cut off as \"s Technology\". No TalkBack focus ring is visible.",
+      "before_screen": "Amazon search results for wireless headphones with top filter rows showing initial options.",
+      "after_screen": "Amazon search results with top filter rows scrolled horizontally to reveal different price and feature filters.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Price filters (e.g., $35 to $60, $60 & above)",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Price filters (e.g., & Up, $15 to $20)",
+          "state": "hidden",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Noise Control, Condition filters",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Connectivity filter",
+          "state": "hidden",
+          "change": "disappeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "Horizontal scroll on the price filter and attribute filter rows to the left, revealing new filtering options."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "s Technology filter button",
+          "observation": "The text label is clipped and cut off at the beginning of the scrollable container.",
+          "potentially_relevant_wcag": [
+            "1.4.10"
+          ]
+        },
+        {
+          "element": "Horizontal scroll containers",
+          "observation": "There are no visual indicators (like arrows or fading edges) to clearly denote that these rows are horizontally scrollable.",
+          "potentially_relevant_wcag": [
+            "1.3.3",
+            "2.5.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "before_filename": "ss_2026-05-26T17-19-08-578.png",
+      "after_filename": "ss_2026-05-26T17-19-12-589.png",
+      "before_paragraph": "The screen shows Amazon search results for 'wireless headphones' with the price filter '$35 to $60' selected, indicated by a green border. No TalkBack focus ring is explicitly visible.",
+      "after_paragraph": "The selected price filter has changed to '$60 & above', which now has the green border. The '$35 to $60' filter now has a grey border, indicating it is deselected. The product listings below remain unchanged.",
+      "before_screen": "Amazon search results for wireless headphones with the '$35 to $60' filter selected.",
+      "after_screen": "Amazon search results for wireless headphones with the '$60 & above' filter selected.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "$35 to $60",
+          "state": "unselected",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "$60 & above",
+          "state": "selected",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "The selected price filter changed from '$35 to $60' to '$60 & above'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Product listings",
+          "observation": "After selecting the '$60 & above' filter, the visible product listings (priced at $12.99, $19.99, and $13.99) did not update, though they are marked as sponsored.",
+          "potentially_relevant_wcag": [
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "before_filename": "ss_2026-05-26T17-19-12-589.png",
+      "after_filename": "ss_2026-05-26T17-19-13-241.png",
+      "before_paragraph": "The screen shows search results for 'wireless headphones' on an e-commerce app (Amazon). No TalkBack focus frame is visible on any element.",
+      "after_paragraph": "There are no visible changes between the BEFORE and AFTER screenshots. The screen contents, status bar, and lack of a visible TalkBack focus indicator remain identical.",
+      "before_screen": "Amazon search results page for 'wireless headphones'",
+      "after_screen": "Amazon search results page for 'wireless headphones' (identical to before)",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons on the right",
+          "observation": "Two floating buttons (purple message icon and gray 'M' icon) overlay the product details and list, potentially obscuring text or other interactive elements.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.4.11"
+          ]
+        },
+        {
+          "element": "Filter chips ('to $20', '$20 to $35', etc.)",
+          "observation": "The filter chips are horizontally scrollable and placed closely together, which might result in small touch targets.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 24,
+      "before_filename": "ss_2026-05-26T17-19-13-241.png",
+      "after_filename": "ss_2026-05-26T17-19-14-304.png",
+      "before_paragraph": "The screen displays Amazon search results for 'wireless headphones'. At the top, a horizontal list of price filters is visible, with '$60 & above' selected (indicated by a green border). A second row of filter dropdowns is below it. The main area shows sponsored product listings for DOQAUS headphones. No TalkBack focus ring is visible.",
+      "after_paragraph": "After user interaction, the 'Most Purchased' filter chip has been selected, and the '$60 & above' chip is deselected. Both rows of filter chips have scrolled horizontally to the right, revealing new filter options like 'Age Range' and 'Headphones For...'. No TalkBack focus is visible, and the product listings below remain the same on-screen.",
+      "before_screen": "Amazon search results for 'wireless headphones' with '$60 & above' filter selected.",
+      "after_screen": "Amazon search results with 'Most Purchased' filter selected and filters scrolled horizontally.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "$60 & above",
+          "state": "unselected",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "Most Purchased",
+          "state": "selected",
+          "change": "state_changed"
+        },
+        {
+          "type": "button",
+          "label": "to $20",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$20 to $35",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$35 to $60",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It Fast",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Brands",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Age Range",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Headphones For...",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "state_changed",
+          "description": "Selected filter changed from '$60 & above' to 'Most Purchased'."
+        },
+        {
+          "type": "scroll_occurred",
+          "description": "Both horizontal filter rows scrolled to the right, hiding some filters and revealing others."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Most Purchased filter chip",
+          "observation": "Selection state is indicated by a thin green border. This may have low visual contrast against the white background.",
+          "potentially_relevant_wcag": [
+            "1.4.11"
+          ]
+        },
+        {
+          "element": "Filter rows",
+          "observation": "Horizontal scrolling containers of buttons can be difficult to navigate and scroll using standard TalkBack swipe gestures.",
+          "potentially_relevant_wcag": [
+            "2.1.1",
+            "2.5.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 25,
+      "before_filename": "ss_2026-05-26T17-19-14-304.png",
+      "after_filename": "ss_2026-05-26T17-19-15-207.png",
+      "before_paragraph": "The screen shows an Amazon product search results page for 'wireless headphones'. It displays product cards for DOQAUS and TuneFlux headphones, along with category filters at the top and a bottom navigation bar. There is no active TalkBack focus ring visible in this screenshot.",
+      "after_paragraph": "The AFTER screenshot is identical to the BEFORE screenshot. No visual changes, state changes, or focus movements are detected between the two frames.",
+      "before_screen": "Amazon search results page for wireless headphones",
+      "after_screen": "Amazon search results page for wireless headphones, unchanged",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating action buttons (purple message icon and grey 'M' icon)",
+          "observation": "These floating icons on the right side of the screen are icon-only and may lack descriptive alternative text for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Bottom navigation icons (Home, Profile, Cart, Menu)",
+          "observation": "These navigation elements rely entirely on icons without visible text labels beneath them.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "1.3.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 26,
+      "before_filename": "ss_2026-05-26T17-19-15-207.png",
+      "after_filename": "ss_2026-05-26T17-19-16-352.png",
+      "before_paragraph": "The screen shows Amazon search results for \"wireless headphones\" with two rows of horizontal filter options at the top. In the first row, the \"Most Purchased\" filter is selected with a green border. There is no active TalkBack focus ring on the screen.",
+      "after_paragraph": "The horizontal filter rows have been scrolled to the right. The \"All Discounts\" filter pill is now selected and highlighted in green, while previously visible filters like \"Most Purchased\" and \"$60 & above\" have scrolled out of view to the left. The second row of filters has also scrolled, revealing new options like \"Features\" and \"Compatibility\". No TalkBack focus ring is visible.",
+      "before_screen": "Amazon search results page for wireless headphones showing the initial filter options.",
+      "after_screen": "Amazon search results page after scrolling the horizontal filter bar and selecting the 'All Discounts' filter.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Most Purchased",
+          "state": "selected",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$60 & above",
+          "state": "unselected",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "All Discounts",
+          "state": "selected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It by Tomorrow",
+          "state": "unselected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Condition",
+          "state": "unselected",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Age Range",
+          "state": "unselected",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Features",
+          "state": "unselected",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Compatibility",
+          "state": "unselected",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The top filter bar and the secondary filter bar both scrolled horizontally to show different options."
+        },
+        {
+          "type": "state_changed",
+          "description": "The active filter changed from 'Most Purchased' to 'All Discounts'."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter row",
+          "observation": "Horizontal scrolling list of filters may hide options from screen reader users if not properly accessible via swipe navigation.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.1.1",
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "All Discounts",
+          "observation": "The selected state is indicated by a green border. Ensure this state is programmatically announced and does not rely solely on color.",
+          "potentially_relevant_wcag": [
+            "1.4.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Headphones Form...",
+          "observation": "Filter labels such as 'Headphones Form...' and 'Compatibl...' are truncated, which may affect readability.",
+          "potentially_relevant_wcag": [
+            "1.4.4",
+            "1.4.10"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 27,
+      "before_filename": "ss_2026-05-26T17-19-16-352.png",
+      "after_filename": "ss_2026-05-26T17-19-16-637.png",
+      "before_paragraph": "The screen shows an Amazon search results page for \"wireless headphones\" with several product listings, including DOQAUS and TuneFlux headphones. There is no visible TalkBack focus indicator on any element.",
+      "after_paragraph": "No changes are observed in the AFTER screen. It is identical to the BEFORE screen, and no TalkBack focus ring has appeared.",
+      "before_screen": "Amazon search results page for 'wireless headphones' showing DOQAUS and TuneFlux products.",
+      "after_screen": "Amazon search results page for 'wireless headphones' showing DOQAUS and TuneFlux products, identical to the before screen.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Text 'List Price: $19.99', 'Sponsored', and 'Check each product page...'",
+          "observation": "These text elements are rendered in a light gray color, which may not meet minimum contrast requirements against the white background.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        },
+        {
+          "element": "Floating action buttons on the right (purple chat bubble and gray 'M' icon)",
+          "observation": "These icons are purely visual and might lack descriptive text labels for screen readers, or might be skipped in standard linear navigation.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "Bottom navigation bar icons (Home, Profile, Cart, Menu)",
+          "observation": "These controls are icon-only and rely entirely on visual representation without text labels.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.5.3"
+          ]
+        },
+        {
+          "element": "Link 'Shop DOQAUS >'",
+          "observation": "The link text might be considered vague out of context, though it is adjacent to DOQAUS products.",
+          "potentially_relevant_wcag": [
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 28,
+      "before_filename": "ss_2026-05-26T17-19-16-637.png",
+      "after_filename": "ss_2026-05-26T17-19-19-367.png",
+      "before_paragraph": "The screen shows search results for 'wireless headphones' on Amazon. At the top of the results, there are two rows of filter chips. The first row contains options like 'Get It Fast', 'Get It by Tomorrow', and 'All Discounts' (which has a green outline). The second row contains dropdown filters like 'Headphones Form...' and 'Features'. No TalkBack focus frame is visible.",
+      "after_paragraph": "The filter rows at the top have changed. The first row now displays price-related filters such as '$15 to $20' and 'Up to $20'. The second row shows dropdown filters like 'Connectivity' and 'Wireless Technology' (which now has a green outline). The product listings below the filters remain identical. No TalkBack focus frame is visible, indicating the change may have occurred due to a scroll or an unannounced filter update.",
+      "before_screen": "Amazon search results for wireless headphones with shipping and discount filters visible.",
+      "after_screen": "Amazon search results with price and technology-specific filters now visible in the top rows.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Get It Fast",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Get It By Tomorrow",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "All Discounts",
+          "state": "selected",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Headphones Form ...",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Features",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "$15 to $20",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Up to $20",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "$20 to $35",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Connectivity",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Wireless Technology",
+          "state": "selected",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "other",
+          "description": "The filter chips in both horizontal scroll rows updated to show different filter categories (price and wireless technology instead of shipping and discounts)."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter chips with truncated text (e.g., 'Headphones Form ...', 'Compatibl...', 'Noi...')",
+          "observation": "Text in several filter chips is truncated, which may prevent screen readers from reading the full label if not implemented correctly.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Wireless Technology filter chip",
+          "observation": "Active or selected state is indicated visually by a green border. It is important that this state change is programmatically announced to screen readers.",
+          "potentially_relevant_wcag": [
+            "1.4.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 29,
+      "before_filename": "ss_2026-05-26T17-19-19-367.png",
+      "after_filename": "ss_2026-05-26T17-19-20-116.png",
+      "before_paragraph": "The screen shows search results for 'wireless headphones' on Amazon, displaying two DOQAUS headphone products side-by-side, followed by a sponsored TuneFlux headphone product listing below. No TalkBack focus ring is visible on the screen.",
+      "after_paragraph": "There are no visual changes between the BEFORE and AFTER screenshots. The screen state, scroll position, and displayed elements remain completely identical, and no TalkBack focus ring is visible in either screenshot.",
+      "before_screen": "Amazon search results page for 'wireless headphones' showing DOQAUS and TuneFlux headphones.",
+      "after_screen": "Amazon search results page for 'wireless headphones' showing DOQAUS and TuneFlux headphones, identical to the before screen.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [
+        {
+          "type": "other",
+          "description": "No visual changes or state changes were detected between the two screenshots."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "TuneFlux Bluetooth Headphones card",
+          "observation": "The product information at the bottom of the screen is clipped and cut off by the bottom navigation bar, which may make it difficult to read without scrolling.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "1.4.4"
+          ]
+        },
+        {
+          "element": "'Sponsored' text label",
+          "observation": "The light grey text 'Sponsored' on a white background appears to have low contrast.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 30,
+      "before_filename": "ss_2026-05-26T17-19-20-116.png",
+      "after_filename": "ss_2026-05-26T17-19-22-541.png",
+      "before_paragraph": "The screen displays Amazon search results for 'wireless headphones' with product listings below. At the top, below the search bar, are two rows of horizontally scrollable filter chips. The first row displays price filters like '$15 to $20' and 'Up to $20', while the second row displays category filters like 'Connectivity' and 'Wireless Technology'. No active TalkBack focus ring is visible.",
+      "after_paragraph": "The filter rows have been scrolled horizontally, revealing a different set of filter chips. The first row now displays options like 'Get It Fast' and 'Get It by Tomorrow', while the second row displays 'Age Range', 'Headphones Form...', and 'Features'. No TalkBack focus ring is visible, indicating a horizontal scroll gesture occurred on the filter area.",
+      "before_screen": "Amazon search results for wireless headphones with price and connectivity filters visible at the top.",
+      "after_screen": "Amazon search results with the filter chips scrolled horizontally to show delivery speed and product feature filters.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Price filters (e.g., $15 to $20, Up to $20)",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Category filters (Connectivity, Wireless Technology, Brands)",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Delivery filters (Get It Fast, Get It by Tomorrow)",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Specification filters (Age Range, Headphones Form, Features)",
+          "state": "visible",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The horizontal filter chip rows at the top of the page were scrolled, updating the visible filter options."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Filter chips",
+          "observation": "Several filter chips have clipped text (e.g., 'Headphones Form...', 'All Disc...', 'C...'), which may make them difficult to understand without activating them.",
+          "potentially_relevant_wcag": [
+            "1.4.4",
+            "2.4.6"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 31,
+      "before_filename": "ss_2026-05-26T17-19-22-541.png",
+      "after_filename": "ss_2026-05-26T17-19-23-560.png",
+      "before_paragraph": "The screenshot shows an Amazon search results page for 'wireless headphones' with various products, sponsored listings, and filtering options. No TalkBack focus ring is visible on any element in this screen.",
+      "after_paragraph": "The screen remains completely identical to the before state. No visual changes, interaction indicators, or TalkBack focus changes are present.",
+      "before_screen": "Amazon search results page for 'wireless headphones'",
+      "after_screen": "Identical Amazon search results page for 'wireless headphones'",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Floating purple chat bubble icon and grey circular icon on the right edge",
+          "observation": "These floating buttons appear to be icon-only and may lack descriptive text labels for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        },
+        {
+          "element": "Bottom navigation icons (Home, Profile, Cart, Menu)",
+          "observation": "These icons are unlabeled visually; they rely on screen reader labels to be accessible.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 32,
+      "before_filename": "ss_2026-05-26T17-19-23-560.png",
+      "after_filename": "ss_2026-05-26T17-19-24-030.png",
+      "before_paragraph": "The screen shows Amazon search results for 'wireless headphones'. At the top, there are two horizontal rows of filter chips, showing options like 'Get It Fast', 'Get It by Tomorrow', 'Age Range', 'Headphones Form...', and 'Features'.",
+      "after_paragraph": "The horizontal filter rows have been scrolled to the right, revealing new filter options. The 'Color' filter chip now has a green focus outline, indicating it has gained TalkBack focus. New options like 'Today's Deals', 'Compatible Devices', and a clipped 'Purpo...' chip are now visible.",
+      "before_screen": "Amazon search results for wireless headphones with initial filter chips.",
+      "after_screen": "Amazon search results after scrolling the filter bar, with focus on the 'Color' filter.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Color button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Age Range",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Headphones Form ...",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Compatible Devices",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Color",
+          "state": "focused",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Purpo...",
+          "state": null,
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The horizontal filter chip rows were scrolled to the right to reveal more filtering options."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Color' filter chip."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Purpo... button",
+          "observation": "The text label is truncated/clipped ('Purpo...'), which may make it difficult to understand the purpose of the control.",
+          "potentially_relevant_wcag": [
+            "1.4.10",
+            "2.4.6",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Color button",
+          "observation": "The green focus indicator outline may have low contrast against the white background.",
+          "potentially_relevant_wcag": [
+            "1.4.11"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 33,
+      "before_filename": "ss_2026-05-26T17-19-24-030.png",
+      "after_filename": "ss_2026-05-26T17-19-25-328.png",
+      "before_paragraph": "The user is browsing wireless headphones on Amazon. The screen reader focus is set on the 'Color' filter dropdown button in the horizontal scrollable filter bar.",
+      "after_paragraph": "The screen reader focus has shifted to the right, now focusing on the 'Purple' filter button (partially cut off as 'Purp').",
+      "before_screen": "Amazon search results for wireless headphones with the 'Color' filter button focused by TalkBack.",
+      "after_screen": "Amazon search results for wireless headphones with the 'Purple' filter button focused by TalkBack.",
+      "talkback_focus_before": "Color filter button",
+      "talkback_focus_after": "Purple filter button",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Color",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "button",
+          "label": "Purple",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Color' filter button to the 'Purple' filter button."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Purple filter button",
+          "observation": "The text on the button is truncated as 'Purp', which might make it difficult for users to read visually, though TalkBack should read the full content if properly labeled.",
+          "potentially_relevant_wcag": [
+            "1.4.4",
+            "1.4.10",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 34,
+      "before_filename": "ss_2026-05-26T17-19-25-328.png",
+      "after_filename": "ss_2026-05-26T17-19-26-749.png",
+      "before_paragraph": "The screen shows Amazon search results for \"wireless headphones\". A horizontal scrollable list of filter options is visible near the top, displaying filters such as 'Tomorrow', 'All Discounts', 'Today's Deals', 'Features', 'Compatible Devices', 'Color', and 'Purple'.",
+      "after_paragraph": "The horizontal filter bar has been scrolled to the right. 'Tomorrow', 'Features', and 'Purple' filters have scrolled off-screen, while 'Purpose' and 'Top Brands' have scrolled into view. The 'All Discounts' and 'Compatible Devices' options are now partially clipped on the left edge of the screen, displaying as 'unts' and 'ompatible Devices' respectively.",
+      "before_screen": "Amazon search results for wireless headphones with top filter options visible.",
+      "after_screen": "Amazon search results showing updated filter options after a horizontal scroll.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": null,
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Tomorrow",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "spinner",
+          "label": "Features",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Purple",
+          "state": "visible",
+          "change": "disappeared"
+        },
+        {
+          "type": "spinner",
+          "label": "Purpose",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "spinner",
+          "label": "Top Brands",
+          "state": "visible",
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "All Discounts",
+          "state": "partially clipped",
+          "change": "state_changed"
+        },
+        {
+          "type": "spinner",
+          "label": "Compatible Devices",
+          "state": "partially clipped",
+          "change": "state_changed"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The horizontal filter list was scrolled to the right to reveal more filtering options."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "All Discounts button",
+          "observation": "Text is clipped ('unts') at the left edge of the screen after scroll.",
+          "potentially_relevant_wcag": [
+            "1.4.10"
+          ]
+        },
+        {
+          "element": "Compatible Devices spinner",
+          "observation": "Text is clipped ('ompatible Devices') at the left edge of the screen after scroll.",
+          "potentially_relevant_wcag": [
+            "1.4.10"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 35,
+      "before_filename": "ss_2026-05-26T17-19-26-749.png",
+      "after_filename": "ss_2026-05-26T17-19-29-099.png",
+      "before_paragraph": "The screen shows Amazon search results for wireless headphones, featuring DOQAUS and TuneFlux headphones. No TalkBack focus frame is visible in the BEFORE screenshot.",
+      "after_paragraph": "TalkBack focus has moved to the 'Sponsored' label with an information icon, located above the DOQAUS Bluetooth headphones listing. The focus frame now outlines this label.",
+      "before_screen": "Amazon search results page for wireless headphones with no active TalkBack focus highlighted.",
+      "after_screen": "Amazon search results page with the TalkBack focus frame highlighting the 'Sponsored' label.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Sponsored label",
+      "changed_elements": [
+        {
+          "type": "text",
+          "label": "Sponsored info",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the 'Sponsored' info label above the first product card."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Sponsored label",
+          "observation": "The 'Sponsored' text is light grey on a white background, which may have low contrast. The adjacent info icon is small and might be difficult to target individually if it is interactive.",
+          "potentially_relevant_wcag": [
+            "1.4.3",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 36,
+      "before_filename": "ss_2026-05-26T17-19-29-099.png",
+      "after_filename": "ss_2026-05-26T17-19-29-635.png",
+      "before_paragraph": "The TalkBack focus is currently on the 'Sponsored info' button (labeled 'Sponsored i') located below the ad headline 'All Day Comfort & No Battery Anxiety for Travel'.",
+      "after_paragraph": "There are no changes between the BEFORE and AFTER screenshots. The TalkBack focus remains on the 'Sponsored info' button, and no content on the screen has updated.",
+      "before_screen": "Amazon search results page for 'wireless headphones' showing sponsored DOQAUS headphones, with TalkBack focus on the 'Sponsored info' button.",
+      "after_screen": "Amazon search results page, identical to the before screen, with TalkBack focus still on the 'Sponsored info' button.",
+      "talkback_focus_before": "Sponsored info button (green rectangle around 'Sponsored i')",
+      "talkback_focus_after": "Sponsored info button (green rectangle around 'Sponsored i')",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Sponsored info button",
+          "observation": "The touch target for the 'Sponsored info' button is visually small, which may make it difficult to target accurately.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        },
+        {
+          "element": "List Price: $19.99",
+          "observation": "The 'List Price: $19.99' text has low contrast against the white background.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 37,
+      "before_filename": "ss_2026-05-26T17-19-29-635.png",
+      "after_filename": "ss_2026-05-26T17-19-30-408.png",
+      "before_paragraph": "The screen shows a search results page on Amazon for 'wireless headphones'. TalkBack focus is currently on the 'Sponsored info' badge/icon located directly above the product listings for DOQAUS headphones.",
+      "after_paragraph": "There is no visual change or movement of TalkBack focus between the BEFORE and AFTER screenshots. Focus remains on the 'Sponsored info' badge.",
+      "before_screen": "Amazon search results page for wireless headphones, showing DOQAUS and TuneFlux listings, with TalkBack focus on a 'Sponsored' badge.",
+      "after_screen": "Amazon search results page, identical to the before screen, with TalkBack focus still on the 'Sponsored' badge.",
+      "talkback_focus_before": "Sponsored info badge",
+      "talkback_focus_after": "Sponsored info badge",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Sponsored info badge",
+          "observation": "The 'Sponsored' label with information icon has a very small touch target and lacks a clear textual description of its purpose.",
+          "potentially_relevant_wcag": [
+            "2.4.4",
+            "2.5.8",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 38,
+      "before_filename": "ss_2026-05-26T17-19-30-408.png",
+      "after_filename": "ss_2026-05-26T17-19-31-893.png",
+      "before_paragraph": "The screen shows search results for wireless headphones on Amazon. TalkBack focus is currently on the 'Sponsored info' indicator badge underneath the advertising headline 'All Day Comfort & No Battery Anxiety for Travel'.",
+      "after_paragraph": "The TalkBack focus has moved down to the first sponsored product title card, highlighting the text 'DOQAUS Bluetooth Headphones Over Ear Wir...'.",
+      "before_screen": "Amazon search results page with a sponsored brand banner, showing focus on the 'Sponsored info' label.",
+      "after_screen": "Amazon search results page with focus shifted to the first product's title link.",
+      "talkback_focus_before": "Sponsored info badge",
+      "talkback_focus_after": "DOQAUS Bluetooth Headphones Over Ear Wir... text link",
+      "changed_elements": [
+        {
+          "type": "button",
+          "label": "Sponsored info",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "text",
+          "label": "DOQAUS Bluetooth Headphones Over Ear Wir...",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the 'Sponsored' label to the title of the first product below it."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Sponsored info badge",
+          "observation": "The touch target for the 'info' icon next to 'Sponsored' might be quite small if it is a standalone interactive element, though it is focused as a single block here.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 39,
+      "before_filename": "ss_2026-05-26T17-19-31-893.png",
+      "after_filename": "ss_2026-05-26T17-19-33-800.png",
+      "before_paragraph": "The screen shows Amazon search results for 'wireless headphones'. Multiple product listings are displayed, including a sponsored banner for 'DOQAUS' headphones. On the left, a DOQAUS Bluetooth Headphones listing is shown with a 'Limited time deal' badge and a discounted price of $12.99. No TalkBack focus frame is visible.",
+      "after_paragraph": "TalkBack focus has moved to the price of the first DOQAUS headphone listing on the left, highlighting the price '$12.99' (visually rendered with '12' and superscript '99' inside a green focus box).",
+      "before_screen": "Amazon product search results for 'wireless headphones' showing DOQAUS headphones.",
+      "after_screen": "Amazon product search results with the price '$12.99' of the first item focused by TalkBack.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "price text '$12.99' of the DOQAUS Bluetooth Headphones on the left",
+      "changed_elements": [
+        {
+          "type": "TextView",
+          "label": "$12.99",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus shifted to the price '$12.99' of the first product listing."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Price '$12.99'",
+          "observation": "The cents are in superscript ('99'), which can sometimes cause screen readers to read the price as separate numbers '12' and '99' instead of 'twelve dollars and ninety-nine cents' if not grouped properly.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 40,
+      "before_filename": "ss_2026-05-26T17-19-33-800.png",
+      "after_filename": "ss_2026-05-26T17-19-40-747.png",
+      "before_paragraph": "The screen displays Amazon search results for \"wireless headphones\" with a sponsored section for DOQAUS headphones at the top, followed by a \"Check each product page\" section with a TuneFlux headphone listing partially visible. TalkBack focus is not visibly active on any element in this screenshot.",
+      "after_paragraph": "The screen has scrolled down, moving the DOQAUS sponsored banner mostly off-screen. The TuneFlux headphone listing is now fully visible, showing purchase details and a \"See options\" button, and a new listing for \"B8 Bluetooth Headphones\" has appeared. TalkBack focus has moved to the Profile icon in the bottom navigation bar, highlighted with a green focus ring.",
+      "before_screen": "Amazon search results page for wireless headphones showing sponsored DOQAUS products.",
+      "after_screen": "Scrolled search results page with focus on the Profile tab in the bottom navigation bar.",
+      "talkback_focus_before": null,
+      "talkback_focus_after": "Bottom navigation bar, Profile tab",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "DOQAUS Sponsored Banner",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "TuneFlux Bluetooth Headphones details and See options button",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "layout",
+          "label": "B8 Bluetooth Headphones listing",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "button",
+          "label": "Profile tab",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "scroll_occurred",
+          "description": "The page scrolled down to reveal more product listings."
+        },
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved to the Profile tab in the bottom navigation bar."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Bottom navigation bar, Profile tab",
+          "observation": "Focus unexpectedly jumped to the bottom navigation bar after a scroll or page update, which might disorient users trying to browse the product list.",
+          "potentially_relevant_wcag": [
+            "2.4.3",
+            "3.2.1"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 41,
+      "before_filename": "ss_2026-05-26T17-19-40-747.png",
+      "after_filename": "ss_2026-05-26T17-19-42-360.png",
+      "before_paragraph": "The TalkBack focus is on the Profile/Account tab in the bottom navigation bar, indicated by a green focus rectangle around the person icon.",
+      "after_paragraph": "No changes are visible between the before and after screenshots. The TalkBack focus remains on the Profile/Account tab in the bottom navigation bar, and all on-screen content remains identical.",
+      "before_screen": "Amazon search results page for 'wireless headphones' with the bottom navigation Profile tab focused.",
+      "after_screen": "Amazon search results page for 'wireless headphones' with the bottom navigation Profile tab focused.",
+      "talkback_focus_before": "Profile/Account navigation tab (second icon from left in the bottom bar)",
+      "talkback_focus_after": "Profile/Account navigation tab (second icon from left in the bottom bar)",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Bottom navigation icons (Home, Profile, Cart, Menu)",
+          "observation": "These tab items are icon-only without visible text labels, which may rely entirely on content descriptions for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.6"
+          ]
+        },
+        {
+          "element": "Floating action buttons (Chat and M icons on the right edge)",
+          "observation": "These floating buttons are relatively small and positioned close to each other, potentially presenting a small touch target.",
+          "potentially_relevant_wcag": [
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 42,
+      "before_filename": "ss_2026-05-26T17-19-42-360.png",
+      "after_filename": "ss_2026-05-26T17-19-46-581.png",
+      "before_paragraph": "The screen shows Amazon search results for 'wireless headphones'. TalkBack focus is on the profile/account icon in the bottom navigation bar, which is highlighted with a green border.",
+      "after_paragraph": "TalkBack focus moves from the bottom navigation bar up to the product image of the first sponsored search result ('TuneFlux Bluetooth Headphones'), which now has a green focus border.",
+      "before_screen": "Amazon search results for 'wireless headphones' with the profile icon in the bottom navigation bar focused.",
+      "after_screen": "Amazon search results with the product image of the first result ('TuneFlux Bluetooth Headphones') focused.",
+      "talkback_focus_before": "Profile icon in bottom navigation bar",
+      "talkback_focus_after": "Product image of TuneFlux Bluetooth Headphones",
+      "changed_elements": [
+        {
+          "type": "Button",
+          "label": "Profile",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "Image",
+          "label": "TuneFlux Bluetooth Headphones product image",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the bottom navigation profile tab up to the first product image in the search results list."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "TuneFlux Bluetooth Headphones product image",
+          "observation": "The product image is separately focusable from the adjacent product text details. If the image announces the same information as the title, it creates redundant speech output.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.4.4"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 43,
+      "before_filename": "ss_2026-05-26T17-19-46-581.png",
+      "after_filename": "ss_2026-05-26T17-19-47-673.png",
+      "before_paragraph": "The TalkBack focus is currently on the product image of the TuneFlux Bluetooth Headphones on an Amazon search results page. The green focus ring outlines the image on the left side of the screen.",
+      "after_paragraph": "No changes are observed in the AFTER screenshot. The screen state and the TalkBack focus remain identical to the BEFORE screenshot, with focus still on the same product image.",
+      "before_screen": "Amazon search results page showing wireless headphones with focus on a sponsored product image.",
+      "after_screen": "Amazon search results page, identical to the before screen with no changes in focus or content.",
+      "talkback_focus_before": "TuneFlux Bluetooth Headphones product image container",
+      "talkback_focus_after": "TuneFlux Bluetooth Headphones product image container",
+      "changed_elements": [],
+      "changes": [],
+      "accessibility_signals": [
+        {
+          "element": "Icon overlay on bottom-left of product image",
+          "observation": "There is a small icon (a document with a plus and a camera/magnifying glass) overlaid on the product image which may be unlabeled or difficult to target individually.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "2.1.1",
+            "2.5.8"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 44,
+      "before_filename": "ss_2026-05-26T17-19-47-673.png",
+      "after_filename": "ss_2026-05-26T17-19-49-053.png",
+      "before_paragraph": "The screen shows a list of search results for 'wireless headphones' on Amazon. The TalkBack focus is currently on the product image of the first sponsored item, 'TuneFlux Bluetooth Headphones'.",
+      "after_paragraph": "The TalkBack focus has shifted down to a text block within the same product listing, specifically reading the delivery estimate: 'Sun, May 31 on $35 of items shipped by Amazon'. This is a sequential navigation down the page.",
+      "before_screen": "Amazon search results for 'wireless headphones' with focus on the first product's image.",
+      "after_screen": "Amazon search results with focus shifted to the delivery details text of the first product.",
+      "talkback_focus_before": "TuneFlux Bluetooth Headphones product image",
+      "talkback_focus_after": "Delivery estimate text: 'Sun, May 31 on $35 of items shipped by Amazon'",
+      "changed_elements": [
+        {
+          "type": "image",
+          "label": "TuneFlux Bluetooth Headphones product image",
+          "state": "focused",
+          "change": "focus_lost"
+        },
+        {
+          "type": "text",
+          "label": "Sun, May 31 on $35 of items shipped by Amazon",
+          "state": "focused",
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the product image to the delivery date details text further down in the product description."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "TuneFlux product listing text",
+          "observation": "The delivery information 'Or Non-members get FREE delivery Sun, May 31 on $35 of items shipped by Amazon' seems to be split into multiple focusable elements, which may break the natural reading flow of the sentence.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 45,
+      "before_filename": "ss_2026-05-26T17-19-49-053.png",
+      "after_filename": "ss_2026-05-26T17-19-51-250.png",
+      "before_paragraph": "The screen displays a search result list for 'wireless headphones' on a shopping app. TalkBack focus is currently on the shipping estimate text, reading 'Sun, May 31 on $35 of items shipped by Amazon' for the first sponsored product.",
+      "after_paragraph": "The focus has moved backward to the price and discount information block above it, reading '$13.99 List Price: $19.99 Save 5% on 2 select item(s)'.",
+      "before_screen": "Amazon search results for wireless headphones with focus on shipping delivery estimate.",
+      "after_screen": "Amazon search results with focus shifted upward to the price details of the first product.",
+      "talkback_focus_before": "Sun, May 31 on $35 of items shipped by Amazon",
+      "talkback_focus_after": "$13.99 List Price: $19.99 Save 5% on 2 select item(s)",
+      "changed_elements": [
+        {
+          "type": "text",
+          "label": "Sun, May 31 on $35 of items shipped by Amazon",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "layout",
+          "label": "$13.99 List Price: $19.99 Save 5% on 2 select item(s)",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "focus_moved",
+          "description": "TalkBack focus moved from the shipping delivery details to the price and discount block above it."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "$13.99 List Price: $19.99 Save 5% on 2 select item(s)",
+          "observation": "Multiple distinct text elements (current price, strikethrough list price, and discount badge) are grouped into a single focusable container. This can be beneficial for reading flow, but could be confusing if the strikethrough state of the list price is not spoken.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "4.1.2"
+          ]
+        },
+        {
+          "element": "Save 5%",
+          "observation": "The 'Save 5%' text is presented in green on a light green background, which may have insufficient contrast for low-vision users.",
+          "potentially_relevant_wcag": [
+            "1.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 46,
+      "before_filename": "ss_2026-05-26T17-19-51-250.png",
+      "after_filename": "ss_2026-05-26T17-20-04-051.png",
+      "before_paragraph": "The user is browsing Amazon search results for 'wireless headphones'. TalkBack focus is currently on the price box for the first sponsored item, 'TuneFlux Bluetooth Headphones', showing '$13.99 List Price: $19.99 Save 5%'.",
+      "after_paragraph": "After selecting the item, the screen navigates to the product detail page for the TuneFlux headphones. TalkBack focus shifts to a very large container that encompasses almost the entire product detail view, including the title, main image, and color options, rather than focusing on the page title or first individual element.",
+      "before_screen": "Amazon search results for 'wireless headphones'",
+      "after_screen": "Product detail page for TuneFlux Bluetooth Headphones",
+      "talkback_focus_before": "Price info block: '$13.99 List Price: $19.99 Save 5% on 2 select item(s)'",
+      "talkback_focus_after": "Main product detail container",
+      "changed_elements": [
+        {
+          "type": "layout",
+          "label": "Search results list",
+          "state": null,
+          "change": "disappeared"
+        },
+        {
+          "type": "layout",
+          "label": "Product details content",
+          "state": null,
+          "change": "appeared"
+        },
+        {
+          "type": "text",
+          "label": "$13.99 List Price: $19.99 Save 5% on 2 select item(s)",
+          "state": null,
+          "change": "focus_lost"
+        },
+        {
+          "type": "layout",
+          "label": "Main product detail container",
+          "state": null,
+          "change": "focus_gained"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the search results page to the specific product detail page for TuneFlux Bluetooth Headphones."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the price block in the search results list to a large container enclosing the product details on the new page."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Main product detail container",
+          "observation": "The focus ring spans a massive container containing the title, rating, image carousel, and color options. If TalkBack attempts to read this entire container as a single announcement, it will result in a long, confusing wall of spoken text.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 47,
+      "before_filename": "ss_2026-05-26T17-20-04-051.png",
+      "after_filename": "start_2026-05-26T17-17-57-813.png",
+      "before_paragraph": "The screen shows an Amazon product detail page for \"TuneFlux Bluetooth Headphones\". The TalkBack focus is set as a large green rectangle around the entire main content area of the page, rather than on a specific interactive element or text block.",
+      "after_paragraph": "The screen has transitioned to a search results page for \"wireless headphones\". The TalkBack focus has shifted to the first filter button, which displays a '1' and a filter icon, located at the top left of the horizontal filter list.",
+      "before_screen": "Product detail page for TuneFlux Bluetooth Headphones on Amazon",
+      "after_screen": "Search results page for 'wireless headphones' on Amazon",
+      "talkback_focus_before": "Main product detail content container",
+      "talkback_focus_after": "Filter button with '1' and filter icon",
+      "changed_elements": [
+        {
+          "type": "container",
+          "label": "Product details",
+          "state": "focused",
+          "change": "disappeared"
+        },
+        {
+          "type": "button",
+          "label": "Filter",
+          "state": "focused",
+          "change": "appeared"
+        }
+      ],
+      "changes": [
+        {
+          "type": "navigation",
+          "description": "Navigated from the product detail page back to the search results page for 'wireless headphones'."
+        },
+        {
+          "type": "focus_moved",
+          "description": "Focus moved from the large product detail container to the first filter button on the search results page."
+        }
+      ],
+      "accessibility_signals": [
+        {
+          "element": "Main product detail content container",
+          "observation": "In the BEFORE screenshot, the focus boundary encompasses almost the entire screen's content area. Grouping a large portion of the page into a single focusable container can make screen reader navigation inefficient if it reads too much text at once or prevents direct access to sub-elements.",
+          "potentially_relevant_wcag": [
+            "1.3.1",
+            "2.4.3"
+          ]
+        },
+        {
+          "element": "Filter button with '1' and filter icon",
+          "observation": "In the AFTER screenshot, the active focus is on a button containing an icon with '1' and slider graphics. It must be verified if this icon-heavy button has an appropriate text label (e.g., 'Filters, 1 active') for screen readers.",
+          "potentially_relevant_wcag": [
+            "1.1.1",
+            "4.1.2"
+          ]
+        }
+      ]
+    }
+  ]
+}

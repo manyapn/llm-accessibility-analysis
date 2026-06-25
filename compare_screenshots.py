@@ -70,110 +70,66 @@ APP_NAME = {
 }
 
 PROMPT = """You are the visual analysis stage of an Android TalkBack accessibility research pipeline.
-Your ONLY job is to describe what you see — comprehensively and impartially.
-Do NOT make accessibility judgements. Do NOT conclude that something is a violation.
-Claude will do the accessibility analysis; you are Claude's eyes.
+Your job is to describe what changed between two screenshots, impartially.
+Do NOT make accessibility judgements or conclude that something is a violation.
+Claude does the accessibility analysis; you are Claude's eyes.
 
 You are given two consecutive screenshots from a TalkBack (Android screen reader) session:
 - BEFORE: the screen state before a user interaction
 - AFTER: the screen state after a user interaction
 
-Your task has three parts:
+Return the four parts below, and keep it lean. Do NOT list every element on screen.
 
-PART 1 — Element inventory (do this for BOTH before_state and after_state):
-List EVERY visible interactive or meaningful element on screen. Be comprehensive — do not filter.
-Include: buttons, tabs, input fields, links, list/email/search rows, icons, toggles, checkboxes,
-radio buttons, dropdown menus, navigation bars, action bars, floating action buttons, dialogs,
-overlays, toasts, snackbars, loading spinners, error banners, status messages, images with apparent
-meaning, text headings. For each element record:
-  - type: the element type (button, tab, input, link, list_item, icon, toggle, checkbox, image, heading, text, etc.)
-  - label: the visible text label or null if no text is present
-  - description: a brief factual description of what it looks like and where it sits on screen
-  - interactive: true if it appears tappable/interactive, false otherwise
-  - state: one of selected, checked, unchecked, expanded, collapsed, active, inactive, loading, error, disabled, or null
-  - approximate_size: small (likely under 24dp), medium, or large
-  - has_focus_ring: true if the green TalkBack focus rectangle is visibly on this element, false otherwise
+PART 1 - Human-readable summary (write for a person, not a machine):
+  - before_paragraph: 2-4 sentences on the BEFORE screen, focusing on where TalkBack
+    focus sits and what it is reading.
+  - after_paragraph: 2-4 sentences on what changed in the AFTER screen and where focus
+    moved. Describe the focus movement explicitly. If focus moved in a way a blind user
+    would find confusing or unexpected, explain what happened and why it matters, even
+    if that runs longer.
+  Capture only the meaningful difference between the frames. This is what a human reads first.
 
-PART 2 — Changes:
-List ALL differences between the before and after frames. Be exhaustive. Include:
-  - focus_moved: TalkBack focus ring moved to a different element
-  - content_appeared: new element or text became visible
-  - content_disappeared: element or text left the screen
-  - state_changed: element changed state (e.g. checkbox checked, button pressed)
-  - navigation: screen or major section changed
-  - dialog_opened / dialog_closed: modal or bottom sheet appeared/disappeared
-  - overlay_appeared / overlay_disappeared: any overlay or dimming layer
-  - toast_appeared: toast or snackbar message appeared
-  - error_appeared: error message or indicator appeared
-  - loading_started / loading_ended: spinner or progress indicator changed
-  - keyboard_appeared / keyboard_disappeared: soft keyboard shown or hidden
-  - scroll_occurred: visible content shifted due to scrolling
-  - other: anything else that changed
+PART 2 - Changed elements only:
+  List ONLY elements that appeared, disappeared, changed state, or gained/lost focus.
+  Do NOT list unchanged elements. For each: type, label (or null), state (or null),
+  change (appeared|disappeared|state_changed|focus_gained|focus_lost).
 
-PART 3 — Accessibility signals:
-List anything that COULD be relevant to accessibility, based purely on visual evidence.
-These are observations, not findings. Claude will decide if they matter.
-For each signal record:
-  - element: which element you are describing
-  - observation: factual description of what you see (e.g. "icon-only, no visible text label")
-  - potentially_relevant_wcag: list of WCAG criterion numbers that MIGHT apply — as hints only,
-    not verdicts. Use these: 1.1.1, 1.3.1, 1.3.3, 1.3.4, 1.4.1, 1.4.3, 1.4.5, 1.4.10, 1.4.11,
-    1.4.13, 2.1.1, 2.1.2, 2.4.3, 2.4.4, 2.4.6, 2.4.7, 2.4.11, 2.5.1, 2.5.3, 2.5.4, 2.5.8,
-    3.2.1, 3.2.2, 3.3.1, 3.3.2, 3.3.7, 4.1.2, 4.1.3
+PART 3 - Changes:
+  List the differences between before and after. Use these types: focus_moved,
+  content_appeared, content_disappeared, state_changed, navigation, dialog_opened,
+  dialog_closed, overlay_appeared, overlay_disappeared, toast_appeared, error_appeared,
+  loading_started, loading_ended, keyboard_appeared, keyboard_disappeared, scroll_occurred, other.
 
-Accessibility signal triggers to look for (report if present, do not pre-filter):
-  - Any icon-only button or image button with no visible text label
-  - Any input field with no visible label (placeholder text is not a label)
-  - Any element whose state (checked/expanded/selected) is only conveyed by color, with no other indicator
-  - Any text that appears low-contrast against its background
-  - Any UI component (button border, input outline) that appears low-contrast
-  - Any touch target that appears visually smaller than approximately 24×24dp
-  - Any element that appears interactive but has no visible label at all
-  - Any status message, toast, or error that appeared without focus ring on it
-  - Any context/screen change that happened without an apparent user tap
-  - Any heading or label that appears vague or non-descriptive
-  - Any link or button with a generic label like "here", "more", "tap"
-  - Any content that appears clipped or cut off at screen edges
-  - Any visible label text that does not match what a tooltip/badge shows
+PART 4 - Accessibility signals:
+  List anything that COULD be relevant to accessibility, based purely on visual evidence.
+  Observations, not findings. For each: element, observation, potentially_relevant_wcag
+  (criterion numbers as hints only, from: 1.1.1, 1.3.1, 1.3.3, 1.3.4, 1.4.1, 1.4.3, 1.4.5,
+  1.4.10, 1.4.11, 1.4.13, 2.1.1, 2.1.2, 2.4.3, 2.4.4, 2.4.6, 2.4.7, 2.4.11, 2.5.1, 2.5.3,
+  2.5.4, 2.5.8, 3.2.1, 3.2.2, 3.3.1, 3.3.2, 3.3.7, 4.1.2, 4.1.3).
+  Watch for: icon-only or unlabeled controls, inputs without labels, state shown by color
+  only, low-contrast text or components, touch targets under ~24dp, status/toast/error with
+  no focus, context changes with no user tap, vague labels (here/more/tap), clipped content.
 
-Return ONLY a raw JSON object — no markdown fences, no prose outside the JSON:
+Return ONLY a raw JSON object, no markdown fences, no prose outside the JSON:
 {
-  "before_state": {
-    "screen_description": "one-sentence description of what screen this is",
-    "talkback_focus": "which element has the green focus ring, or null if not visible",
-    "elements": [
-      {
-        "type": "...",
-        "label": "visible text or null",
-        "description": "...",
-        "interactive": true,
-        "state": "...",
-        "approximate_size": "small|medium|large",
-        "has_focus_ring": false
-      }
-    ]
-  },
-  "after_state": {
-    "screen_description": "...",
-    "talkback_focus": "...",
-    "elements": [ "..." ]
-  },
+  "before_paragraph": "...",
+  "after_paragraph": "...",
+  "before_screen": "one-line description of the before screen",
+  "after_screen": "one-line description of the after screen",
+  "talkback_focus_before": "element with the focus ring, or null",
+  "talkback_focus_after": "element with the focus ring, or null",
+  "changed_elements": [
+    { "type": "...", "label": "text or null", "state": "... or null", "change": "appeared|disappeared|state_changed|focus_gained|focus_lost" }
+  ],
   "changes": [
-    {
-      "type": "focus_moved|content_appeared|content_disappeared|state_changed|navigation|dialog_opened|dialog_closed|overlay_appeared|overlay_disappeared|toast_appeared|error_appeared|loading_started|loading_ended|keyboard_appeared|keyboard_disappeared|scroll_occurred|other",
-      "description": "factual description of what changed"
-    }
+    { "type": "focus_moved|...", "description": "factual description" }
   ],
   "accessibility_signals": [
-    {
-      "element": "which element",
-      "observation": "what you observe, factually",
-      "potentially_relevant_wcag": ["X.X.X"]
-    }
+    { "element": "...", "observation": "...", "potentially_relevant_wcag": ["X.X.X"] }
   ]
 }
 
-Be comprehensive. When in doubt, include it. Claude will filter; you should not."""
+Keep it lean. Report only what changed and what is accessibility-relevant. Claude will analyze; you describe."""
 
 
 def encode_image(path: Path) -> bytes:
@@ -228,7 +184,7 @@ def _process_pair(args_tuple):
     try:
         result = call_gemini(client, model_name, img1, img2)
         step.update(result)
-        n_elements = len(result.get("before_state", {}).get("elements", []))
+        n_elements = len(result.get("changed_elements", []))
         n_changes = len(result.get("changes", []))
         n_signals = len(result.get("accessibility_signals", []))
         status = f"{n_elements} elements, {n_changes} changes, {n_signals} signals"
@@ -285,6 +241,20 @@ def process_task(folder: Path, client, model_name: str, args) -> None:
     out_path.write_text(json.dumps(output, indent=2, ensure_ascii=False))
     print(f"  → {out_path}")
 
+    md_lines = [f"# {task_id} ({app}) visual summary", ""]
+    for step in steps:
+        if step is None or "error" in step:
+            n = step.get("step", "?") if step else "?"
+            md_lines.append(f"## Step {n}: (no description)\n")
+            continue
+        md_lines.append(f"## Step {step['step']}: {step['before_filename']} -> {step['after_filename']}")
+        md_lines.append(f"**Before:** {step.get('before_paragraph', '(none)')}")
+        md_lines.append(f"**After:** {step.get('after_paragraph', '(none)')}")
+        md_lines.append("")
+    md_path = folder / "visual_summary.md"
+    md_path.write_text("\n".join(md_lines), encoding="utf-8")
+    print(f"  -> {md_path}")
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -292,7 +262,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument("--task", help="Process only this task ID (e.g. GM1). Default: all tasks.")
-    parser.add_argument("--model", default="gemini-2.5-flash", help="Gemini model (default: gemini-2.5-flash)")
+    parser.add_argument("--model", default="gemini-3.5-flash", help="Gemini model (default: gemini-3.5-flash)")
     parser.add_argument("--delay", type=float, default=0.0, help="Seconds between pair submissions (default: 0 — parallel mode ignores this)")
     parser.add_argument("--max-pairs", type=int, metavar="N", help="Cap pairs per task — use 3-5 for testing")
     parser.add_argument("--workers", type=int, default=4, help="Parallel API calls per task (default: 4)")
